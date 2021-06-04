@@ -15,24 +15,34 @@ ___
 ___
 ### Strategy 
 
-* #### Project Goals
+#### Project Goals
+* To create a fully-optimized responsive site for flawless user experience on all devices.
+* To create a platform that allows all users to purchase stylish and affordable posters and frames.
+* Convert website visitors into registered users to utilize the website to its full potential. 
 
 
-* #### Business Goals
+#### Business Goals
+* Achieve sales growth by offering competitively priced and good value products.
+* Drive traffic to the site by promoting it on various social media sites and collaborating with influencers.
+* Offer new and exclusive collections every month by collaborating with original photographers and artists.
+
+#### Customer Goals
 
 
-* #### Customer Goals
-
-
-* #### Target Audience
+#### Target Audience
+Mainly female audience aged 14-65 who have interest in:
+* Lifestyle, beauty and fashion, 
+* Travel and tourism 
+* Art and Design
+* Home and Garden
 
 
 ### User Stories
 
-* #### First-time / casual visitor goals
+#### First-time / casual visitor goals
 
-* #### Returning / registered visitor goals
-* #### Admin / superuser goals
+#### Returning / registered visitor goals
+#### Admin / superuser goals
 
 
 
