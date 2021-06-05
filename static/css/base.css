@@ -2,8 +2,31 @@ html {
     height: 100%;
 }
 
-
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
 
 #top-nav {
-    background-color: aquamarine;
+    background: blue;
 }
+
+.delivery-info {
+    list-style: none;
+    color: blueviolet;
+
+}
+
+
+
+
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+

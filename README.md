@@ -118,4 +118,11 @@ ___
 
 ## Credits
 ___
+### Code
+
+
+### Content
+
+* Favicon icon is from [ICONS8](https://icons8.com/)
+
 ## Acknowledgements
