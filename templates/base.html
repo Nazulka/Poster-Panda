@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="{% static 'css/icon.png' %}">
     {% endblock %}
 
     {% block extra_meta %}
@@ -46,13 +47,13 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="top-nav" class="row">
-            <div class="col header-right text-left">
+            <div class="col-12 col-md-4 header-left text-left">
                 <form method="GET" action="">
                     <div class="input-group w-100">
-                        <input class="form-control" type="text" name="q"
-                            placeholder="Find something amazing">
+                        <input class="form-control border" type="text" name="q"
+                            placeholder="Search">
                         <div class="input-group-append">
-                            <button class="form-control btn" type="submit">
+                            <button class="form-control btn border rounded-0" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -61,44 +62,87 @@
                     </div>
                 </form>
             </div>
-            <div class="col header-center text-center">
+            <div class="col-12 col-md-4 header-center text-center">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 id="logo" class="text-uppercase">Poster Panda</h2>
+                    <h2 id="logo" class="logo-font text-uppercase">Poster Panda</h2>
                 </a>
             </div>
-            <div class="col header-left text-right delivery-info">
+            <div class="col-12 col-md-4 list-inline list-unstyled header-right text-right">
                 <ul>
-                    <li>Delivery 2-4 working days</li>
-                    <li>Free delivery over £29</li>
+                    <li class="delivery-info">Delivery 2-4 working days</li>
+                    <li class="delivery-info">Free delivery over £29</li>
                 </ul>
             </div>
         </div>
 
-        <div class="menubar">
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Posters</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">New In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Bestsellers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Get Inspired</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="menubar container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">                    
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Posters</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">New In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Bestsellers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Get Inspired</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
+                <div class="col-4">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Account</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                href="">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        $0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 

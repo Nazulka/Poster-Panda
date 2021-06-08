@@ -7,13 +7,13 @@ body {
 }
 
 #top-nav {
-    background: blue;
+    background: #fff;
 }
 
 .delivery-info {
     list-style: none;
-    color: blueviolet;
-
+    display: inline-block;
+    text-align: right;
 }
 
 
