@@ -5,8 +5,11 @@ html {
 body {
     font-family: 'Noto Sans', sans-serif;
 }
-
-#top-nav {
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+#topnav {
     background: #fff;
 }
 
@@ -15,11 +18,32 @@ body {
     display: inline-block;
     text-align: right;
 }
+.card-hero {
+    background: url('/media/hero-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
 
-
-
-
-
+}
+.shop-now-button {
+    background: black;
+    color: white;
+}
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background: white;
+    color: black;
+}
+.border-black {
+    border: 1px solid black !important; 
+}
+.text-black {
+    color: black !important;
+}
+.logo-font {
+    color: black;
+}
 
 /* from Bulma */
 .icon {
