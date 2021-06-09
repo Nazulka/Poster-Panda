@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: 'Noto Sans', sans-serif;
+    height: calc(100vh - 164px);
 }
 .container-fluid {
     padding: 0;
@@ -43,6 +44,7 @@ body {
 }
 .logo-font {
     color: black;
+    text-transform: uppercase;
 }
 
 /* from Bulma */
@@ -54,3 +56,28 @@ body {
     width: 1.5rem;
 }
 
+
+
+/*------ Media Queries -----*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
