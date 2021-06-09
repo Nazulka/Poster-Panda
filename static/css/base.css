@@ -14,25 +14,24 @@ body {
     background: #fff;
 }
 
-.delivery-info {
-    list-style: none;
-    display: inline-block;
-    text-align: right;
-}
 .card-hero {
-    background: url('/media/hero-2.jpg') no-repeat center center fixed;
+    background: url('/media/hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 800px;
     width: 100%;
 
 }
-.shop-now-button {
+.shop-now-button,
+.btn-black {
     background: black;
     color: white;
 }
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus {
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
     background: white;
     color: black;
 }
@@ -40,11 +39,15 @@ body {
     border: 1px solid black !important; 
 }
 .text-black {
-    color: black !important;
+    color: #000 !important;
 }
+
 .logo-font {
     color: black;
     text-transform: uppercase;
+}
+.bg-banner {
+    background: #AAC0AF !important;
 }
 
 /* from Bulma */
@@ -55,7 +58,9 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
-
+.dropdown-toggle::after {
+    content: none;
+}
 
 
 /*------ Media Queries -----*/
@@ -76,8 +81,8 @@ body {
         left: 0;
         z-index: 1030;
     }
-
+/* 
     .header-container {
         padding-top: 164px;
-    }
+    } */
 }
