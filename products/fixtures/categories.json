@@ -1,0 +1,83 @@
+[
+
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "animals",
+            "friendly_name": "Animals"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "nature",
+            "friendly_name": "Nature"
+        }
+    },
+
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "black and white",
+            "friendly_name": "Black and White"
+        }
+    },
+        
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "abstract",
+            "friendly_name": "Abstract"
+        }
+    },
+
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "kids",
+            "friendly_name": "Kids"
+        }
+    },
+
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "fashion",
+            "friendly_name": "Fashion"
+        }
+    },
+
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "frames",
+            "friendly_name": "Frames"
+        }
+    },
+
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "new_in",
+            "friendly_name": "New In"
+        }
+    },
+
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "bestsellers",
+            "friendly_name": "Bestsellers"
+        }
+    },
+
+]

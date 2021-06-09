@@ -1,0 +1,28 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp0101",
+            "name": "Plants in Vases",
+            "description": "",
+            "price": 9.99,
+            "category": 2,
+            "rating": 4.4,
+            "image_url": "",
+            "image": "bamboo-vases.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp0102",
+            "name": "Maldives",
+            "description": "",
+            "price": 12.99,
+            "category": 9,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "beach.jpg"
+        }
+    },
