@@ -92,7 +92,14 @@ The main components used: navbar, footer, buttons, toasts etc.
 - [x] **Back-end**
 * **[Django]()** - 
 * **[Stripe]()** - 
+* **[pillow]()** - to allow me to use the image field
 * **[]()** - 
+* **[]()** - 
+* **[]()** - 
+* **[]()** - 
+* **[]()** - 
+* **[]()** - 
+
 * **[AWS S3]()** - 
 
 
