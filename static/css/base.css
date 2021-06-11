@@ -73,9 +73,10 @@ body {
 }
 
 
-/*------ Media Queries -----*/
+/*---------------- Media Queries -----------------*/
 
-/* Extra (xl) large devices (large desktops)
+/* Extra (xl) large devices (large desktops)*/ 
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
