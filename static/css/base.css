@@ -62,16 +62,28 @@ body {
 .dropdown-toggle::after {
     content: none;
 }
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
 
 
 /*------ Media Queries -----*/
 
+/* Extra (xl) large devices (large desktops)
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
     }
 }
+
+/* Large (lg) devices (desktops) */
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -82,8 +94,15 @@ body {
         left: 0;
         z-index: 1030;
     }
-/* 
+
     .header-container {
         padding-top: 164px;
-    } */
+    }
 }
+/* Medium (md) devices (tablets) */
+@media (min-width: 768px) {
+
+}
+
+/* Small (sm) devices (landscape phones) */
+@media (min-width: 576px) {}
