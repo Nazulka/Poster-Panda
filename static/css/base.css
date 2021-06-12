@@ -102,12 +102,21 @@ body {
 }
 /* Medium (md) devices (tablets) */
 @media (min-width: 768px) {
-
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+    border: 3px solid black !important;
+}
 }
 
 /* Small (sm) devices (landscape phones) */
 @media (min-width: 576px) {
-
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
