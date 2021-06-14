@@ -7,23 +7,25 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="posters-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Posters</a>
-                <a href="" class="dropdown-item">Animals</a>
-                <a href="" class="dropdown-item">Nature</a>
-                <a href="" class="dropdown-item">Black and White</a>
-                <a href="" class="dropdown-item">Abstract</a>
-                <a href="" class="dropdown-item">Kids</a>
-                <a href="" class="dropdown-item">Fashion</a>
-                <a href="" class="dropdown-item">Frames</a>
+                <a href="{% url 'products' %}?category=animals" class="dropdown-item">Animals</a>
+                <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
+                <a href="{% url 'products' %}?category=black_white" class="dropdown-item">Black and White</a>
+                <a href="{% url 'products' %}?category=abstract" class="dropdown-item">Abstract</a>
+                <a href="{% url 'products' %}?category=kids" class="dropdown-item">Kids</a>
+                <a href="{% url 'products' %}?category=fashion" class="dropdown-item">Fashion</a>
+                <a href="{% url 'products' %}?category=frames" class="dropdown-item">Frames</a>
 
             </div>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="newIn-link">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5"
+                href="{% url 'products' %}?category=new_in" id="newIn-link">
                 New In
             </a>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="bestsellers-link">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5"
+                href="{% url 'products' %}?category=bestsellers" id="bestsellers-link">
                 Bestsellers
             </a>
         </li>
