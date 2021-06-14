@@ -17,7 +17,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 text-center">
-            <h2 class="display-4 logo-font mt-4">
+            <h2 class="logo-font mt-4 pt-3">
                 Products
             </h2>
             <hr class="w-50 mx-auto mb-1">
@@ -30,8 +30,8 @@
             {% endfor %}
         </div>
     </div>
-    <div class="row">
-        <div class="product-container col-10 offset-1">
+    <div class="row justify-content-md-center">
+        <div class="product-container col-sm-10 col-md-8">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
@@ -66,8 +66,8 @@
             </div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
+                <div class="col-xs-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0 mx-auto">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
