@@ -7,14 +7,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="posters-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Posters</a>
-                <a href="{% url 'products' %}?category=animals" class="dropdown-item">Animals</a>
-                <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
-                <a href="{% url 'products' %}?category=black_white" class="dropdown-item">Black and White</a>
+                <a href="{% url 'products' %}?category=animals_nature" class="dropdown-item">Animals & Nature</a>
+                <a href="{% url 'products' %}?category=black_white" class="dropdown-item">Black & White</a>
                 <a href="{% url 'products' %}?category=abstract" class="dropdown-item">Abstract</a>
-                <a href="{% url 'products' %}?category=kids" class="dropdown-item">Kids</a>
-                <a href="{% url 'products' %}?category=fashion" class="dropdown-item">Fashion</a>
-                <a href="{% url 'products' %}?category=frames" class="dropdown-item">Frames</a>
-
+                <a href="{% url 'products' %}?category=new_in" class="dropdown-item">New In</a>
+                <a href="{% url 'products' %}?category=bestsellers" class="dropdown-item">Bestsellers</a>
             </div>
         </li>
         <li class="nav-item">
@@ -35,10 +32,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
     </ul>
