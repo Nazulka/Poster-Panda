@@ -2,36 +2,30 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container-fluid header-container">
+<div class="container header-container">
     <div class="row">
-        <div class="col-12">
-
-        </div>
+        <div class="col"></div>
     </div>
 </div>
 {% endblock %}
-
 
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 text-center">
-            <h2 class="logo-font mt-4 pt-3">
-                Products
-            </h2>
-            <hr class="w-50 mx-auto mb-1">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Products</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span
-                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}
-                </span>
+                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
+            <hr class="w-50 mx-auto mb-1">
         </div>
     </div>
-    <div class="row justify-content-md-center">
-        <div class="product-container col-sm-10 col-md-8">
+    <div class="row">
+        <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
@@ -51,6 +45,10 @@
                                 (A-Z)</option>
                             <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
                                 (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                Category (A-Z)</option>
+                            <option value="category_desc"
+                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                         </select>
                     </div>
                 </div>
@@ -66,8 +64,8 @@
             </div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-xs-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0 mx-auto">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -84,7 +82,7 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="mb-0 text-danger text-left font-weight-bold">£{{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
@@ -98,12 +96,6 @@
                                         5</small>
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
-                                    {% endif %}
-                                    {% if request.user.is_superuser %}
-                                    <small class="ml-3">
-                                        <a href="">Edit</a> |
-                                        <a class="text-danger" href="">Delete</a>
-                                    </small>
                                     {% endif %}
                                 </div>
                             </div>
@@ -135,5 +127,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
