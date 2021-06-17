@@ -102,6 +102,11 @@ a.category-badge>span.badge:hover {
     max-height: 520px;
     object-fit: cover;
 }
+
+.img-bag {
+    padding: 0.3rem;
+    border: 1.5px solid black;
+}
 /*---------------- Media Queries -----------------*/
 
 /* Extra (xl) large devices (large desktops)*/ 
@@ -132,10 +137,17 @@ a.category-badge>span.badge:hover {
     .header-container {
         padding-top: 164px;
     }
+    .img-bag {
+        padding: 1rem;
+        border: 3px solid black;
+    }
 }
 /* Medium (md) devices (tablets) */
 @media (min-width: 768px) {
-
+    .img-bag {
+        padding: 0.75rem;
+        border: 2px solid black;
+    }
 }
 
 /* Small (sm) devices (landscape phones) */
@@ -146,6 +158,11 @@ a.category-badge>span.badge:hover {
     object-fit: cover;
     padding: 1rem;
     border: 3px solid black !important;
+}
+
+.img-bag {
+    padding: 0.5rem;
+    border: 2px solid black;
 }
 }
 
