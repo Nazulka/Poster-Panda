@@ -117,10 +117,7 @@ a.category-badge>span.badge:hover {
 .toast-capper {
     height: 2px;
 }
-.toast {
-    display: block;
-    opacity: 1;
-}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
