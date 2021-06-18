@@ -130,7 +130,7 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
+        <div class="toast message-container">
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
@@ -155,7 +155,9 @@
 
     {% block postloadjs %}
     <script type="text/javascript">
-        $('.toast').toast('show');
+        $(document).ready(function(){
+            $('.toast').toast('show');
+        });
     </script>
     {% endblock %}
 
