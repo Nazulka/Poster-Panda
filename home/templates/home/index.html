@@ -13,11 +13,18 @@
 
 
 {% block content %}
-    <div class="container-fluid header-container">
+    <div class="container-fluid header-container mt-5">
         <div class="row">
             <div class="col-10 offset-1">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-10 card card-hero mx-auto">
+                <div id="jumbotron-hero" class="jumbotron jumbotron-fluid text-center text-white">
+                    <div class="container">
+                        <h1 class="display-4">Staycation Collection!</h1>
+                        <h4 class="text-white">Create the most memorable moments at home.</h4>
+                        <a class="btn btn-lg border-black shop-now-button text-uppercase py-2 mx-auto" href="{% url 'products' %}" role="button">Shop Now</a>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-sm-6 col-lg-10 card card-hero mx-auto mt-5">
                         <h1 class="card-text text-white logo-font mt-5">
                             New studio collection
                         </h1>
@@ -29,25 +36,19 @@
                             </h4>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row mt-3">
-                    <div class="col-sm-6 card mr-2">
-                        <h4 class="card-text text-white logo-font mt-5">
-                            New 1
-                        </h4>
+                    <div class="col-sm-6 card">
                         <div class="my-5">
                             <h5>
-                                <a href="" class="btn btn-lg border-black shop-now-button text-uppercase py-2">Shop
-                                    Now</a>
+                                <a href="" class="btn btn-lg border-black shop-now-button text-uppercase py-2">New</a>
                             </h5>
                         </div>
                     </div>
-                    <div class="col-sm-6 card ml-2">
-                        <h4 class="card-text text-white logo-font mt-5">New 2</h4>
+                    <div class="col-sm-6 card">
                         <div class="my-5">
                             <h5>
-                                <a href="" class="btn btn-lg border-black shop-now-button text-uppercase py-2">Shop
-                                    Now</a>
+                                <a href="" class="btn btn-lg border-black shop-now-button text-uppercase py-2">Bestsellers</a>
                             </h5>
                         </div>
                     </div>

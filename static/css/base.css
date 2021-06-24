@@ -14,12 +14,11 @@ body {
     background: #fff;
 }
 
-.card-hero {
-    background: url('/media/hero-image.jpg') no-repeat center center fixed;
+#jumbotron-hero {
+    background: url('/media/hero.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 800px;
     width: 100%;
-
 }
 .shop-now-button,
 .btn-black {
@@ -54,7 +53,7 @@ body {
     text-transform: uppercase;
 }
 .bg-banner {
-    background: #AAC0AF !important;
+    background: #81E7EF !important;
 }
 
 /* from Bulma */
@@ -269,9 +268,9 @@ input[name='q']::placeholder {
         z-index: 1030;
     }
 
-    .header-container {
+    /* .header-container {
         padding-top: 164px;
-    }
+    } */
     .img-bag {
         padding: 1rem;
         border: 3px solid black;
@@ -321,5 +320,10 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+@media (min-width: 991px) {
+    .header-container {
+        padding-top: 60px;
     }
 }
