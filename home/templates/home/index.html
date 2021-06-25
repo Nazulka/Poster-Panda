@@ -13,49 +13,91 @@
 
 
 {% block content %}
+    <!-- Hero Jumbotron -->
     <div class="container-fluid header-container mt-5">
         <div class="row">
             <div class="col-10 offset-1">
-                <div id="jumbotron-hero" class="jumbotron jumbotron-fluid text-center text-white">
-                    <div class="container">
+                <div id="jumbotron-hero" class="jumbotron jumbotron-fluid text-left text-white mt-3">
+                    <div class="container jumbotron-inner">
                         <h1 class="display-4">Staycation Collection!</h1>
-                        <h4 class="text-white">Create the most memorable moments at home.</h4>
-                        <a class="btn btn-lg border-black shop-now-button text-uppercase py-2 mx-auto" href="{% url 'products' %}" role="button">Shop Now</a>
+                        <h4 class="my-3">Create the most memorable moments at home.</h4>
+                        <a class="btn btn-lg border-black shop-now-button text-uppercase py-2 mx-auto"
+                            href="{% url 'products' %}" role="button">Shop Now</a>
                     </div>
-                </div>
-                <!-- <div class="row">
-                    <div class="col-sm-6 col-lg-10 card card-hero mx-auto mt-5">
-                        <h1 class="card-text text-white logo-font mt-5">
-                            New studio collection
-                        </h1>
-                        <div class="my-5">
-                            <h4>
-                                <a href="{% url 'products' %}"
-                                    class="btn btn-lg border-black shop-now-button text-uppercase py-2">Shop
-                                    Now</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="row mt-3">
-                    <div class="col-sm-6 card">
-                        <div class="my-5">
-                            <h5>
-                                <a href="" class="btn btn-lg border-black shop-now-button text-uppercase py-2">New</a>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 card">
-                        <div class="my-5">
-                            <h5>
-                                <a href="" class="btn btn-lg border-black shop-now-button text-uppercase py-2">Bestsellers</a>
-                            </h5>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
+    <!-- Card Jumbotron -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="row mx-auto">
+                    <div class="col-sm-6">
+                        <div class="jumbotron jumbotron-fluid jumbotron-left text-center mr-auto mt-3 mx-auto">
+                            <div class="container">
+                                <a class="btn btn-lg border-black product-btn text-uppercase mx-auto py-2">New In</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="jumbotron jumbotron-fluid jumbotron-right text-center ml-auto mt-3 mx-auto">
+                            <div class="container">
+                                <a
+                                    class="btn btn-lg border-black product-btn text-uppercase mx-auto py-2">Bestsellers</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <!-- Card Carousel -->
+    <div class="container text-center my-3">
+        <h2 class="logo-font">Handpicked Favourites</h2>
+        <div class="row mx-auto my-auto">
+            
+            <div id="cardCarousel" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100" role="listbox">
+                    {% for product in products %}
+                    <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                        <div class="col-sm-4 col-md-3">
+                            <div class="card">
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top product-card img-fluid" src="{{ product.image.url }}"
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top product-card img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card card-body pb-0">
+                                    <h6 class="card-title mb-0">{{ product.name }}</h6>
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                    <a class="carousel-control-prev w-auto" href="#cardCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+                            aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next w-auto" href="#cardCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+                            aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+            </div>
+            
+        </div>
+    </div>
+
+{% endblock %}

@@ -15,15 +15,41 @@ body {
 }
 
 #jumbotron-hero {
-    background: url('/media/hero.jpg') no-repeat center center fixed;
+    display: flex;
+    background: url('/media/hero.jpg') no-repeat center center;
     background-size: cover;
     height: 800px;
+    width: 100%;
+}
+.jumbotron-inner {
+    margin-top: 40%;
+}
+.jumbotron-left {
+    background: url('/media/cali.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+.jumbotron-right {
+    background: url('/media/surf.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
     width: 100%;
 }
 .shop-now-button,
 .btn-black {
     background: black;
     color: white;
+    min-width: 260px;
+}
+
+.product-btn {
+    background: black;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 60%;
+    min-width: 260px;
 }
 
 .btn-outline-black {
@@ -37,7 +63,10 @@ body {
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
-.btn-black:focus {
+.btn-black:focus 
+.product-btn:hover,
+.product-btn:active,
+.product-btn:focus {
     background: white;
     color: black;
 }
@@ -53,7 +82,7 @@ body {
     text-transform: uppercase;
 }
 .bg-banner {
-    background: #81E7EF !important;
+    background: #118592 !important;
 }
 
 /* from Bulma */
@@ -193,9 +222,12 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
+    .jumbotron-inner {
+        margin-top: 30%;
+    }
 }
 
-.card-img-top {
+.product-card {
     width: 80%;
     height: 50vw;
 }
@@ -286,7 +318,7 @@ input[name='q']::placeholder {
 
 /* Small (sm) devices (landscape phones) */
 @media (min-width: 576px) {
-.card-img-top {
+.product-card {
     width: 100%;
     height: 22vw;
     object-fit: cover;
@@ -302,7 +334,7 @@ input[name='q']::placeholder {
 
 /* Extra small (xs) devices (landscape phones) */
 @media (max-width: 576px) {
-    .card-img-top {
+    .product-card {
         width: 100%;
         height: auto;
         max-height: 450px;
@@ -320,6 +352,10 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+    .product-btn {
+       margin-top: 85%;
+       min-width: 200px;
     }
 }
 @media (min-width: 991px) {
