@@ -67,7 +67,7 @@
             </div>
             <div class="col-12 col-md-4 header-center text-center my-auto">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 id="logo" class="logo-font font-weight-bolder text-uppercase">Poster Panda</h2>
+                    <h2 id="logo" class="logo-font font-weight-bolder">Poster Panda</h2>
                 </a>
             </div>
             <div class="col-12 col-md-4 header-right text-right mx-auto">
@@ -114,10 +114,10 @@
         </div>
 
         <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <nav class="navbar navbar-expand-lg navbar-light w-100 mx-3 my-auto py-0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="hamburger"><i class="fas fa-bars"></i></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
@@ -167,3 +167,4 @@
 </body>
 
 </html>
+
