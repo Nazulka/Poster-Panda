@@ -291,6 +291,22 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
+
+/*-- Footer --*/
+#footer {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: grey;
+}
+.footer-container {
+    height: 4rem;
+}
+
 /* Large (lg) devices (desktops) */
 
 /* fixed top navbar only on medium and up */
@@ -349,13 +365,13 @@ input[name='q']::placeholder {
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
+    /* .header-container {
         padding-top: 116px;
     }
 
     body {
         height: calc(100vh - 116px);
-    }
+    } */
     .product-btn {
        margin-top: 85%;
        min-width: 200px;

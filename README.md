@@ -20,11 +20,11 @@ ___
 * #### Project Goals
     * To create a fully-optimized responsive site for flawless user experience on all devices.
     * To create a platform that allows all users to purchase stylish and affordable posters and frames.
-    * Convert website visitors into registered users to utilize the website to its full potential. 
+    * Convert website visitors into registered users to utilize the website to it's full potential. 
 
 
 * #### Business Goals
-    * Achieve sales growth by offering competitively priced and good value products and increase profit.
+    * Achieve sales growth by offering competitively priced, good value products and increase profit.
     * Drive traffic to the site by promoting it on various social media sites and collaborating with influencers.
     * Offer new and exclusive collections every month by collaborating with original photographers and artists.
 
