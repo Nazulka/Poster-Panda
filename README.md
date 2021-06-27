@@ -40,7 +40,7 @@ ___
 
 ### User Stories
 
-* #### As a **first-time / casual visitor** I want to be able to:
+* #### As a **First-time / casual visitor** I want to be able to:
     * Navigate the site intuitively and easily access all available website features from different screen size devices.
     * See list of all the products offered on the site and use sorting and filters to narrow down the search for posters that I am interested in purchasing.
     * See the new collections and other featured favourites to be inspired and informed on latest trends.
@@ -49,7 +49,7 @@ ___
     * Add the products that I like to the cart, select the quantity and view the total amount for the items in the cart to be able to see the costs before I decide to checkout. 
     * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
 
-* #### As a **registered / returning visitor** I want to be able to:
+* #### As a **Registered / returning visitor** I want to be able to:
     * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
     * View all items in the cart as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
     * Adjust the quantity of the products in the cart so I can make changes easily.
@@ -59,26 +59,34 @@ ___
     * See an instant confirmation of the order on the site and receive an email confirming that the order has been placed successfully for proof of purchase and peace of mind.  
     * Easily view my current order details and previous orders history, all saved in one place - my account.
     * Leave reviews for the products to interract and provide feedback to the store, encourage them make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide. 
-    * Edit and delete my reviews if I change my mind or if it is no longer relevant. 
+    * Edit and delete my reviews if I change my mind or if they are no longer relevant. 
     * Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.  
     * Remove items that I am no longer interested in from my wishlist.
 
-* #### As a **store owner / superuser** I want to be able to:
+* #### As a **Store owner / Superuser** I want to be able to:
     * Add products to enable me to add new items to the store.
     * Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.
     * Delete products, if they are no longer available, to keep the stocks up to date.
 
 
 ### Scope 
-* To create a user friendly full-stack website p. 
+* To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
+    * Intuitive design: allow users to navigate the site intuitively, view products.
+    * Authorisation: allow users to Register, Login and Logout.
+    * Wishlist: allow users to add products to the wishlist and remove from it.
+    * Reviews: allow users to leave product reviews on the website.
+    * Simple checkout: allow users to checkut in a few simple steps. 
+    * Secure payment: allow users to securely enter their payment details to complete the purchase. 
+    * Superuser: allow admin user to add, edit delete products to keet the store up to date. 
 
 ### Structure
+The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the [Information Architecture]() section. 
+
+- [x] **![Database Structure]()**
 
 
 ### Skeleton 
-
 - [x] **[Wireframes]()**
-- [x] **![Database Structure]()**
 
 
 ### Surface
@@ -141,6 +149,8 @@ ___
 
 
 ### Future Features
+
+## Information Architecture 
 
 ## Testing
 ___
