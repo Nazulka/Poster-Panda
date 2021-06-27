@@ -42,25 +42,31 @@ ___
 
 * #### As a **first-time / casual visitor** I want to be able to:
     * Navigate the site intuitively and easily access all available website features from different screen size devices.
-    * See list of all the products offered on the site  and use sorting and filters to search for posters that I am interested in purchasing.
-    * 
-    * See the new collections and other featured favourites to be informed on latest trends.
+    * See list of all the products offered on the site and use sorting and filters to narrow down the search for posters that I am interested in purchasing.
+    * See the new collections and other featured favourites to be inspired and informed on latest trends.
+    * Search products by name or description to quickly find the product that I need.
     * View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.
-    * Add the products that I like to the cart, select the quantity and view the total amount for the items in the cart to be able to see how much to spend. 
-    * Easily sign-up for an account to create a profile for faster checkout in the future and keeping track of order details and history.
+    * Add the products that I like to the cart, select the quantity and view the total amount for the items in the cart to be able to see the costs before I decide to checkout. 
+    * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
 
 * #### As a **registered / returning visitor** I want to be able to:
-    * View my profile and easily login or logout from my account.
-    * Easily view my current order details and previous orders history, all saved in one place.
-    * Leave reviews for the products to help other shoppers to decide easily whether to purchase this poster. 
-    * Edit and delete my reviews if I change my mind or if the review I left previously is no longer relevant. 
-    * Save items in my wishlist, for items that I am intersted in purchasing in the future.  
-    *  
+    * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
+    * View all items in the cart as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
+    * Adjust the quantity of the products in the cart so I can make changes easily.
+    * Remove items in the cart so I can purchase only the ones that I really want.
+    * Add and save my personal information when checking out for the first time, so it can safely be stored in my account to ensure faster and hussle free checkout next time. 
+    * Securely add my card details when checking out.
+    * See an instant confirmation of the order on the site and receive an email confirming that the order has been placed successfully for proof of purchase and peace of mind.  
+    * Easily view my current order details and previous orders history, all saved in one place - my account.
+    * Leave reviews for the products to interract and provide feedback to the store, encourage them make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide. 
+    * Edit and delete my reviews if I change my mind or if it is no longer relevant. 
+    * Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.  
+    * Remove items that I am no longer interested in from my wishlist.
 
 * #### As a **store owner / superuser** I want to be able to:
-    * Add products, to enable me to add new items to the store
-    * Edit/ Update products 
-
+    * Add products to enable me to add new items to the store.
+    * Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.
+    * Delete products, if they are no longer available, to keep the stocks up to date.
 
 
 ### Scope 
@@ -86,7 +92,7 @@ ___
 * Google Fonts *Noto Sans* used accross the site for a harmonious look and feel.
 
 - [x] **Imagery**
-* All supporting images as well as products images are taken from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/). 
+* All supporting images for the website as well as products' images were carefully selected from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/). 
 
 
 ## Technologies Used
@@ -162,4 +168,4 @@ ___
 * Thanks to the wonderful Slack community for their time and sharing their knowledge!
 * A big thank you to my family and friends for their enormous support!
 
-:top: [](#poster-panda)
+[:top:](#poster-panda)
