@@ -40,11 +40,26 @@ ___
 
 ### User Stories
 
-* #### First-time / casual visitor goals
+* #### As a **first-time / casual visitor** I want to be able to:
+    * Navigate the site intuitively and easily access all available website features from different screen size devices.
+    * See list of all the products offered on the site  and use sorting and filters to search for posters that I am interested in purchasing.
     * 
+    * See the new collections and other featured favourites to be informed on latest trends.
+    * View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.
+    * Add the products that I like to the cart, select the quantity and view the total amount for the items in the cart to be able to see how much to spend. 
+    * Easily sign-up for an account to create a profile for faster checkout in the future and keeping track of order details and history.
 
-* #### Returning / registered visitor goals
-* #### Admin / superuser goals
+* #### As a **registered / returning visitor** I want to be able to:
+    * View my profile and easily login or logout from my account.
+    * Easily view my current order details and previous orders history, all saved in one place.
+    * Leave reviews for the products to help other shoppers to decide easily whether to purchase this poster. 
+    * Edit and delete my reviews if I change my mind or if the review I left previously is no longer relevant. 
+    * Save items in my wishlist, for items that I am intersted in purchasing in the future.  
+    *  
+
+* #### As a **store owner / superuser** I want to be able to:
+    * Add products, to enable me to add new items to the store
+    * Edit/ Update products 
 
 
 
@@ -98,20 +113,21 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 * **[SQLite](https://www.sqlite.org/index.html)** - for economical, efficient, reliable and independent local data storage for the application.
 * **[Pip3](https://packaging.python.org/key_projects/#pip)** - the most popular package installer for Python.
 * **[PostgreSQL](https://www.postgresql.org/)** - powerful, reliable, open source object-relational database system.
-
 * **[AWS S3](https://aws.amazon.com/s3/?c=s&sec=srv)** - an object storage service, used to store and protect project's images and static files.
 
 
 - [x] **IDE and Deployment**
-* **Git** - used to keep track of the changes made to the repository and for version control.
-* **Gitpod** - I used CI full template as an IDE to develop, commit and push files to GitHub. 
-* **GitHub** - used as a hosting service and for future collaborations.
-* **Heroku** - my GitHub repo for this project had been connected to Heroku app to enable management and deployment of this app.
+* **[Git](https://git-scm.com/)** - used to keep track of the changes made to the repository and for version control.
+* **[Gitpod](https://www.gitpod.io/)** - I used CI full template as an IDE to develop, commit and push files to GitHub. 
+* **[GitHub](https://github.com/)** - used as a hosting service and for future collaborations.
+* **[Heroku](https://id.heroku.com/login)** - my GitHub repo for this project had been connected to Heroku app to enable management and deployment of this app.
 
 
 ## Features
 ___
 ### Implemented Features
+
+
 ### Future Features
 
 ## Testing
@@ -128,7 +144,13 @@ ___
 
 
 ### Content
-
+* The website was inspired by CI Project- Boutique Ado
+* The website design was inspired by [Desenio](https://desenio.co.uk/)
+* All images are taken from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
 * Favicon icon is from [ICONS8](https://icons8.com/)
 
 ## Acknowledgements
+* I would like to thank my mentor Excellence Ilesanmi for his continuous support and guidance.
+* Big thanks to all tutors from Tutor Support.
+* Thanks to the wonderful Slack community for their time and sharing their knowledge!
+* A big thank you to may family and friends for their enormous support!
