@@ -132,7 +132,7 @@ ___
 
 ## Testing
 ___
-
+Testing documentation can be found [HERE](TESTING.md)
 
 ## Deployment
 ___
@@ -153,4 +153,4 @@ ___
 * I would like to thank my mentor Excellence Ilesanmi for his continuous support and guidance.
 * Big thanks to all tutors from Tutor Support.
 * Thanks to the wonderful Slack community for their time and sharing their knowledge!
-* A big thank you to may family and friends for their enormous support!
+* A big thank you to my family and friends for their enormous support!
