@@ -300,9 +300,11 @@ input[name='q']::placeholder {
     left: 0;
     bottom: 0;
     padding: 1rem;
+    margin: 0;
     text-align: center;
     background-color: grey;
 }
+
 .footer-container {
     height: 4rem;
 }
@@ -389,10 +391,10 @@ input[name='q']::placeholder {
         line-height: 1;
         background-color: transparent;
         border: none;
+    }
 }
 @media (min-width: 991px) {
     .header-container {
         padding-top: 60px;
     }
 }
-

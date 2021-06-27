@@ -78,8 +78,8 @@ ___
 
 ### Frameworks, Libraries and Tools
 - [x] **Front-end**
-* **[Bootstrap v5.0](https://getbootstrap.com/)** - a front-end open source toolkit, used to create a sleek, consistent, functional and responsive website.
-The main components used: navbar, footer, buttons, toasts etc.  
+* **[Bootstrap v4.6](https://getbootstrap.com/)** - a front-end open source toolkit, used to create a sleek, consistent, functional and responsive website.
+The main components used: navbar, cards, footer, buttons, toasts etc.  
 * **[jQuery](https://jquery.com/)** - required to ensure proper rendering of the Bootstrap components listed above.
 * **[Google Fonts](https://fonts.google.com/)** for typography. 
 * **[Font Awesome v5.15](https://fontawesome.com/)** for icons throughout the pages, on the navbar and social icons.
@@ -90,20 +90,19 @@ The main components used: navbar, footer, buttons, toasts etc.
 
 
 - [x] **Back-end**
-* **[Django]()** - 
-* **[Stripe]()** - 
-* **[pillow]()** - to allow me to use the image field
-* **[]()** - 
-* **[]()** - 
-* **[]()** - 
-* **[]()** - 
-* **[]()** - 
-* **[]()** - 
+* **[Django](https://www.djangoproject.com/)** - free and open-source Python Framework for rapid development and clean design.
+* **[Stripe](https://stripe.com/gb)** - for fast and easy to implement way of accepting online payments from customers.
+* **[Pillow](https://pypi.org/project/Pillow/2.2.1/)** - Python Imaging Library (PIL), that supports opening, manipulating and saving images.
+* **[Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)** - to render Django forms in a very elegant and DRY way.
+* **[Gunicorn](https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/gunicorn/)** - an HTTP server for use with Django on Heroku.
+* **[SQLite](https://www.sqlite.org/index.html)** - for economical, efficient, reliable and independent local data storage for the application.
+* **[Pip3](https://packaging.python.org/key_projects/#pip)** - the most popular package installer for Python.
+* **[PostgreSQL](https://www.postgresql.org/)** - powerful, reliable, open source object-relational database system.
 
-* **[AWS S3]()** - 
+* **[AWS S3](https://aws.amazon.com/s3/?c=s&sec=srv)** - an object storage service, used to store and protect project's images and static files.
 
 
-- [x] **Deployment**
+- [x] **IDE and Deployment**
 * **Git** - used to keep track of the changes made to the repository and for version control.
 * **Gitpod** - I used CI full template as an IDE to develop, commit and push files to GitHub. 
 * **GitHub** - used as a hosting service and for future collaborations.
