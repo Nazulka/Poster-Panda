@@ -77,10 +77,16 @@ ___
 
 ### Surface
 
-* #### Color Scheme
-* #### Typography
-* #### Imagery
+- [x] **Color Scheme**
+* [Coolors](https://coolors.co/) was used to creat the color palette for this project.
+* Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's and the buttons' color every time when a new collection is out, so it fully complements the scheme of the collection. 
+* Light grey and black were used for the rest of the elements to keep it simple and less cluttered as products' images can be quite colourful. 
 
+- [x] **Typography**
+* Google Fonts *Noto Sans* used accross the site for a harmonious look and feel.
+
+- [x] **Imagery**
+* All supporting images as well as products images are taken from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/). 
 
 
 ## Technologies Used
@@ -156,4 +162,4 @@ ___
 * Thanks to the wonderful Slack community for their time and sharing their knowledge!
 * A big thank you to my family and friends for their enormous support!
 
-[:top_arrow:](#poster-panda)
+:top: [](#poster-panda)
