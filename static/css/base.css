@@ -5,6 +5,8 @@ html {
 body {
     font-family: 'Noto Sans', sans-serif;
     height: calc(100vh - 164px);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .container-fluid {
     padding: 0;
@@ -302,11 +304,16 @@ input[name='q']::placeholder {
     padding: 1rem;
     margin: 0;
     text-align: center;
-    background-color: grey;
+    background-color: #d6d6d6;
 }
-
+.footer-copyright {
+    background-color: #a3a3a3;
+}
+.footer-about {
+    line-height: 1.7rem;
+}
 .footer-container {
-    height: 4rem;
+    height: auto;
 }
 
 /* Large (lg) devices (desktops) */

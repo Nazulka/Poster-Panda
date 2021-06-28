@@ -67,7 +67,7 @@
             </div>
             <div class="col-12 col-md-4 header-center text-center my-auto">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 id="logo" class="logo-font font-weight-bolder">Poster Panda</h2>
+                    <h2 id="logo" class="logo-font">Poster Panda</h2>
                 </a>
             </div>
             <div class="col-12 col-md-4 header-right text-right mx-auto">
@@ -152,9 +152,9 @@
     {% block page_header %}
     {% endblock %}
     
-    <section class="footer">
+    <footer>
         {% include 'includes/footer.html' %}
-    </section>
+    </footer>
 
     {% block content %}
     {% endblock %}
