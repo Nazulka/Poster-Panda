@@ -152,12 +152,16 @@
     {% block page_header %}
     {% endblock %}
     
+
+    {% block content %}
+    {% endblock %}
+
+    
     <footer>
         {% include 'includes/footer.html' %}
     </footer>
 
-    {% block content %}
-    {% endblock %}
+    
 
     {% block postloadjs %}
     <script type="text/javascript">

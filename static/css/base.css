@@ -153,6 +153,57 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
+
+/*-- Footer --*/
+#footer {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #ebebeb;
+
+}
+
+.footer-copyright {
+    min-width: 100%;
+    background-color: #d6d6d6;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+}
+
+.footer-about {
+    line-height: 1.7rem;
+}
+
+.fa-facebook {
+    color: #3b5998;
+} 
+.fa-twitter {
+    color: #00aced;
+}
+.fa-instagram {
+    color: #517fa4;
+}
+.fa-pinterest {
+    color: #cb2027;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-pinterest:hover {
+    color: #d5d5d5d;
+    transition: 0.3s;
+    transform: translateY(-4px);
+}
+
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
@@ -218,6 +269,12 @@ input[name='q']::placeholder {
 #cardCarousel {
     height: 300px;
 }
+
+
+
+
+
+
 /*---------------- Media Queries -----------------*/
 
 /* Extra (xl) large devices (large desktops)*/ 
@@ -293,44 +350,6 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
-
-/*-- Footer --*/
-#footer {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    background-color: #ebebeb;
-
-}
-.footer-copyright {
-    min-width: 100%;
-    background-color: #d6d6d6;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
-}
-.footer-about {
-    line-height: 1.7rem;
-}
-.footer-container {
-    height: auto;
-}
-.social-icon {
-    color: #474747;
-    
-}
-a i.social-icon:hover {
-    cursor: pointer;
-    color: red;
-    transition: 0.3s;
-    transform: translateY(-4px);
-}
 
 /* Large (lg) devices (desktops) */
 
