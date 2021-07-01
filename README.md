@@ -6,7 +6,7 @@ ___
 
 At Poster Panda, we are passionate about interior decoration and design. We offer wide range of stylish high quality posters along with frames and have something to suit every wall. Express yourself by creating a personalized wall of posters! Inspire others and have fun!
 
-### :point_right: [Live demo]()
+### :panda_face: [Live demo]()
 
 
 ## Table of Contents
