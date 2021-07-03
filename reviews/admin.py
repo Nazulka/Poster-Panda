@@ -10,8 +10,10 @@ class ProductReviewAdmin(admin.ModelAdmin):
         'headline',
         'comments',
         'rating',
-        'date_posted'
+        'date_posted',
     )
+
+    ordering = ('date_posted',)
 
 
 admin.site.register(ProductReview, ProductReviewAdmin)
