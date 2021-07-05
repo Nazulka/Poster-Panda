@@ -16,12 +16,11 @@ class AddReviewForm(forms.ModelForm):
         """
         Add placeholders for form input fields
         """
-
         placeholders = {
             'headline': 'I would buy this product again',
             'comments': 'Things are great about this product and things not so great about it.',
-            
         }
+        
         self.fields['headline'].widget.attrs['autofocus'] = True
         self.fields['comments'].widget.attrs['rows'] = 5
         

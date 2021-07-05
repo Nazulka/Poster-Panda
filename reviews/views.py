@@ -29,15 +29,18 @@ from profiles.models import UserProfile
 @login_required
 def add_review(request, product_id):
     """ Add a review to the product """
-  
+
+    product = get_object_or_404(Product, pk=product_id)
+
     if request.method == 'POST':
         review_form = AddReviewForm(
             user=request.user,
-            product_name=request.POST.get('product_name'),
+            product=request.POST.get('product'),
             review_rating=request.POST('review_rating'),
             review_headline=request.POST.get('review_headline'),
             review_comments=request.POST.get('review_comments'),
         )
+
 
         review_form.save()
         messages.success(request, 'Successfully added review!')
@@ -45,7 +48,7 @@ def add_review(request, product_id):
         return redirect(reverse('product_detail', args=[product.id]))
     
     context = {
-        'review_form': review_form
+        'form': AddReviewForm
     }
 
     return render(request, 'reviews/add_review.html', context)
