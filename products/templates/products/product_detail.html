@@ -102,11 +102,13 @@
             </div>
         </div>
         <hr class="w-50 mb-1">
-        {% include 'reviews/includes/reviews.html %}
-    </div>    
+    </div>
+    <!-- Product reviews -->
+    <div class="row text-center">
+        {% include 'reviews/includes/reviews.html' %}
+    </div>
 </div>
-
-    {% endblock %}
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}

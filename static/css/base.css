@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    height: calc(100vh - 164px);
+    /* height: calc(100vh - 164px); */
     overflow-x: hidden;
     overflow-y: auto;
 }

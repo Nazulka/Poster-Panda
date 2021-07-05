@@ -7,7 +7,7 @@ class AddReviewForm(forms.ModelForm):
     class Meta:
         model = ProductReview
         exclude = ('user', 'product', 'date_posted')
-        fields = ('headline', 'comments', 'rating')
+        fields = ['headline', 'comments', 'rating']
         labels = {
             'rating': 'Rating',
         }

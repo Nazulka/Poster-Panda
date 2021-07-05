@@ -1,49 +1,51 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
 
 from .models import ProductReview
 from .forms import AddReviewForm
+from products.models import Product
+from profiles.models import UserProfile
 
 
 # Create your views here.
-def product_reviews(request):
-    """ A view to show all reviews for the product """
+# def product_reviews(request):
+#     """ A view to show all reviews for the product """
 
-    product_reviews = ProductReview.objects.all().order_by('-date_posted')
+#     product_reviews = ProductReview.objects.all().order_by('-date_posted')
 
-    if request.GET:
+#     if request.GET:
 
-        template = 'reviews/reviews.html'
+#         template = 'reviews/reviews.html'
         
-    context = {
-        'product_reviews': product_reviews,
-    }
+#     context = {
+#         'product_reviews': product_reviews,
+#     }
 
-    return render(request, template, context)
+#     return render(request, template, context)
 
 
 @login_required
-def add_review(request):
-
+def add_review(request, product_id):
     """ Add a review to the product """
-
+  
     if request.method == 'POST':
-        form = AddReviewForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
-            messages.success(request, 'Successfully added review!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Invalid form. Failed to add review.')
-    else:
-        form = AddReviewForm()
+        review_form = AddReviewForm(
+            user=request.user,
+            product_name=request.POST.get('product_name'),
+            review_rating=request.POST('review_rating'),
+            review_headline=request.POST.get('review_headline'),
+            review_comments=request.POST.get('review_comments'),
+        )
+
+        review_form.save()
+        messages.success(request, 'Successfully added review!')
         
-    template = 'reviews/add_reviews.html'
+        return redirect(reverse('product_detail', args=[product.id]))
+    
     context = {
-        'form': form,
+        'review_form': review_form
     }
 
-    return render(request, template, context)
-
-
+    return render(request, 'reviews/add_review.html', context)

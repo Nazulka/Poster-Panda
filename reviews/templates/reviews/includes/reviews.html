@@ -1,29 +1,27 @@
 <!-- Product reviews -->
-<div class="row">
-    <div class="col-10 col-md-6">
-        <h3 class="text-center subtitle logo-font m-4 p-3">Reviews</h3>
-        <div class="col-8 offset-sm-2 col-md-6 offset-md=3">
-            {% for review in product.reviews.all %}
-            <div class="review-notification">
-                <h5 class="text-center">{{ review.headline }}</h5>
-                Rating: {{ review.rating }}
-                {{ review.comments }}
-                <hr>
-                <p class="text-right text-muted">{{ review.user }}</p>
-                <p class="text-right text-muted">{{ review.date_posted }}</p>
-            </div>
-            {% empty %}
-            <div class="review-notification">
-                No reviews yet.
-            </div>
-            {% endfor%}
-        </div>
+<div class="col-10 col-md-6">
+    <h3 class="text-center subtitle logo-font m-4 p-3">Reviews</h3>
+    <div class="col-8 offset-sm-2 col-md-6 offset-md=3">
+        {% for review in product.reviews.all %}
         <div class="review-notification">
-            {% if request.user.is_authenticated %}
-            <div class="text-center">
-                <a class="btn btn-black rounded-0" href="{% url 'add_review' %}">Add A Review</a>
-            </div>
-            {% endif %}
+            <h5 class="text-center">{{ review.headline }}</h5>
+            Rating: {{ review.rating }}
+            {{ review.comments }}
+            <hr>
+            <p class="text-right text-muted">{{ review.user }}</p>
+            <p class="text-right text-muted">{{ review.date_posted }}</p>
         </div>
+        {% empty %}
+        <div class="review-notification">
+            No reviews yet.
+        </div>
+        {% endfor%}
+    </div>
+    <div class="review-notification">
+        {% if request.user.is_authenticated %}
+        <div class="text-center">
+            <a class="btn btn-black rounded-0 mt-5" href="{% url 'add_review' %}">Add A Review</a>
+        </div>
+        {% endif %}
     </div>
 </div>
