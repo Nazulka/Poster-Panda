@@ -11,7 +11,11 @@ def product_reviews(request):
     """ A view to show all reviews for the product """
 
     product_reviews = ProductReview.objects.all().order_by('-date_posted')
-    template = 'reviews/includes/reviews.html'
+
+    if request.GET:
+
+        template = 'reviews/reviews.html'
+        
     context = {
         'product_reviews': product_reviews,
     }
@@ -31,7 +35,7 @@ def add_review(request):
             messages.success(request, 'Successfully added review!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+            messages.error(request, 'Invalid form. Failed to add review.')
     else:
         form = AddReviewForm()
         
