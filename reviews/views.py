@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Avg
 
 from .models import ProductReview
 from .forms import AddReviewForm
@@ -31,24 +30,31 @@ def add_review(request, product_id):
     """ Add a review to the product """
 
     product = get_object_or_404(Product, pk=product_id)
+    user = UserProfile.objects.get(user=request.user)
 
     if request.method == 'POST':
-        review_form = AddReviewForm(
-            user=request.user,
-            product=request.POST.get('product'),
-            review_rating=request.POST('review_rating'),
-            review_headline=request.POST.get('review_headline'),
-            review_comments=request.POST.get('review_comments'),
-        )
-
-
-        review_form.save()
-        messages.success(request, 'Successfully added review!')
-        
-        return redirect(reverse('product_detail', args=[product.id]))
-    
+        review_form = AddReviewForm(request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.user = user
+            review.product = product
+            # review.rating = request.POST('review_rating'),
+            # review.headline = request.POST.get('review_headline'),
+            # review.comments = request.POST.get('review_comments'),
+            review.save()
+            messages.success(request, 'Successfully added review!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, "Ensure the form is valid. \
+                                Please try again!")
+   
+    else:
+        review_form = AddReviewForm(instance=product)
+      
     context = {
-        'form': AddReviewForm
+        'review_form': review_form,
+        'product': product
     }
+    template = 'reviews/add_review.html'
 
-    return render(request, 'reviews/add_review.html', context)
+    return render(request, template, context)
