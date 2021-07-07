@@ -92,3 +92,12 @@ def edit_review(request, review_id):
 @login_required
 def delete_review(request, review_id):
     """ Delete user's existing review """
+
+    if request.user != review.user:
+        messages.error(request, 'Sorry, only the reviewer can do that.')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(ProductReview, pk=review_id)
+    review.delete()
+    messages.success(request, 'Successfully deleted review!')
+    return redirect(reverse('products'))
