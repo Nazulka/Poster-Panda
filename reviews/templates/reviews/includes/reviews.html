@@ -1,9 +1,9 @@
 <!-- Product reviews -->
 <div class="row">
     <div class="col-10 offset-sm-1 col-md-6 offset-md-3">
-        <h3 class="text-center subtitle logo-font m-4 p-3">Reviews</h3>
+        <h3 class="text-center subtitle logo-font m-4 p-3">Reviews {{ rating }}</h3>
         <div class="row">
-            {% for review in product.reviews.all %}
+            {% for review in reviews %}
                 <div class="review-notification">
                     <h5 class="text-center">{{ review.headline }}</h5>
                     <h6>Rating: {{ review.rating }} / 5<i class="far fa-star"></i></h6>

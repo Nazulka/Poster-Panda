@@ -31,16 +31,16 @@ def add_review(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = UserProfile.objects.get(user=request.user)
-
+    review = ProductReview.objects.create(product=product, user=user,
+                                            rating=rating,
+                                            headline=headline,
+                                            comments=comments)
     if request.method == 'POST':
         review_form = AddReviewForm(request.POST)
         if review_form.is_valid():
             review = review_form.save(commit=False)
             review.user = user
             review.product = product
-            # review.rating = request.POST('review_rating'),
-            # review.headline = request.POST.get('review_headline'),
-            # review.comments = request.POST.get('review_comments'),
             review.save()
             messages.success(request, 'Successfully added review!')
             return redirect(reverse('product_detail', args=[product.id]))

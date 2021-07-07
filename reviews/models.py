@@ -8,11 +8,11 @@ from products.models import Product
 class ProductReview(models.Model):
 
     RATING_CHOICES = [
-    (1, 'Poor'),
-    (2, 'Average'),
-    (3, 'Good'),
-    (4, 'Very Good'),
-    (5, 'Excellent')
+        (1, 'Poor'),
+        (2, 'Average'),
+        (3, 'Good'),
+        (4, 'Very Good'),
+        (5, 'Excellent')
     ]
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
