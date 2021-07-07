@@ -12,16 +12,12 @@ from profiles.models import UserProfile
 def product_reviews(request):
     """ A view to show all reviews for the product """
 
-    product_reviews = ProductReview.objects.all().order_by('-date_posted')
-
+    reviews = ProductReview.objects.all().order_by('-date_posted')
     if request.GET:
-
         template = 'reviews/reviews.html'
-        
     context = {
-        'product_reviews': product_reviews,
+        'reviews': reviews,
     }
-
     return render(request, template, context)
 
 
@@ -31,7 +27,6 @@ def add_review(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = UserProfile.objects.get(user=request.user)
-    # review = ProductReview.objects.create(product=product, user=user)
     if request.method == 'POST':
         review_form = AddReviewForm(request.POST)
         if review_form.is_valid():
