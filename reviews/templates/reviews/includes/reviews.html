@@ -12,6 +12,12 @@
                     <p class="text-right text-muted">{{ review.user }}</p>
                     <p class="text-right text-muted">{{ review.date_posted }}</p>
                 </div>
+                {% if user.is_authenticated and user.get_username == review.user.user.username %}
+                <div class="m-3">
+                    <a href="{% url 'edit_review' review.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                </div>
+                {% endif %}
             {% empty %}
                 <div class="review-notification">
                     No reviews for this product yet.
