@@ -27,7 +27,7 @@ from profiles.models import UserProfile
 
 @login_required
 def add_review(request, product_id):
-    """ Add a review to the product """
+    """ Add a product review """
 
     product = get_object_or_404(Product, pk=product_id)
     user = UserProfile.objects.get(user=request.user)
@@ -53,8 +53,42 @@ def add_review(request, product_id):
       
     context = {
         'review_form': review_form,
-        'product': product
+        'product': product,
     }
     template = 'reviews/add_review.html'
 
     return render(request, template, context)
+
+
+@login_required
+def edit_review(request, review_id):
+    """ Save edited product review """
+
+    review = get_object_or_404(ProductReview, pk=review_id)
+    if request.user == review.user:
+        if request.method == 'POST':
+            review_form = AddReviewForm(request.POST, instance=review)
+            if review_form.is_valid():
+                review_form.save()
+                messages.success(request, 'Successfully updated review!')
+                return redirect(reverse('product_detail', args=[review.id]))
+            else:
+                messages.error(request, 'Failed to update the review. \
+                                        Please ensure the form is valid.')
+        else:
+            review_form = AddReviewForm(instance=review)
+        
+        template = 'reviews/edit_review.html',
+        context = {
+            'review_form': review_form,
+            'review': review,
+        }
+        return render(request, template, context)
+    else:
+        messages.error(request, 'Sorry, only the reviewer can edit this review!')
+        return redirect(reverse('product_detail', args=[review.product.id]))
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete user's existing review """
