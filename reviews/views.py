@@ -9,20 +9,20 @@ from profiles.models import UserProfile
 
 
 # Create your views here.
-# def product_reviews(request):
-#     """ A view to show all reviews for the product """
+def product_reviews(request):
+    """ A view to show all reviews for the product """
 
-#     product_reviews = ProductReview.objects.all().order_by('-date_posted')
+    product_reviews = ProductReview.objects.all().order_by('-date_posted')
 
-#     if request.GET:
+    if request.GET:
 
-#         template = 'reviews/reviews.html'
+        template = 'reviews/reviews.html'
         
-#     context = {
-#         'product_reviews': product_reviews,
-#     }
+    context = {
+        'product_reviews': product_reviews,
+    }
 
-#     return render(request, template, context)
+    return render(request, template, context)
 
 
 @login_required
@@ -31,10 +31,7 @@ def add_review(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = UserProfile.objects.get(user=request.user)
-    review = ProductReview.objects.create(product=product, user=user,
-                                            rating=rating,
-                                            headline=headline,
-                                            comments=comments)
+    # review = ProductReview.objects.create(product=product, user=user)
     if request.method == 'POST':
         review_form = AddReviewForm(request.POST)
         if review_form.is_valid():
@@ -93,11 +90,11 @@ def edit_review(request, review_id):
 def delete_review(request, review_id):
     """ Delete user's existing review """
 
+    review = get_object_or_404(ProductReview, pk=review_id)
     if request.user != review.user:
         messages.error(request, 'Sorry, only the reviewer can do that.')
-        return redirect(reverse('home'))
-
-    review = get_object_or_404(ProductReview, pk=review_id)
+        return redirect(reverse('products'))
+   
     review.delete()
     messages.success(request, 'Successfully deleted review!')
     return redirect(reverse('products'))
