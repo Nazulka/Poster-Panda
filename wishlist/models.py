@@ -1,6 +1,6 @@
 from django.db import models
 
-from django.contrib.auth.models import User
+from profiles.models import UserProfile
 from products.models import Product
 
 
@@ -8,24 +8,24 @@ class Wishlist(models.Model):
 
     """ Model for maintaining a wishlist """
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    product = models.ManyToManyField(
-        Product,
-        through="WishListItem",
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name="product_wishlists")
+    user = models.ForeignKey(UserProfile, null=False, blank=False,
+                             on_delete=models.CASCADE,
+                             related_name='wishlist')
+    products = models.ManyToManyField(Product, through='WishlistItem')
     
     def __str__(self):
-        return self.products
+        return f'Wishlist ({self.user})'
 
 
-class WishListItem(models.Model):
+class WishlistItem(models.Model):
 
     """ The 'through' model that creates link between products and wishlist."""
-    product = models.ForeignKey(Product, on_delete=models.SET_NULL)
-    wishlist = models.ForeignKey(Wishlist, on_delete=models.SET_NULL)
+    product = models.ForeignKey(Product, null=False, blank=False,
+                                on_delete=models.CASCADE,
+                                related_name='wishlist_products')
+    wishlist = models.ForeignKey(Wishlist, null=False, blank=False,
+                                 on_delete=models.CASCADE,
+                                 related_name='wishlist_items')
 
     def __str__(self):
-        return self.product
+        return self.product.name
