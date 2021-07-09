@@ -3,7 +3,6 @@ from django.db import models
 from profiles.models import UserProfile
 from products.models import Product
 
-# Create your models here.
 
 class ProductReview(models.Model):
 

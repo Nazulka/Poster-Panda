@@ -1,10 +1,11 @@
 <!-- Product reviews -->
 <div class="row">
     <div class="col-10 offset-sm-1 col-md-6 offset-md-3">
-        <h3 class="text-center subtitle logo-font m-4 p-3">Reviews</h3>
+        <h3 class="text-center subtitle logo-font m-2 p-3">Reviews</h3>
         <hr>
         {% if reviews %}
-            <h4>Reviewed by {{ reviews.count}} </h4>
+            <h4>Reviewed by {{ reviews.count}} customers</h4>
+            <hr>
             <div class="row">
                 {% for review in reviews %}
                 <div class="col-12">
@@ -12,25 +13,27 @@
                         <h5 class="text-center"><i class="far fa-star"></i>{{ review.rating }} / 5 {{ review.headline }}
                         </h5>
                         {{ review.comments }}
-                        <hr>
-                        <p class="text-right text-muted">Submitted {{ review.date_posted|date:"Y-m-d" }}</p>
-                        <p class="text-right text-muted">By {{ review.user }}</p>
+                        
+                        <p class="text-right text-muted">Submitted
+                            <strong>{{ review.date_posted|date:"d-M-y" }}</strong></p>
+                        <p class="text-right text-muted">By <strong>{{ review.user }}</strong></p>
                     </div>
-                    {% if request.user.is_authenticated and request.user == review.user %}
-                    <div class="m-3">
+                    {% if request.user == review.user or request.user.is_superuser %}
+                    <div class="text-right m-3">
                         <a href="{% url 'edit_review' review.id %}">Edit</a> |
                         <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
                     </div>
                     {% endif %}
+                    <hr>
                 </div>
                 {% endfor %}
             </div>
         {% else %}
             <div class="review-notification">
-                No reviews for this product yet.
+                Write the first review.
             </div>
+        {% endif %}
                 
-       
         <div class="review-notification">
             {% if request.user.is_authenticated %}
             <div class="text-center">
