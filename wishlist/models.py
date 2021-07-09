@@ -9,7 +9,7 @@ class Wishlist(models.Model):
     """ Model for maintaining a wishlist """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    products = models.ManyToManyField(
+    product = models.ManyToManyField(
         Product,
         through="WishListItem",
         null=True,

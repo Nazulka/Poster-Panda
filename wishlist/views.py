@@ -5,7 +5,18 @@ from products.models import Product
 from profiles.models import UserProfile
 
 
-def add_to_wishlist(request, id):
+def add_to_wishlist(request, product_id):
     """ A view to add products to the wishlist """
 
-    product = 
+    product = get_object_or_404(Product, pk=product_id)
+
+    if product.user_wishlist.filter(id=request.user.id).exists():
+        product.user_wishlist.remove(request.user)
+        messages.success(request, 'Successfully removed the item from \
+                         the wishlist!')
+    else:
+        product.user_wishlist.add(request.user)
+        messages.success(request, 'Successfully added the item from \
+                         the wishlist! ')
+    return redirect(reverse('product_detail', args=[product.id]))
+
