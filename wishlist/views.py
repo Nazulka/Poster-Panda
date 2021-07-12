@@ -6,7 +6,7 @@ from profiles.models import UserProfile
 
 
 def add_to_wishlist(request, product_id):
-    """ A view to add products to the wishlist """
+    """ A view to add products to the wishlist and remove from it"""
 
     product = get_object_or_404(Product, pk=product_id)
 

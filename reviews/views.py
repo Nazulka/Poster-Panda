@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Avg
 from .models import ProductReview
 from .forms import AddReviewForm
+
 from products.models import Product
 from profiles.models import UserProfile
 
@@ -43,13 +44,13 @@ def add_review(request, product_id):
    
     else:
         review_form = AddReviewForm(instance=product)
-      
+
+    template = 'reviews/add_review.html' 
     context = {
         'review_form': review_form,
         'product': product,
     }
-    template = 'reviews/add_review.html'
-
+    
     return render(request, template, context)
 
 

@@ -11,6 +11,7 @@ body {
     padding: 0;
     margin: 0;
 }
+
 #topnav {
     background: #fff;
 }
@@ -37,6 +38,10 @@ body {
     height: 500px;
     width: 100%;
 }
+.wishlist-link {
+    text-decoration: none;
+}
+
 .shop-now-button,
 .btn-black {
     background: black;
