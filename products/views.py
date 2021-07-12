@@ -6,6 +6,8 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from reviews.models import ProductReview
+from wishlist.models import Wishlist, WishlistItem
+
 from .forms import ProductForm
 
 

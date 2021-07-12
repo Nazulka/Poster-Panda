@@ -1,12 +1,12 @@
     <li class="list-inline-item d-lg-none">
-        <div class="header-center">
+        <div class="text-center">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 id="logo-mobile" class="logo-font text-center mx-auto">Poster Panda</h2>
+                <h2 id="logo-mobile" class="logo-font text-center ml-5">Poster Panda</h2>
             </a>
         </div>
     </li>
-    <li class="list-inline-item">
-        <a class="text-black nav-link nav-link-left pl-1 d-inline-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+    <li class="list-inline-item pr-0">
+        <a class="text-black nav-link nav-link-left d-inline-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-search"></i></div>
@@ -17,7 +17,7 @@
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
                         placeholder="Search our site">
-                    <div class="input-group-append">
+                    <div class="input-group-append text-center">
                         <button class="form-control btn border border-black rounded-0"
                             type="submit">
                             <span class="icon">
@@ -30,19 +30,13 @@
         </div>
         <a href=""
             class="nav-link wishlist-link text-black d-inline-block my-auto d-lg-none pl-1">
-            <div><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+            <div class="text-center"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
         </a>
-        <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-inline-block d-lg-none pl-1 mr-1"
+        <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-inline-block d-lg-none pl-1 pr-0"
             href="{% url 'view_bag' %}">
             <div class="text-center">
                 <i class="fa fa-shopping-cart"></i>
-                <!-- <p class="my-0">
-                    {% if grand_total %}
-                    £{{ grand_total|floatformat:2 }}
-                    {% else %}
-                    £0.00
-                    {% endif %}
-                </p> -->
+                <span class="badge badge-pill badge-danger">{{ request.session.products|length }}</span>
             </div>
         </a>
     </li>
