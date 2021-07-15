@@ -68,11 +68,11 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
-    # wishlist = WishlistItem.objects.filter(product=product)
+    wishlist = WishlistItem.objects.filter(product=product)
     context = {
         'product': product,
         'reviews': reviews,
-        # 'wishlist': wishlist,
+        'wishlist': wishlist,
     }
     template = 'products/product_detail.html'
     

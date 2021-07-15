@@ -13,8 +13,8 @@ def add_to_wishlist(request, product_id):
     user = UserProfile.objects.get(user=request.user)
     product = get_object_or_404(Product, pk=product_id)
     wishlist = Wishlist.objects.all()
-    # wishlists = user.wishlist.all()
-  
+    #wishlists = user.wishlist.all()
+    
     if request.method == 'POST':
 
         if wishlist.product.filter(pk=request.user.id).exists():
@@ -27,7 +27,6 @@ def add_to_wishlist(request, product_id):
             messages.success(request, 'Successfully added the item to the \
                              wishlist! ')
                              
-    print(f"WISHLIST: {wishlist}")
     template = 'wishlist/wishlist.html'
     context = {
         'product': product,

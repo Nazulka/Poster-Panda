@@ -29,23 +29,29 @@ def add_review(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = UserProfile.objects.get(user=request.user)
+    user_review = ProductReview.objects.filter(product=product, user=user)
+    review_form = AddReviewForm(request.POST)
+
     if request.method == 'POST':
-        review_form = AddReviewForm(request.POST)
-        if review_form.is_valid():
-            review = review_form.save(commit=False)
-            review.user = user
-            review.product = product
-            review.save()
-            messages.success(request, 'Successfully added review!')
-            return redirect(reverse('product_detail', args=[product.id]))
+        if user_review:
+            messages.error(request, "You have reviewed this product already.")
+
         else:
-            messages.error(request, "Ensure the form is valid. \
-                                Please try again!")
-   
+            if review_form.is_valid():
+                review = review_form.save(commit=False)
+                review.user = user
+                review.product = product
+                review.save()
+                messages.success(request, 'Successfully added review!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, "Ensure the form is valid. \
+                                    Please try again!")
+    
     else:
         review_form = AddReviewForm(instance=product)
 
-    template = 'reviews/add_review.html' 
+    template = 'reviews/add_review.html'
     context = {
         'review_form': review_form,
         'product': product,
@@ -59,7 +65,7 @@ def edit_review(request, review_id):
     """ Save edited product review """
 
     review = get_object_or_404(ProductReview, pk=review_id)
-    if request.user == review.user:
+    if request.user.is_superuser or request.user == review.user:
         if request.method == 'POST':
             review_form = AddReviewForm(request.POST, instance=review)
             if review_form.is_valid():
@@ -88,7 +94,7 @@ def delete_review(request, review_id):
     """ Delete user's existing review """
 
     review = get_object_or_404(ProductReview, pk=review_id)
-    if request.user != review.user:
+    if not request.user.is_superuser or request.user == review.user:
         messages.error(request, 'Sorry, only the reviewer can do that.')
         return redirect(reverse('products'))
    

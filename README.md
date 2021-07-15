@@ -149,9 +149,10 @@ ___
 The website consists of 7 apps: bag, checkout, home, products, profiles, reviews and wishlist. 
 
 ### Future Features
-- [x] Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
-- [x] Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
-- [x] Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
+-  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
+-  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
+-  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
+
 ## Information Architecture 
 
 ## Testing

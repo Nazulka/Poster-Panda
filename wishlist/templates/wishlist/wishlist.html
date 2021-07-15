@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">{{ user.username }}'s Wishlist</h2>
+            <h2 class="text-center logo-font mb-4">{{ user.username }}'s Wishlist</h2>
             <hr>
         </div>
     </div>
@@ -39,10 +39,11 @@
                         <tr>
                             <td class="p-3 w-25">
                                 {% if product.image %}
-                                <img class="img-fluid rounded" src="{{ product.image.url }}"
+                                <img class="img-fluid product-view-img rounded"
+                                    src="{{ product.image.url }}"
                                     alt="{{ product.name }}">
                                 {% else %}
-                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+                                <img class="img-fluid product-view-img rounded" src="{{ MEDIA_URL }}noimage.png"
                                     alt="{{ product.name }}">
                                 {% endif %}
                             </td>
@@ -54,7 +55,7 @@
                                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p> -->
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ product.price }}</p>
+                                <p class="my-0">£{{ product.price }}</p>
                             </td>
                             
                         </tr>
