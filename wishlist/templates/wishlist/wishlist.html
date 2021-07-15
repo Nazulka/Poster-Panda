@@ -29,7 +29,7 @@
                         <thead class="text-black">
                             <tr>
                                 <th scope="col">Product Info</th>
-                                <th scope="col"></th>
+                                <th scope="col">Details</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Qty</th>
                             </tr>
@@ -39,7 +39,7 @@
                         <tr>
                             <td class="p-3 w-25">
                                 {% if product.image %}
-                                <img class="img-fluid product-view-img rounded"
+                                <img class="img-fluid img-thumbnail"
                                     src="{{ product.image.url }}"
                                     alt="{{ product.name }}">
                                 {% else %}

@@ -207,6 +207,13 @@ input[name='q']::placeholder {
     transform: translateY(-4px);
 }
 
+/* --- Image Thu,bnail --*/
+.img-thumbnail {
+    height: 100px;
+    width: 70px !important;
+}
+
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
