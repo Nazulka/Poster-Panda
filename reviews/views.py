@@ -71,7 +71,7 @@ def edit_review(request, review_id):
             if review_form.is_valid():
                 review_form.save()
                 messages.success(request, 'Successfully updated review!')
-                return redirect(reverse('product_detail', args=[review.id]))
+                return redirect(reverse('product_detail', args=[review.product.id]))
             else:
                 messages.error(request, 'Failed to update the review. \
                                         Please ensure the form is valid.')
@@ -94,10 +94,10 @@ def delete_review(request, review_id):
     """ Delete user's existing review """
 
     review = get_object_or_404(ProductReview, pk=review_id)
-    if not request.user.is_superuser or request.user == review.user:
+    if request.user.is_superuser or request.user == review.user:
+        review.delete()
+        messages.success(request, 'Successfully deleted review!')
+        return redirect(reverse('products'))
+    else:
         messages.error(request, 'Sorry, only the reviewer can do that.')
         return redirect(reverse('products'))
-   
-    review.delete()
-    messages.success(request, 'Successfully deleted review!')
-    return redirect(reverse('products'))

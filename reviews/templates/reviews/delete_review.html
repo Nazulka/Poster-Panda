@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <p>Delete this review?</p>
-            <form method="POST" action="{% url 'delete_review' review.id %}" class="form mb-2"
+            <form method="POST" action="{% url 'delete_review' review.pk %}" class="form mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ review_form | crispy }}
