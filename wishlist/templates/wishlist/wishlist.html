@@ -16,26 +16,26 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="text-center logo-font mb-4">My Wishlist</h2>
+            <h2 class="text-center logo-font mb-4">My Wishlist {{ wishlist_products }}</h2>
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            {% if product %}
+            {% if wishlist_products %}
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
                             <tr>
-                                <th scope="col">{{ product.name }}</th>
+                                <th scope="col">Product Name</th>
                                 <th scope="col">Product Details</th>
                                 <th scope="col">Price</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
 
-                        {% for products in wishlist %}
+                        {% for products in wishlist_products %}
                         <tr>
                             <td class="p-3 w-25">
                                 {% if product.image %}
@@ -59,6 +59,7 @@
                                     <span class="icon">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                     </span>
+                                    <span class="text-uppercase">Add to bag</span>
                                 </a>
                             </td>
                         </tr>
