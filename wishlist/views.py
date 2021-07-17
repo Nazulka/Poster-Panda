@@ -9,47 +9,63 @@ from wishlist.models import Wishlist, WishlistItem
 
 
 @login_required
-def view_wishlist(request, product_id):
+def view_wishlist(request):
     # product = get_object_or_404(Product, pk=product_id)
-    wishlist_product = WishlistItem.objects.filter(product_id=product_id)
+   
+    user = UserProfile.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=user)
+    wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
 
-    if request.GET:
-        template = 'wishlist/wishlist.html'
+    print(list(wishlist_products))
 
     context = {
-        # 'wishlists': wishlists,
-        'wishlist_product': wishlist_product,
+        'wishlist_products': wishlist_products,
     }
-    return render(request, template, context)
+    return render(request, 'wishlist/wishlist.html', context)
 
 
 @login_required
 def add_to_wishlist(request, product_id):
     """ A view to add products to the wishlist and remove from it"""
 
-    user = UserProfile.objects.get(user=request.user)
-    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'GET':
+        # get the wishlist
+        user = UserProfile.objects.get(user=request.user)
+        wishlist = Wishlist.objects.get(user=user)
 
-    # wishlist_items = WishlistItem.objects.all(product=product, user=user)
+        # create a new wishlist item
+        product = get_object_or_404(Product, pk=product_id)
+        item = WishlistItem.objects.create(product=product, wishlist=wishlist)
+    
+    return redirect(reverse('view_wishlist'))
+    
 
-  
-    if request.method == 'POST':
-        wishlist_products = WishlistItem.objects.filter(product_id=product_id)
+# user = UserProfile.objects.get(user=request.user)
 
-        if wishlist_products.filter(pk=request.user).exists():
-            wishlist_products.remove(request.user)
-            
-            messages.success(request, 'Successfully removed the item from \
-                            the wishlist!')
-        else:
-            wishlist_product.add(request.user)
-            messages.success(request, 'Successfully added the item to the \
-                             wishlist!')
-                             
-    template = 'wishlist/wishlist.html'
-    context = {
-        'product': product,
-        'wishlist_products': wishlist_products,
-    }
+# product = get_object_or_404(Product, pk=product_id)
+# wishlist_products, created = Wishlist.objects.get_or_create(
+#     product=product,
+#     user=request.user)
 
-    return render(request, template, context)
+
+# if request.method == 'POST':
+#     # wishlist_products = WishlistItem.objects.filter(product=product)
+
+#     if product.wishlist_products.filter(user=request.user).exists():
+#         product.wishlist_products.remove(request.user)
+        
+#         messages.success(request, 'Successfully removed the item from \
+#                         the wishlist!')
+#     else:
+#         product.wishlist_products.add(request.user)
+#         messages.success(request, 'Successfully added the item to the \
+#                          wishlist!')
+                            
+# template = 'wishlist/wishlist.html'
+# context = {
+#     'product': product,
+#     'wishlist_products': wishlist_products,
+# }
+
+# return render(request, template, context)
+

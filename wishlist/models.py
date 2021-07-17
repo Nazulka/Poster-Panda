@@ -35,7 +35,7 @@ class WishlistItem(models.Model):
         return self.product.name
 
 
-@receiver(post_save, sender=User)
+@receiver(post_save, sender=UserProfile)
 def create_or_update_user_wishlist(sender, instance, created, **kwargs):
     """
     Create or update the user wishlist
@@ -43,4 +43,4 @@ def create_or_update_user_wishlist(sender, instance, created, **kwargs):
     if created:
         Wishlist.objects.create(user=instance)
     # Existing users: just save the wishlist
-    instance.userwishlist.save()
+    # instance.save()

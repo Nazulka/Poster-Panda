@@ -148,6 +148,18 @@ ___
 ### Implemented Features
 The website consists of 7 apps: bag, checkout, home, products, profiles, reviews and wishlist. 
 
+- [x] **Features available accross all pages**
+* **Navigation Bar**
+  * Responsive Navigation Bar was created using Bootstrap Navbar-extended class. It displays the website's logo on the left and on the right navigation links to the "Home", "Glossary", "Log In" and "Sign Up" Pages when the user is not logged in. 
+  * Brand Logo also serves as link to the Home Page, which is particularly convenient when accessing the site on smaller screen size devices. 
+  * On screen sizes below 992px navbar is hidden and slide out menu comes into effect, which collapses into a hamburger menu bar when closed. 
+
+
+
+
+
+
+
 ### Future Features
 -  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
 -  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 

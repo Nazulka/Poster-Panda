@@ -15,8 +15,7 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr>
-            <h2 class="text-center logo-font mb-4">My Wishlist {{ wishlist_products }}</h2>
+            <h2 class="text-center logo-font my-4">My Wishlist</h2>
             <hr>
         </div>
     </div>
@@ -35,26 +34,27 @@
                             </tr>
                         </thead>
 
-                        {% for products in wishlist_products %}
+                        {% for item in wishlist_products %}
                         <tr>
                             <td class="p-3 w-25">
-                                {% if product.image %}
+                                
+                                {% if item.product.image %}
                                 <img class="img-fluid img-thumbnail"
-                                    src="{{ product.image.url }}"
-                                    alt="{{ product.name }}">
+                                    src="{{ item.product.image.url }}"
+                                    alt="{{ item.product.name }}">
                                 {% else %}
                                 <img class="img-fluid product-view-img rounded" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="{{ product.name }}">
+                                    alt="{{ item.product.name }}">
                                 {% endif %}
                             </td>
                             <td class="py-3 w-25">
-                                <p class="my-0">{{ product.description }}</p>
+                                <p class="my-0">{{ item.product.description }}</p>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">£{{ product.price }}</p>
+                                <p class="my-0">£{{ item.product.price }}</p>
                             </td>
                             <td class="py-3">
-                                <a href="{% url 'product_detail' product.id %}"
+                                <a href=""
                                     class="btn btn-black rounded-0 text-uppercase mt-5" aria-disabled="true">
                                     <span class="icon">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -63,7 +63,6 @@
                                 </a>
                             </td>
                         </tr>
-                        <hr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="text-right">
