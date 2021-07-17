@@ -86,8 +86,11 @@ The database structure was created as a visual representation for logical unders
 
 
 ### Skeleton 
-- [x] **[Wireframes]()**
+- [x] **![Desktop/Tablet and Mobile Wireframes](readme_docs/ms-4-all-wireframes)**
 
+Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
+
+Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because of the time constraints.
 
 ### Surface
 
@@ -158,7 +161,7 @@ ___
 * **Toast Messages**
 * Django pop up toast messages displayed to keep the users informed.
 
-**App specific features**
+**Page specific features**
 - [x] **Home Page**
 * Contains a main jumbotron that features colorful and bright image to draw attention and call to action to shop the latest collection. Two additional jumbotrons also styled in similar fashion and invite users to shop. 
 * *Handpicked Favourites* section is added for extra interactivity and is a Bootstrap carousel that cycles through cards containing product images and details. 
@@ -209,7 +212,25 @@ Testing documentation can be found [HERE](TESTING.md)
 
 
 ## Deployment
-___
+---
+
+### Local Deployment
+
+- [x] **Requirements**
+* *Python3* to write the code and run the application
+* *PIP* to install packages
+* *Git* for version control
+* *GitPod* was used for this project 
+* *Stripe* as a secure payment processing platform.
+* *AWS* cloud storage and S3 to store and retrieve media and static files.
+
+- [x] **Project Creation**
+* This project was created using the CI recommended Gitpod Full Template.
+* Click on Use this template button and enter a short and memorable name of your choice for your repo and select Create repository from template.
+* Once created, click on green Gitpod button to open your new workspace.
+
+- [x] **Deployment to Heroku**
+* 
 
 
 ## Credits
