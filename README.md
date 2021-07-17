@@ -147,7 +147,7 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 ___
 ### Implemented Features
 
-**Features available accross all apps**
+**Features available accross all pages**
 * **Navigation Bar**
 * The website Header features navigation menu, website logo, search bar, My Bag, My Account and My Favourites links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
@@ -159,16 +159,16 @@ ___
 * Django pop up toast messages displayed to keep the users informed.
 
 **App specific features**
-- [x] **Home App**
+- [x] **Home Page**
 * Contains a main jumbotron that features colorful and bright image to draw attention and call to action to shop the latest collection. Two additional jumbotrons also styled in similar fashion and invite users to shop. 
 * *Handpicked Favourites* section is added for extra interactivity and is a Bootstrap carousel that cycles through cards containing product images and details. 
 * Responsive *Footer* is visible on Home Page and contains website motto, delivery information and social media icons. Icons are hoverable to let users know they are clickable and linked to the external websites and open in new tabs when clicked.
 * *Copyright* section is directly below the Footer and contains Copyright information.
 
-- [x] **Bag App**
+- [x] **Bag Page**
 * This feature allows users to add products to the bag and view the bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
 
-- [x] **Checkout App**
+- [x] **Checkout Page**
 * Contains a crispy form for user details and delivery address.
 * Order summary is displayed to keep users informed and contains products details, subtotal, delivery charges and total for the bag. 
 * Links provided to create an account for all new users or to log in for existing users to.
@@ -176,14 +176,24 @@ ___
 * Users can securely fill their credit card details into the form.
 * Checkout success page displays order details as well as sending it to the email provided. Users get notified via a toast message. 
 
-- [x] **Products App**
-* 
+- [x] **Products Page**
+* Products are displayed in a responsive grid layout and provide the best shopping experience no matter what device user is using to shop. 
+* Products display can be sorted alphabetically, by price and by category for the user's convenience. 
+* It features back to top button to allow users to get to the top of the page if there are a lot of products on the page.
+* When users click on a product that they are interested in it opens in a new Product detail page. This page contains a product image and details and allows users to select product size and quantity before adding the product to the bag. 
+* Product reviews and ratings for the selected product are displayed on the bottom of the page to give users chance to learn other customers feedback.
+* Logged in users are encouraged to leave their own reviews.
 
+- [x] **Profile Page**
+* This page is only available for registered users.
+* It allows users to save default delivery info for an easier checkout and update it if need be. 
+* Order History section contains all previous orders details. Users can click on individual order number to view full details.
 
-
-
-
-
+- [x] **Django allauth features**
+* *Register* - allows new users to create an account to access website's full features by filling out the registration form. A verifification email is sent to the email provided for confirmation. 
+* *Log In* - registered users can log in using their username and password. 
+* *Password reset* - a link to reset password is provided if users forgot their password.
+* *Logout* - a Sign Out button allows users to log out of the website for added security. 
 
 
 ### Future Features
