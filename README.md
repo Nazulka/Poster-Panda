@@ -169,6 +169,16 @@ ___
 * This feature allows users to add products to the bag and view the bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
 
 - [x] **Checkout App**
+* Contains a crispy form for user details and delivery address.
+* Order summary is displayed to keep users informed and contains products details, subtotal, delivery charges and total for the bag. 
+* Links provided to create an account for all new users or to log in for existing users to.
+* Logged in users can save their details for faster checkout next time. 
+* Users can securely fill their credit card details into the form.
+* Checkout success page displays order details as well as sending it to the email provided. Users get notified via a toast message. 
+
+- [x] **Products App**
+* 
+
 
 
 
