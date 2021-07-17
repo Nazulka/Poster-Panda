@@ -10,13 +10,10 @@ from wishlist.models import Wishlist, WishlistItem
 
 @login_required
 def view_wishlist(request):
-    # product = get_object_or_404(Product, pk=product_id)
    
     user = UserProfile.objects.get(user=request.user)
     wishlist = Wishlist.objects.get(user=user)
     wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
-
-    print(list(wishlist_products))
 
     context = {
         'wishlist_products': wishlist_products,
@@ -38,6 +35,34 @@ def add_to_wishlist(request, product_id):
         item = WishlistItem.objects.create(product=product, wishlist=wishlist)
     
     return redirect(reverse('view_wishlist'))
+    
+
+
+# @login_required
+# def add_to_wishlist(request, product_id):
+#     """ A view to add products to the wishlist and remove from it"""
+#     # get the wishlist
+#     user = UserProfile.objects.get(user=request.user)
+#     wishlist = Wishlist.objects.get(user=user)
+#     product = get_object_or_404(Product, pk=product_id)
+#     item = WishlistItem.objects.filter(product=product, wishlist=wishlist)
+
+
+#     if request.method == 'GET':
+#         if item:
+#             item = WishlistItem.objects.remove(product=product, wishlist=wishlist)
+#             messages.success(request, 'Removed from the wishlist!')
+
+#             print(item)
+
+#         else:
+#         # create a new wishlist item
+#             # product = get_object_or_404(Product, pk=product_id)
+#             item = WishlistItem.objects.add(product=product, wishlist=wishlist)
+#             messages.success(request, 'Successfully added to the wishlist!')
+
+    
+#     return redirect(reverse('view_wishlist'))
     
 
 # user = UserProfile.objects.get(user=request.user)

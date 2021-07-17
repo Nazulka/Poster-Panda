@@ -146,13 +146,19 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 ## Features
 ___
 ### Implemented Features
-The website consists of 7 apps: bag, checkout, home, products, profiles, reviews and wishlist. 
 
-- [x] **Features available accross all pages**
-* **Navigation Bar**
-  * Responsive Navigation Bar was created using Bootstrap Navbar-extended class. It displays the website's logo on the left and on the right navigation links to the "Home", "Glossary", "Log In" and "Sign Up" Pages when the user is not logged in. 
-  * Brand Logo also serves as link to the Home Page, which is particularly convenient when accessing the site on smaller screen size devices. 
-  * On screen sizes below 992px navbar is hidden and slide out menu comes into effect, which collapses into a hamburger menu bar when closed. 
+* **Header**
+* Header is available accross all pages and features navigation menu, website logo, search bar, My Bag, My Account and My Favourites links.    
+* Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
+* Bag and Account icons remain always visible to the user, and on large screens users also able to see bag total, to keep informed on how much they are spending. 
+* Brand Logo is centered and visible on all screen sizes and serves as a link to the Home Page, which is particularly convenient when accessing the site on smaller screen size devices. 
+* My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile, My Wishlist and Logout for authorised users and an additional Product Management link for an admin user.
+
+* **Footer**
+* Responsive Footer is visible on Home Page and contains website motto, delivery information and social media icons. Icons are hoverable to let users know they are clickable and linked to the external websites and open in new tabs when clicked.
+* Copyright section is directly below the Footer and contains Copyright information.
+
+* **
 
 
 
