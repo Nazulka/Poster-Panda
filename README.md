@@ -86,7 +86,7 @@ The database structure was created as a visual representation for logical unders
 
 
 ### Skeleton 
-- [x] **![Desktop/Tablet and Mobile Wireframes](readme_docs/ms-4-all-wireframes)**
+- [x] **[Desktop/Tablet and Mobile Wireframes](readme_docs/ms-4-all-wireframes)**
 
 Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
 
@@ -236,7 +236,7 @@ Testing documentation can be found [HERE](TESTING.md)
 ## Credits
 ___
 ### Code
-
+* 
 
 ### Content
 * The website was inspired by CI Project- Boutique Ado

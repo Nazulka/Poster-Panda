@@ -42,7 +42,7 @@ def add_review(request, product_id):
                 review.user = user
                 review.product = product
                 review.save()
-                messages.success(request, 'Successfully added review!')
+                messages.info(request, 'Thank you for your review!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, "Ensure the form is valid. \
@@ -70,7 +70,7 @@ def edit_review(request, review_id):
             review_form = AddReviewForm(request.POST, instance=review)
             if review_form.is_valid():
                 review_form.save()
-                messages.success(request, 'Successfully updated review!')
+                messages.info(request, 'Your review has been updated!')
                 return redirect(reverse('product_detail', args=[review.product.id]))
             else:
                 messages.error(request, 'Failed to update the review. \
@@ -96,7 +96,7 @@ def delete_review(request, review_id):
     review = get_object_or_404(ProductReview, pk=review_id)
     if request.user.is_superuser or request.user == review.user:
         review.delete()
-        messages.success(request, 'Successfully deleted review!')
+        messages.info(request, 'Your review has been deleted!')
         return redirect(reverse('products'))
     else:
         messages.error(request, 'Sorry, only the reviewer can do that.')

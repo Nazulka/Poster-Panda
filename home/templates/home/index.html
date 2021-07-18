@@ -16,7 +16,7 @@
     <!-- Hero Jumbotron -->
     <div class="container-fluid header-container">
         <div class="row">
-            <div class="col-10 offset-1">
+            <div class="col-md-8 offset-md-2">
                 <div id="jumbotron-hero" class="jumbotron jumbotron-fluid text-left text-white mt-3 mb-0">
                     <div class="container jumbotron-inner">
                         <h1 class="display-4">Staycation Collection!</h1>
@@ -31,7 +31,7 @@
     <!-- Card Jumbotron -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10 offset-1 px-0">
+            <div class="col-md-8 offset-md-2 px-0">
                 <div class="row mx-auto">
                     <div class="col-sm-6">
                         <div class="jumbotron jumbotron-fluid jumbotron-left text-center mr-auto mt-3 mx-auto">
@@ -55,11 +55,10 @@
 
 
     <!-- Card Carousel -->
-    <div class="container text-center my-3 mb-5">
+    <div class="container text-center my-5">
         <h2 class="logo-font">Handpicked Favourites</h2>
-        <div class="row mx-auto">
-            
-            <div id="cardCarousel" class="carousel slide w-100" data-ride="carousel">
+        <div class="row mx-auto mt-4">
+            <div id="cardCarousel" class="col-10 offset-1 carousel slide w-100" data-ride="carousel">
                 <div class="carousel-inner w-100" role="listbox">
                     {% for product in products %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
@@ -98,9 +97,10 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        {% include 'includes/footer.html' %}
-    </footer>
+    <div class="container-fluid">
+        <footer>
+            {% include 'includes/footer.html' %}
+        </footer>
+    </div>
 
 {% endblock %}
