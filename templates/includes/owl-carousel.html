@@ -8,20 +8,20 @@
     </div> -->
     {% for product in products %}
     <div class="mr-2 ml-2">
-        <div class="card my-2">
+        <div class="card carousel-card my-2">
             {% if product.image %}
             <a href="{% url 'product_detail' product.id %}">
-                <img class="card-img-top owl-lazy product-card img-fluid" src="{{ product.image.url }}"
+                <img class="card-img-top product-card img-fluid" src="{{ product.image.url }}"
                     alt="{{ product.name }}">
             </a>
             {% else %}
             <a href="{% url 'product_detail' product.id %}">
-                <img class="card-img-top owl-lazy product-card img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                <img class="card-img-top product-card img-fluid" src="{{ MEDIA_URL }}noimage.png"
                     alt="{{ product.name }}">
             </a>
             {% endif %}
             <div class="card card-body pb-0">
-                <h5 class="card-title text-left mb-0">{{ product.name }}</h5>
+                <h6 class="card-title text-left mb-0">{{ product.name }}</h6>
                 <p class="lead mt-3 mb-0 text-left font-weight-bold">£{{ product.price }}</p>
             </div>
         </div>
