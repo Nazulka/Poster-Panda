@@ -19,7 +19,13 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-
+    <!-- Owl Slider -->
+    <!-- <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% endblock %}
 
     {% block extra_css %}
@@ -38,6 +44,7 @@
     </script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
+    
     {% endblock %}
 
     {% block extra_js %}
@@ -174,10 +181,26 @@
     
 
     {% block postloadjs %}
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    {% endblock %}
+
+    {% block postload_js %}
     <script type="text/javascript">
-    $(document).ready(function(){
         $('.toast').toast('show');
-    });
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: false,
+            
+        });
     </script>
     {% endblock %}
 

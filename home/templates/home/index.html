@@ -52,10 +52,8 @@
             </div>
         </div>
     </div>
-
-
     <!-- Card Carousel -->
-    <div class="container text-center my-5">
+    <!-- <div class="container text-center my-5">
         <h2 class="logo-font">Handpicked Favourites</h2>
         <div class="row mx-auto mt-4">
             <div id="cardCarousel" class="col-10 offset-1 carousel slide w-100" data-ride="carousel">
@@ -96,11 +94,18 @@
                 </a>
             </div>
         </div>
+    </div> -->
+
+    <!-- Owl Card Slider -->
+    <div class="container text-center my-5">
+        <h2 class="logo-font">Handpicked Favourites</h2>
+            {% include 'includes/owl-carousel.html'%}
     </div>
     <div class="container-fluid">
         <footer>
             {% include 'includes/footer.html' %}
         </footer>
     </div>
-
 {% endblock %}
+
+

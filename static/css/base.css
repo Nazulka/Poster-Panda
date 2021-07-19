@@ -211,6 +211,16 @@ input[name='q']::placeholder {
     width: 100px !important;
 }
 
+/*-- Carousel-owl --*/
+.owl-theme {
+    width: 25%;
+    height: 170px;
+}
+
+
+
+
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
@@ -273,9 +283,6 @@ input[name='q']::placeholder {
 .img-bag {
     padding: 0.3rem;
     border: 1.5px solid black;
-}
-#cardCarousel {
-    height: 300px;
 }
 
 
