@@ -207,8 +207,8 @@ input[name='q']::placeholder {
 
 /* --- Image Thumbnail --*/
 .img-thumbnail {
-    height: 100px;
-    width: 70px !important;
+    height: 150px;
+    width: 100px !important;
 }
 
 
