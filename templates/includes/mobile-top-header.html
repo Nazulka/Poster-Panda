@@ -28,17 +28,22 @@
                 </div>
             </form>
         </div>
-        <!-- /*--my favourites url goes here --*/ -->
+        <!-- Wishlist -->
         <a href="{% url 'view_wishlist' %}"
             class="nav-link wishlist-link text-black d-inline-block my-auto d-lg-none pl-1">
-            <div class="text-center"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+            <div class="text-center">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                {% if wishlist_products %}
+                    <span class="badge badge-info">{{ wishlist_products|length }}</span>
+                {% endif %}
+            </div>
         </a>
         <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-inline-block d-lg-none pl-1 pr-0"
             href="{% url 'view_bag' %}">
             <div class="text-center">
                 <i class="fa fa-shopping-cart"></i>
                 {% if bag_items %}
-                <span class="badge badge-pill badge-danger">{{ product_count }}</span>
+                <span class="badge badge-danger">{{ product_count }}</span>
                 {% endif %}
             </div>
         </a>

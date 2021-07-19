@@ -48,7 +48,9 @@ body {
     color: white;
     /* min-width: 260px; */
 }
-
+.header-right {
+    padding: 0;
+}
 .product-btn {
     background: black;
     color: white;

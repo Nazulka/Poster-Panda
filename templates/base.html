@@ -68,10 +68,24 @@
                     <h2 id="logo" class="logo-font">Poster Panda</h2>
                 </a>
             </div>
-            <div class="col-12 col-md-4 header-right text-right mx-auto">
-                <ul class="list-inline list-unstyled text-center text-lg-right mr-md-1 my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+            <div class="col-12 col-md-4 d-inline-block header-right mx-auto">
+                <ul class="list-inline float-right list-unstyled text-center text-lg-right mr-md-1 my-0">
+                    <li class="list-inline-item d-inline-block">
+                        <a href="{% url 'view_wishlist' %}"
+                            class="nav-link wishlist-link text-black px-0">
+                            <div class="text-center">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                {% if wishlist_products %}
+                                <span class="badge badge-info">{{ wishlist_products|length }}</span>
+                                {% endif %}
+                                <p class="my-0">My Wishlist</p>
+                                
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item dropdown d-inline-block">
+                        <a class="nav-link dropdown-toggle px-0" role="button" href="#" id="user-options"
+                            data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="text-center text-black">
                                 <div><i class="fas fa-user fa-lg"></i></div>
@@ -84,7 +98,6 @@
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'view_wishlist' %}" class="dropdown-item">My Wishlist</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -92,8 +105,8 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'view_bag' %}">
+                    <li class="list-inline-item d-inline-block">
+                        <a class="text-black nav-link pl-0 pr-3" href="{% url 'view_bag' %}">
                             <div class="text-center pr-1">
                                 <div>
                                     <i class="fas fa-shopping-cart fa-lg"></i>
