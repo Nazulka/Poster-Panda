@@ -1,6 +1,6 @@
-/* html {
+html {
     height: 100%;
-} */
+}
 
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -157,10 +157,6 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/*-- Rating Stars --*/
-.checked {
-    color: red;
-}
 
 /*-- Footer --*/
 #footer {
@@ -207,7 +203,7 @@ input[name='q']::placeholder {
     transform: translateY(-4px);
 }
 
-/* --- Image Thu,bnail --*/
+/* --- Image Thumbnail --*/
 .img-thumbnail {
     height: 100px;
     width: 70px !important;

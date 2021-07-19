@@ -29,7 +29,7 @@
             </form>
         </div>
         <!-- /*--my favourites url goes here --*/ -->
-        <a href=""
+        <a href="{% url 'view_wishlist' %}"
             class="nav-link wishlist-link text-black d-inline-block my-auto d-lg-none pl-1">
             <div class="text-center"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
         </a>
@@ -37,7 +37,9 @@
             href="{% url 'view_bag' %}">
             <div class="text-center">
                 <i class="fa fa-shopping-cart"></i>
-                <span class="badge badge-pill badge-danger">{{ request.session.products|length }}</span>
+                {% if bag_items %}
+                <span class="badge badge-pill badge-danger">{{ product_count }}</span>
+                {% endif %}
             </div>
         </a>
     </li>
