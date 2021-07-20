@@ -1,5 +1,7 @@
+import random
 from django.shortcuts import render
 from products.models import Product
+
 
 # Create your views here.
 
@@ -7,10 +9,13 @@ from products.models import Product
 def index(request):
     """ A view to return the index page """
 
-    products = Product.objects.all()
+    # products = Product.objects.all()
+    pool = list(Product.objects.all())
+    random.shuffle(pool)
 
     context = {
-        'products': products,
+        # 'products': products,
+        'pool': pool,
     }
     template = 'home/index.html'
 

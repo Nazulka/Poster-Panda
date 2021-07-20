@@ -167,7 +167,7 @@ input[name='q']::placeholder {
     /* position: absolute; */
     bottom: 0;
     padding: 0;
-    margin-top: 25rem;
+    margin-top: 15rem;
     text-align: center;
     background-color: #ebebeb;
 
@@ -212,9 +212,7 @@ input[name='q']::placeholder {
 }
 
 /*-- Carousel-owl --*/
-.owl-theme {
-    /* width: 25%; */
-}
+
 .carousel-card {
     border-radius: 10px;
     border: none;
@@ -301,9 +299,6 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
-    /* .jumbotron-inner {
-        margin-top: 30%;
-    } */
 }
 
 .product-card {
@@ -407,7 +402,7 @@ input[name='q']::placeholder {
 /* Small (sm) devices (landscape phones) */
 @media (min-width: 576px) {
 .product-card {
-    height: 18rem;
+    height: 20rem;
     padding: 0.7rem;
     border: 2px solid black !important;
 }
@@ -422,7 +417,7 @@ input[name='q']::placeholder {
     .product-card {
         /* width: 100%; */
         height: auto;
-        max-height: 450px;
+        max-height: 16px;
         object-fit: cover;
         padding: 0.6rem;
         border: 1.5px solid black !important;

@@ -236,12 +236,15 @@ Testing documentation can be found [HERE](TESTING.md)
 ## Credits
 ___
 ### Code
+* John CI - for helping me to restore my worksapace.
+* Sean CI - for helping with the code to automatically create a wishlist for new users
 * 
 
 ### Content
 * The website was inspired by CI Project- Boutique Ado
 * The website design was inspired by [Desenio](https://desenio.co.uk/)
 * All images are taken from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
+* Some of the poster descriptions are from [Poster Store](https://posterstore.co.uk/)
 * Favicon icon is from [ICONS8](https://icons8.com/)
 
 ## Acknowledgements
