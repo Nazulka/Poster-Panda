@@ -46,10 +46,12 @@ ___
     * See the new collections and other featured favourites to be inspired and informed on latest trends.
     * Search products by name or description to quickly find the product that I need.
     * View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.
-    * Add the products that I like to the cart, select the quantity and view the total amount for the items in the cart to be able to see the costs before I decide to checkout. 
+    * View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the costs before I decide to checkout. 
     * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
 
 * #### As a **Registered / returning visitor** I want to be able to:
+    * Get a confirmation email upon successful registration.
+    * Easily reset the password if I forget it so I can recover access to my account.
     * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
     * View all items in the cart as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
     * Adjust the quantity of the products in the cart so I can make changes easily.
