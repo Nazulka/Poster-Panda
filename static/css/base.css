@@ -38,7 +38,7 @@ body {
     height: 500px;
     width: 100%;
 }
-.wishlist-link {
+.like {
     text-decoration: none;
 }
 
@@ -204,6 +204,13 @@ input[name='q']::placeholder {
     transition: 0.3s;
     transform: translateY(-4px);
 }
+/* .fa-heart {
+    font-size: 1.1rem;
+    color: #000;
+}
+.heart i.fa-heart {
+    color: #f44336;
+} */
 
 /* --- Image Thumbnail --*/
 .img-thumbnail {

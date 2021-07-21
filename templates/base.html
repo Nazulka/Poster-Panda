@@ -79,7 +79,7 @@
                 <ul class="list-inline float-right list-unstyled text-center text-lg-right mr-md-1 my-0">
                     <li class="list-inline-item d-inline-block">
                         <a href="{% url 'view_wishlist' %}"
-                            class="nav-link wishlist-link text-black px-0">
+                            class="nav-link like text-black px-0">
                             <div class="text-center">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 {% if wishlist_products %}
@@ -193,9 +193,15 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $(".toast").toast('show');
-        $('.toast').toast({
-            delay: 5000
-        })
+        // $('.toast').toast({
+        //     delay: 5000
+        // });
+
+        $(".like").click(function(){
+            $(this).toggleClass("heart");
+
+        });
+
         $(".owl-carousel").owlCarousel({
             loop: true,
             autoplay: true,
