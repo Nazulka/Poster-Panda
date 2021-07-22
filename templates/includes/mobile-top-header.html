@@ -1,7 +1,7 @@
     <li class="list-inline-item d-lg-none">
         <div class="text-center">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 id="logo-mobile" class="logo-font text-center ml-5">Poster Panda</h2>
+                <h4 id="logo-mobile" class="logo-font text-center">Poster Panda</h4>
             </a>
         </div>
     </li>
@@ -12,7 +12,7 @@
                 <div><i class="fas fa-search"></i></div>
             </div>
         </a>
-        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+        <div class="dropdown-menu border-0 w-100 p-1 rounded-0 my-0" aria-labelledby="mobile-search">
             <form class="form" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"

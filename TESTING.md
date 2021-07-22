@@ -42,18 +42,51 @@
 | Securely enter my card details when checking out. | Users are prompted to enter their card details on the *Checkout* page before completing the purchase. |
 | See an instant confirmation of the order on the site and receive an email confirming that the order has been placed successfully for proof of purchase and peace of mind. | Order confirmation is displayed when checkout is completed successfully and a copy is sent to the email provided by the user.|
 | Easily view my current order details and previous orders history, all saved in one place - my account.| On the *My Profile* page logged in users can view their Order History details.|
-| Leave reviews for the products to interract and provide feedback to the store, encourage them make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide.|
+| Leave reviews for the products to interract and provide feedback to the store, encourage them make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide.| Users can click on the *Add Review* button on the Product Detail page to leave their rating and review the product. |
+|Edit and delete my reviews if I change my mind or if they are no longer relevant. | Logged in users are provided with *Edit* and *Delete* links under their reviews.|
+| Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.| Logged In user can use *Add to Wishlist* feature to add their favourite items to the wishlist and view all products in *My Wishlist* page. |
+| Remove items that I am no longer interested in from my wishlist. | Items no longer wanted in the wishlist can easily be removed .....................|
 
 
-
-
-
-
+-[x] **Store owner / Superuser**
+| User Story | Testing | 
+|:-----------|:--------|
+| Add products to enable me to add new items to the store. | Superuser can access *Product Management* page when logged in to allow them to add new products to the site.|
+| Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.| Logged in Superuser is provided with *Edit* button under each product to allow them to make changes to the product.|
+| Delete products, if they are no longer available, to keep the stocks up to date.| Logged in Superuser is provided with a *Delete* button under each product, which they can use to remove a product/s from the store if need be. |
 
 
 
 ## Functionality Testing
 ---
+* **Navigation Bar**
+* The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a small and compact mobile navbar. 
+* The hamburger menu displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
+* *My Account* link can be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
+
+* The brand logo link is displayed on all screen sizes and was tested by clicking and is working correctly, as it takes users back to the Home page from anywhere on the site.
+* On large screens users can enter the word on the *Search* box displayed and on medium and smaller screens search bar dropdown is activated when the search button is clicked. It is accessible from all pages and correctly returns the all products that contain the seached key word in their name or description.
+* *My Wishlist* button takes unauthoresed users to the *Log In* page when clicked. Logged in users are able to see a list of items that they previosly added to their wishlist. Users can also click on the heart icon and see how many products they currently have in their wishlist.
+* The *Bag* link is working as intended and takes users to their shopping bag page when clicked. 
+
+* On large screen users are offered extended navbar for easier access to the links. It is working as expected.  
+* All the links on the main navbar were tested by clicking and are working as intended, allowing users to jump to the linked pages.
+* *Posters* link dropdown is activated when clicked and displays product categories. All category links are working as intended allowing products to be filtered correctly. 
+* *All Products* link dropdown is activated when clicked and displays options for sorting the products. The sorting options were tested by clicking and are working correctly.
+
+
+* **Toast Messages**
+* Django pop up toast messages are displayed correctly and .
+
+
+- [x] **Home Page**
+
+
+
+
+
+
+
 
 ## Defensive Design Testing 
 ---

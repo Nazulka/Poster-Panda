@@ -50,14 +50,14 @@ ___
     * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
 
 * #### As a **Registered / returning visitor** I want to be able to:
-    * Get a confirmation email upon successful registration.
+    * Get a confirmation email upon successful registration to be certain that my account has been created.
     * Easily reset the password if I forget it so I can recover access to my account.
     * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
-    * View all items in the cart as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
-    * Adjust the quantity of the products in the cart so I can make changes easily.
-    * Remove items in the cart so I can purchase only the ones that I really want.
+    * View all items in the bag as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
+    * Adjust the quantity of the products in the bag so I can make changes easily before purchasing.
+    * Remove items in the bag so I can purchase only the ones that I really want.
     * Add and save my personal information when checking out for the first time, so it can safely be stored in my account to ensure faster and hussle free checkout next time. 
-    * Securely add my card details when checking out.
+    * Securely enter my card details when checking out.
     * See an instant confirmation of the order on the site and receive an email confirming that the order has been placed successfully for proof of purchase and peace of mind.  
     * Easily view my current order details and previous orders history, all saved in one place - my account.
     * Leave reviews for the products to interract and provide feedback to the store, encourage them make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide. 
@@ -154,7 +154,7 @@ ___
 
 **Features available accross all pages**
 * **Navigation Bar**
-* The website Header features navigation menu, website logo, search bar, My Bag, My Account and My Favourites links.    
+* The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
 * Bag and Account icons remain always visible to the user, and on large screens users also able to see bag total, to keep informed on how much they are spending. 
 * Brand Logo is centered and visible on all screen sizes and serves as a link to the Home Page, which is particularly convenient when accessing the site on smaller screen size devices. 

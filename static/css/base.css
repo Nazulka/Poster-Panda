@@ -38,9 +38,9 @@ body {
     height: 500px;
     width: 100%;
 }
-.like {
+/* .like {
     text-decoration: none;
-}
+} */
 
 .shop-now-button,
 .btn-black {
@@ -421,14 +421,25 @@ input[name='q']::placeholder {
 
 /* Extra small (xs) devices (landscape phones) */
 @media (max-width: 576px) {
+    /* .main-logo-link {
+        font-size: 1.5rem !important;
+    } */
     .product-card {
-        /* width: 100%; */
+        width: 12rem;
         height: auto;
-        max-height: 16px;
+        max-height: 18rem;
         object-fit: cover;
         padding: 0.6rem;
         border: 1.5px solid black !important;
     }
+       .hamburger {
+           width: 25px;
+           height: 35px;
+       }
+
+       .navbar-toggler {
+           font-size: 1rem;
+       }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -452,9 +463,8 @@ input[name='q']::placeholder {
         color: #000;
     }
     .navbar-toggler {
-        padding: .25rem .5rem;
+        /* padding: .25rem; */
         font-size: 1.2rem;
-        line-height: 1;
         background-color: transparent;
         border: none;
     }
