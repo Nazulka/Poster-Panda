@@ -74,20 +74,40 @@
     * On large screens users can enter the search word on the *Search box* displayed and on medium and smaller screens search bar dropdown is activated when the search button is clicked. 
     * It is accessible from all pages and correctly returns all products that contain the seached key word in their name or description on the *Products* page. 
     * If search returns no matching results, users are notified by a message on the *Products* page. 
-    * If an empty search form is submitted, users get an error toast message to notify them.
+    * If an empty search form is submitted, users get an error *toast* message to notify them.
 * *My Wishlist* button takes unauthorised users to the *Log In* page when clicked. Logged in users are able to see a list of items that they previosly added to their wishlist. Users can also click on the heart icon and see how many products they currently have in their wishlist. All above features are working as desired.
-* The *Bag* link is working as intended and takes users to their shopping bag page when clicked. 
+* The *Bag* button is working as intended and takes users to their shopping bag page when clicked. 
 
 
 
 **Toast Messages**
-* Django pop up toast messages are displayed correctly and .
+* Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
 
 - [x] **Home Page**
 * Home page is responsive and all the items displaying as intended on different screen sizes.
 * Jumbotrons are displayed correctly and call to action buttons are working as they should, taking the users to the appropriate pages.
 * *Handpicked Favourites* owl-carousel is working as desired by automatically looping through the shuffled products cards, displaying the correct amount of cards depending on the screen size and displaying a navigation on small screen sizes. If the card is clicked, it takes users to the *Product Detail* page.
+* *Footer* is responsive and contains Social media icons.
+* Change of colour and transition effects on hovering over Social icons are working as intended. Social icons were tested by clicking on them, all links to the external websites are functioning as intended and open in new tabs.
+* Copyright section is center-aligned and located directly below the Footer as intended.
+
+
+- [x] **Products Page**
+* The *Product Page* correctly dispays all products cards in a responsive grid layout. The amount of cards in each row varies depending on screen sizes.
+* The total products count is displayed on top of the page for users convenience.
+* The *Sort by...* box is located on top of the page and allows users to sort results by Price, Rating, Name and Category in ascending and descending orders. It was tested by selecting each option from the dropdown menu and is working as intended.
+* Each Product Card displays a product image, product name, price and category.
+Additionally, *edit* and *delete* buttons are displayed for the admin user. 
+* *Back to top* button is working as intended and takes users to the top of the page. 
+* When users click on the product card, it takes them to the Product Detail page for the selected product. 
+
+- [x] **Product Detail Page**
+* The *Product Detail* page is correctly displaying product image, name, category as well as the full description for the product.
+* 
+
+* *Keep shopping* button takes users back to the *Products* page. 
+
 
 
 

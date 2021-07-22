@@ -170,6 +170,23 @@ ___
 * Responsive *Footer* is visible on Home Page and contains website motto, delivery information and social media icons. Icons are hoverable to let users know they are clickable and linked to the external websites and open in new tabs when clicked.
 * *Copyright* section is directly below the Footer and contains Copyright information.
 
+- [x] **Products Page**
+* Products are displayed in a responsive grid layout and provide the best shopping experience no matter what device user is using to shop. 
+* Products display can be sorted alphabetically, by price, rating and category for the user's convenience. 
+* It features back to top button to allow users to get to the top of the page if there are a lot of products on the page.
+
+
+- [x] **Product Detail Page**
+* When users click on a product that they are interested in it opens in a new Product detail page. This page contains a product image and details and allows users to select product size and quantity before adding the product to the bag. 
+* Product reviews and ratings for the selected product are displayed on the bottom of the page to give users chance to learn other customers feedback.
+* Logged in users are encouraged to leave their own reviews.
+
+- [x] **Profile Page**
+* This page is only available for registered users.
+* It allows users to save default delivery info for an easier checkout and update it if need be. 
+* Order History section contains all previous orders details. Users can click on individual order number to view full details.
+
+
 - [x] **Bag Page**
 * This feature allows users to add products to the bag and view the bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
 
@@ -181,18 +198,6 @@ ___
 * Users can securely fill their credit card details into the form.
 * Checkout success page displays order details as well as sending it to the email provided. Users get notified via a toast message. 
 
-- [x] **Products Page**
-* Products are displayed in a responsive grid layout and provide the best shopping experience no matter what device user is using to shop. 
-* Products display can be sorted alphabetically, by price and by category for the user's convenience. 
-* It features back to top button to allow users to get to the top of the page if there are a lot of products on the page.
-* When users click on a product that they are interested in it opens in a new Product detail page. This page contains a product image and details and allows users to select product size and quantity before adding the product to the bag. 
-* Product reviews and ratings for the selected product are displayed on the bottom of the page to give users chance to learn other customers feedback.
-* Logged in users are encouraged to leave their own reviews.
-
-- [x] **Profile Page**
-* This page is only available for registered users.
-* It allows users to save default delivery info for an easier checkout and update it if need be. 
-* Order History section contains all previous orders details. Users can click on individual order number to view full details.
 
 - [x] **Django allauth features**
 * *Register* - allows new users to create an account to access website's full features by filling out the registration form. A verifification email is sent to the email provided for confirmation. 
