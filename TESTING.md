@@ -18,6 +18,7 @@
 ---
 
 - [x] **First-Time / Casual Visitor** 
+
 | User Story | Testing | 
 |:-----------|:--------|
 | Navigate the site intuitively and easily access all available website features from different screen size devices.  | The website is fully responsive and designed to provide an optimal user experience, no matter what device users are accessing it from.|
@@ -31,6 +32,7 @@
 
 
 - [x] **Registered / Returning Visitor**
+
 | User Story | Testing | 
 |:-----------|:--------|
 | Get a confirmation email upon successful registration to be certain that my account has been created.| When users submit the registration form successfully, they receive an email to confirm it.|
@@ -118,7 +120,9 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 * *Keep shopping* button takes users back to the *Products* page. 
 
-
+- [x] **Profile Page**
+* Authenticated users are able to access *My Profile* page by clicking on *My Account* button on the main navbar on larger screens or clicking on the hamburger menu button and selecting it from the dropdown menu on medium and small screens. 
+* The page renders the *Default Delivery Information* form and *Order History*. Users can view their previous order details by clicking on the order numbers.   
 
 
 
