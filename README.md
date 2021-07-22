@@ -153,20 +153,20 @@ ___
 ### Implemented Features
 
 **Features available accross all pages**
-* **Navigation Bar**
+**Navigation Bar**
 * The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
 * Bag and Account icons remain always visible to the user, and on large screens users also able to see bag total, to keep informed on how much they are spending. 
 * Brand Logo is centered and visible on all screen sizes and serves as a link to the Home Page, which is particularly convenient when accessing the site on smaller screen size devices. 
 * My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile, My Wishlist and Logout for authorised users and an additional Product Management link for an admin user.
 
-* **Toast Messages**
+**Toast Messages**
 * Django pop up toast messages displayed to keep the users informed.
 
 **Page specific features**
 - [x] **Home Page**
 * Contains a main jumbotron that features colorful and bright image to draw attention and call to action to shop the latest collection. Two additional jumbotrons also styled in similar fashion and invite users to shop. 
-* *Handpicked Favourites* section is added for extra interactivity and is a Bootstrap carousel that cycles through cards containing product images and details. 
+* *Handpicked Favourites* section is added for extra interactivity and is an owl-carousel that cycles through cards containing product images and details. 
 * Responsive *Footer* is visible on Home Page and contains website motto, delivery information and social media icons. Icons are hoverable to let users know they are clickable and linked to the external websites and open in new tabs when clicked.
 * *Copyright* section is directly below the Footer and contains Copyright information.
 

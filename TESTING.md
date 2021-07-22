@@ -8,15 +8,16 @@
 ---
 - HTML Markup Validation - [](https://validator.w3.org/nu/)
 - CSS Validation - [](https://jigsaw.w3.org/css-validator/)
-- JavaScript Code Quality Tool JSHint - ](https://jshint.com/)
+- JavaScript Code Quality Tool JSHint - [](https://jshint.com/)
 - PEP8 - [](http://pep8online.com/)
 
 
 **[back to top](#testing)**
 
 ## Testing User Stories
-- [x] **First-time / casual visitor** 
 ---
+
+- [x] **First-Time / Casual Visitor** 
 | User Story | Testing | 
 |:-----------|:--------|
 | Navigate the site intuitively and easily access all available website features from different screen size devices.  | The website is fully responsive and designed to provide an optimal user experience, no matter what device users are accessing it from.|
@@ -28,8 +29,8 @@
 | Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.| The *Register* button is easily accessible for the users who wish to sign up to enable faster checkouts in the future as well as accessing their order history.|
 
 
-- [x] **Registered / returning visitor**
----
+
+- [x] **Registered / Returning Visitor**
 | User Story | Testing | 
 |:-----------|:--------|
 | Get a confirmation email upon successful registration to be certain that my account has been created.| When users submit the registration form successfully, they receive an email to confirm it.|
@@ -48,7 +49,8 @@
 | Remove items that I am no longer interested in from my wishlist. | Items no longer wanted in the wishlist can easily be removed .....................|
 
 
--[x] **Store owner / Superuser**
+- [x] **Store owner / Superuser**
+
 | User Story | Testing | 
 |:-----------|:--------|
 | Add products to enable me to add new items to the store. | Superuser can access *Product Management* page when logged in to allow them to add new products to the site.|
@@ -59,27 +61,33 @@
 
 ## Functionality Testing
 ---
-* **Navigation Bar**
-* The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a small and compact mobile navbar. 
-* The hamburger menu displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
-* *My Account* link can be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
-
-* The brand logo link is displayed on all screen sizes and was tested by clicking and is working correctly, as it takes users back to the Home page from anywhere on the site.
-* On large screens users can enter the word on the *Search* box displayed and on medium and smaller screens search bar dropdown is activated when the search button is clicked. It is accessible from all pages and correctly returns the all products that contain the seached key word in their name or description.
-* *My Wishlist* button takes unauthoresed users to the *Log In* page when clicked. Logged in users are able to see a list of items that they previosly added to their wishlist. Users can also click on the heart icon and see how many products they currently have in their wishlist.
-* The *Bag* link is working as intended and takes users to their shopping bag page when clicked. 
-
+**Navigation Bar**
+* The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a compact mobile navbar that contains the hamburger menu button, brand logo and *Search*, *My Wishlist* and *Bag* buttons. 
+* When clicked, the hamburger menu dropdown displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
+* *My Account* link can also be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
 * On large screen users are offered extended navbar for easier access to the links. It is working as expected.  
 * All the links on the main navbar were tested by clicking and are working as intended, allowing users to jump to the linked pages.
 * *Posters* link dropdown is activated when clicked and displays product categories. All category links are working as intended allowing products to be filtered correctly. 
 * *All Products* link dropdown is activated when clicked and displays options for sorting the products. The sorting options were tested by clicking and are working correctly.
+* The *Brand Logo* link is displayed on all screen sizes and was tested by clicking and is working correctly, as it takes users back to the Home page from anywhere on the site.
+* *Search bar*:
+    * On large screens users can enter the search word on the *Search box* displayed and on medium and smaller screens search bar dropdown is activated when the search button is clicked. 
+    * It is accessible from all pages and correctly returns all products that contain the seached key word in their name or description on the *Products* page. 
+    * If search returns no matching results, users are notified by a message on the *Products* page. 
+    * If an empty search form is submitted, users get an error toast message to notify them.
+* *My Wishlist* button takes unauthorised users to the *Log In* page when clicked. Logged in users are able to see a list of items that they previosly added to their wishlist. Users can also click on the heart icon and see how many products they currently have in their wishlist. All above features are working as desired.
+* The *Bag* link is working as intended and takes users to their shopping bag page when clicked. 
 
 
-* **Toast Messages**
+
+**Toast Messages**
 * Django pop up toast messages are displayed correctly and .
 
 
 - [x] **Home Page**
+* Home page is responsive and all the items displaying as intended on different screen sizes.
+* Jumbotrons are displayed correctly and call to action buttons are working as they should, taking the users to the appropriate pages.
+* *Handpicked Favourites* owl-carousel is working as desired by automatically looping through the shuffled products cards, displaying the correct amount of cards depending on the screen size and displaying a navigation on small screen sizes. If the card is clicked, it takes users to the *Product Detail* page.
 
 
 
