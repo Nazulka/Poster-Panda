@@ -150,22 +150,19 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
     * When the valid form is submitted, users are required to verify their email address by clicking on the link in the email sent to the newly registered email address. 
 
 * *Login*:
-    * 
-
+    * *Log In* form is rendered on the *Sign In* page.
+    * *Sign up* link is provided if users haven't registered yet and redirects them to the registration page.
+    * *The username and/or password you specified are not correct.* error is generated if wrong username / email address or password entered. 
+    * *Forgot password* link is provided to allow users to allow users to reset their password. 
+    * If all the entries are valid, a toast success message is displayed and users are redirected to the Home page. 
     
 
+* *Logout*:
+    * *Sign Out* page is accessed by clicking on *My Account* and *Logout*. 
+    * Users need to confirm sighning out by clicking on the *Sign Out* button. 
+    * A toast message is displayed to confirm successful sign out and users are redirected to the Home Page.
 
-
-
-
-## Defensive Design Testing 
----
-
-
-
-
-
-
+    
 
 **[back to top](#testing)**
 
