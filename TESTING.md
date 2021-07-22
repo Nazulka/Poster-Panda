@@ -104,7 +104,17 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 - [x] **Product Detail Page**
 * The *Product Detail* page is correctly displaying product image, name, category as well as the full description for the product.
-* 
+* Users can select a value between 1 and 99 by *manually* entering it, by using *up* or *down* arrows or *+* and *-* buttons provided, in order for them to add the desired product quantity to the bag. Arrows and buttons are disabled functionally and style wise to stop users from increasing / decreasing values outside the valid numbers.
+* If value of less than 1 or greater than 99 is selected, the form validation error message is displayed informing users. 
+* If user manually enters a value of 0 or greater than 100 and click on the *Add to bag* button, an error form validation message is displayed and quantity not added.
+
+* The *Add to Wishlist* button allows users to add the selected product to their wishlist. It is working as intended.
+
+* All website users can read reviews left by other customers. Reviews (if any) are displayed below the product description. 
+* *Add a review* button is displayed only for logged in users and admin. 
+* Authenticated users can click on the *Add a review* button and open up form containing *Review Headline*, *Your Comments* and a *rating* required fields. If the form is submitted successfully, users get a toast notification confirming it.
+* Users can only review each product once. 
+* Logged in users and admin can *edit* and *delete* their reviews. *Edit* form is similar to the *Add review* form and the *Delete Review* is displayed in a modal asking users to confirm before deleting the review or cancel. All of the above described review CRUD operations have been extensively tested and working as intended.
 
 * *Keep shopping* button takes users back to the *Products* page. 
 
