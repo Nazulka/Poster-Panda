@@ -183,12 +183,12 @@ ___
 
 - [x] **Profile Page**
 * This page is only available for registered users.
-* It allows users to save default delivery info for an easier checkout and update it if need be. 
+* It allows users to view saved default delivery and update it if need be. 
 * Order History section contains all previous orders details. Users can click on individual order number to view full details.
 
 
 - [x] **Bag Page**
-* This feature allows users to add products to the bag and view the bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
+* This feature allows users to view their shopping bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
 
 - [x] **Checkout Page**
 * Contains a crispy form for user details and delivery address.

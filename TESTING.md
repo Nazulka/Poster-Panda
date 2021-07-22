@@ -102,14 +102,14 @@
 * Each Product Card displays a product image, product name, price and category.
 Additionally, *edit* and *delete* buttons are displayed for the admin user. 
 * *Back to top* button is working as intended and takes users to the top of the page. 
-* When users click on the product card, it takes them to the Product Detail page for the selected product. 
+* When users click on the product card, it navigates them to the Product Detail page for the selected product. 
 
 - [x] **Product Detail Page**
 * The *Product Detail* page is correctly displaying product image, name, category as well as the full description for the product.
 * Users can select a value between 1 and 99 by *manually* entering it, by using *up* or *down* arrows or *+* and *-* buttons provided, in order for them to add the desired product quantity to the bag. Arrows and buttons are disabled functionally and style wise to stop users from increasing / decreasing values outside the valid numbers.
 * If value of less than 1 or greater than 99 is selected, the form validation error message is displayed informing users. 
 * If user manually enters a value of 0 or greater than 100 and click on the *Add to bag* button, an error form validation message is displayed and quantity not added.
-
+* When a valid quantity is selected and *Add to Bag* button is clicked, the product is added to the bag. Users then see a confirmation toast message containing product image, price quantity and subtotal.
 * The *Add to Wishlist* button allows users to add the selected product to their wishlist. It is working as intended.
 
 * All website users can read reviews left by other customers. Reviews (if any) are displayed below the product description. 
@@ -122,9 +122,37 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 - [x] **Profile Page**
 * Authenticated users are able to access *My Profile* page by clicking on *My Account* button on the main navbar on larger screens or clicking on the hamburger menu button and selecting it from the dropdown menu on medium and small screens. 
-* The page renders the *Default Delivery Information* form and *Order History*. Users can view their previous order details by clicking on the order numbers.   
+* The page renders the form where users defaul delivery information is saved (if they choose to) when they checkout for the first tima. This information can be updated by submitting an amended form and if successful, users see a confirmation toast message. 
+* *Order History* section allows users to view their previous order details.   
+
+- [x] **Bag Page**
+* Items added to the bag can be viewed in the *Bag* page. 
+* The number of items in the bag is correctly displayed next to the bag icon.  
+* The page contains details of the products added to the bag and also allows users to adjust the product quantity or remove the item completely from the bag. 
+* When quantity is amended and *update* button is clicked or *remove* button is clicked to remove the product from the bag, users get a toast notification to confirm their action has been successful. Subtotal, delivery charges and total are automatically re-calculated. This has been tested to verify that it's working as intended.
+* After adding all the products they wouls like to purchase, users can click either on the *Go to secure checkout* button on the confirmation toast or on the *Secure Checkout* button to go to the *Checkout* page.
+* If *Keep Shopping* button is clicked, users are navigated to the products page. 
 
 
+- [x] **Checkout Page**
+* This page contains the checkout form for user details, delivery information and payment details for users who are not logged in. 
+* Logged in users can choose to save this information by ticking the appropriate box when checking out for the first time for faster future checkouts. The credit card information will not be stored for security purposes and has to be re-entered on each checkout.
+* The *Order Summary* section contains summary of the products in the bag, delivery charges, if any and transaction total. 
+* *Adjust Bag* button takes users back to the *Bag* page. 
+* When all the requested information is provided, including credit card details, user can click on *Complete Order* button to complete the purchase. A confirmation email containing order details is sent to the user email.
+
+
+- [x] **Django allauth features**
+* *Registration*: 
+    * Users can click on the *Register* button on the *My Account* dropdown menu.
+    * The allauth registration form is rendered as expected. As all the fields are required in the form, leaving any of them unfilled prompts an allauth validation error.
+    * Allauth validation errors could also be caused by entering unmatched emails, already registered email, unmatching passwords, short password (less than 8 characters), too easy password, existing username, etc.
+    * When the valid form is submitted, users are required to verify their email address by clicking on the link in the email sent to the newly registered email address. 
+
+* *Login*:
+    * 
+
+    
 
 
 
