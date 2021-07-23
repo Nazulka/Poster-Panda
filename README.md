@@ -221,13 +221,19 @@ ___
 
 ## Testing
 ___
+Stripe checkout test card details:
+```
+Card number: 4242 4242 4242 4242
+Exp. date mm/yy: any future date
+CVC: any 3 digit number
+ZIP: any 5 digit number
+```
+
 Testing documentation can be found [HERE](TESTING.md)
 
 
 ## Deployment
 ---
-
-### Local Deployment
 
 - [x] **Requirements**
 * *Python3* to write the code and run the application
@@ -241,6 +247,12 @@ Testing documentation can be found [HERE](TESTING.md)
 * This project was created using the CI recommended Gitpod Full Template.
 * Click on Use this template button and enter a short and memorable name of your choice for your repo and select Create repository from template.
 * Once created, click on green Gitpod button to open your new workspace.
+
+
+- [x] **Local Deployment**
+1.  Clone from GitHub:
+    * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
+
 
 - [x] **Deployment to Heroku**
 * 
