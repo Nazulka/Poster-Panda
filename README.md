@@ -82,13 +82,13 @@ ___
     * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
 ### Structure
-The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the [Information Architecture]() section. 
+The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the _Information Architecture_ section. 
 
-- [x] **![Database Structure](./readme_docs/db-structure.png)**
+![Database Structure](./readme_docs/db-structure.png)
 
 
 ### Skeleton 
-- [x] **[Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf)**
+- [x] **[Desktop/Tablet and Mobile Wireframes](./readme_docs/ms4-all-wireframes.pdf)**
 
 Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
 
@@ -97,7 +97,7 @@ Some changes were made to the original wireframes during development process, pa
 ### Surface
 
 - [x] **Color Scheme**
-![color palette](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/coolors.png "Project color scheme palette from Coolors")
+![color palette](./readme_docs/coolors.png "Project color scheme palette from Coolors")
 
 * [Coolors](https://coolors.co/) was used to create the color palette for this project.
 * Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's color every time when a new collection is out, so it fully complements the color scheme of the collection. 
@@ -251,13 +251,53 @@ Testing documentation can be found [HERE](TESTING.md)
 
 
 - [x] **Local Deployment**
-1.  Clone from GitHub:
+1.  Clone the project repository from GitHub
     * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
     * Click on the _Code_ button and Download ZIP. You can unzip the files in the directory of your choice.
     * Alternatively, you can run this command in your IDE:    
-    ``` git clone https://github.com/Nazulka/Poster-Panda```
+    ``` 
+    git clone https://github.com/Nazulka/Poster-Panda
+    ```
 
-2. 
+2. To install Python required modules, run in the command line
+
+    ``` pip3 install -r requirements.txt```
+
+3. Create an ```env.py```  file to store environmental variables: 
+
+``` 
+'DEVELOPMENT', set to 'True'
+'SECRET_KEY', '<your value - from Django Secret Key Generator>'
+'STRIPE_PUBLIC_KEY', '<your value - API publishable key from Stripe dashboard>'
+'STRIPE_SECRET_KEY', '<your value - API secret key from Stripe dashboard>'
+'STRIPE_WH_SECRET', '<your value - from Stripe's developer API after creating a webhook>'
+```
+
+If Gitpod is used for development, these environmental variables can be stored in _Settings_ and _Variables_ on the Gitpod Workspaces page. 
+
+
+4. To set up the local database, run:
+```
+python3 manage.py makemigrations
+python3 manage.py migrate 
+```
+
+5. Create a superuser to access Django admin panel:
+```
+python3 manage.py createsuperuser
+```
+
+6. Run the server:
+```
+python3 manage.py runserver
+```
+
+
+
+
+
+
+
 
 
 - [x] **Deployment to Heroku**
