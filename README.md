@@ -84,20 +84,21 @@ ___
 ### Structure
 The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the [Information Architecture]() section. 
 
-- [x] **![Database Structure]()**
+- [x] **![Database Structure](./readme_docs/db-structure.png)**
 
 
 ### Skeleton 
-- [x] **[Desktop/Tablet and Mobile Wireframes](readme_docs/ms-4-all-wireframes)**
+- [x] **[Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf)**
 
 Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
 
-Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because of the time constraints.
+Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because it was considered low importance and low viability.
 
 ### Surface
 
 - [x] **Color Scheme**
 ![color palette](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/coolors.png "Project color scheme palette from Coolors")
+
 * [Coolors](https://coolors.co/) was used to create the color palette for this project.
 * Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's color every time when a new collection is out, so it fully complements the color scheme of the collection. 
 * Light grey and black were used for the rest of the elements to keep it simple and less cluttered as products' images can be quite colourful. 
@@ -252,6 +253,11 @@ Testing documentation can be found [HERE](TESTING.md)
 - [x] **Local Deployment**
 1.  Clone from GitHub:
     * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
+    * Click on the _Code_ button and Download ZIP. You can unzip the files in the directory of your choice.
+    * Alternatively, you can run this command in your IDE:    
+    ``` git clone https://github.com/Nazulka/Poster-Panda```
+
+2. 
 
 
 - [x] **Deployment to Heroku**
