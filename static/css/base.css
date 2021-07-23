@@ -15,12 +15,11 @@ body {
 #topnav {
     background: #fff;
 }
-
 #jumbotron-hero {
     display: flex;
     background: url('/media/hero.jpg') no-repeat center center;
     background-size: cover;
-    height: 800px;
+    /* height: 700px; */
     width: 100%;
 }
 .jumbotron-inner {
@@ -29,13 +28,13 @@ body {
 .jumbotron-left {
     background: url('/media/cali.jpg') no-repeat center center;
     background-size: cover;
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
 }
 .jumbotron-right {
     background: url('/media/surf.jpg') no-repeat center center;
     background-size: cover;
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
 }
 /* .like {
@@ -56,7 +55,7 @@ body {
     color: white;
     display: inline-block;
     cursor: pointer;
-    margin-top: 60%;
+    /* margin-top: 60%; */
     min-width: 260px;
 }
 
@@ -408,15 +407,15 @@ input[name='q']::placeholder {
 
 /* Small (sm) devices (landscape phones) */
 @media (min-width: 576px) {
-.product-card {
-    height: 20rem;
-    padding: 0.7rem;
-    border: 2px solid black !important;
-}
+    .product-card {
+        height: 20rem;
+        padding: 0.7rem;
+        border: 2px solid black !important;
+    }
 
-.img-bag {
-    padding: 0.5rem;
-}
+    .img-bag {
+        padding: 0.5rem;
+    }
 }
 
 /* Extra small (xs) devices (landscape phones) */
@@ -424,6 +423,7 @@ input[name='q']::placeholder {
     /* .main-logo-link {
         font-size: 1.5rem !important;
     } */
+    
     .product-card {
         width: 12rem;
         height: auto;
@@ -445,11 +445,11 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 100px;
     }
 
-    /* body {
-        height: calc(100vh - 116px); */
+    body {
+        height: calc(100vh - 116px);
     } 
     .product-btn {
        margin-top: 85%;

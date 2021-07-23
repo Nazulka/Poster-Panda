@@ -6,7 +6,7 @@ ___
 
 At Poster Panda, we are passionate about interior decoration and design. We offer wide range of stylish high quality posters along with frames and have something to suit every wall. Express yourself by creating a personalized wall of posters! Inspire others and have fun!
 
-### :panda_face: [Live demo]()
+### :panda_face: [Visit the website]()
 
 
 ## Table of Contents
@@ -84,11 +84,12 @@ ___
 ### Structure
 The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the _Information Architecture_ section. 
 
-![Database Structure](./readme_docs/db-structure.png)
+![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-structure.png)
 
 
 ### Skeleton 
-- [x] **[Desktop/Tablet and Mobile Wireframes](./readme_docs/ms4-all-wireframes.pdf)**
+- [x] **Desktop/Tablet and Mobile Wireframes**
+!![Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
 
 Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
 
@@ -97,7 +98,7 @@ Some changes were made to the original wireframes during development process, pa
 ### Surface
 
 - [x] **Color Scheme**
-![color palette](./readme_docs/coolors.png "Project color scheme palette from Coolors")
+![color palette](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/coolors.png "Project color scheme palette from Coolors")
 
 * [Coolors](https://coolors.co/) was used to create the color palette for this project.
 * Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's color every time when a new collection is out, so it fully complements the color scheme of the collection. 
@@ -241,6 +242,7 @@ Testing documentation can be found [HERE](TESTING.md)
 * *PIP* to install packages
 * *Git* for version control
 * *GitPod* was used for this project 
+* *Heroku* as a cloud based host platform
 * *Stripe* as a secure payment processing platform.
 * *AWS* cloud storage and S3 to store and retrieve media and static files.
 
@@ -293,22 +295,25 @@ python3 manage.py runserver
 ```
 
 
-
-
-
-
-
-
-
 - [x] **Deployment to Heroku**
-* 
+---
+
+1. Create an account in [Heroku](https://id.heroku.com/login) if you haven't got it already and log in. Create a new app, give it a unique name and select a region closest to you.
+![Heroku app](./readme_docs/heroku-app.png)
+
+2. Create an AWS account or log in to your existing one
+
+
+
+
+
 
 
 ## Credits
 ___
 ### Code
 * John CI - for helping me to restore my worksapace.
-* Sean CI - for helping with the code to automatically create a wishlist for new users
+* Sean CI - for helping to debug the code to automatically create a wishlist for the new users
 * 
 
 ### Content
