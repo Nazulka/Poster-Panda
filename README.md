@@ -76,10 +76,10 @@ ___
     * Intuitive design: allow users to navigate the site intuitively, view products.
     * Authorisation: allow users to Register, Login and Logout.
     * Wishlist: allow users to add products to the wishlist and remove from it.
-    * Reviews: allow users to leave product reviews on the website.
+    * Reviews: allow users to add, edit, delete product reviews on the website.
     * Simple checkout: allow users to checkut in a few simple steps. 
     * Secure payment: allow users to securely enter their payment details to complete the purchase. 
-    * Superuser: allow admin user to add, edit delete products to keet the store up to date. 
+    * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
 ### Structure
 The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the [Information Architecture]() section. 
@@ -97,9 +97,11 @@ Some changes were made to the original wireframes during development process, pa
 ### Surface
 
 - [x] **Color Scheme**
-* [Coolors](https://coolors.co/) was used to creat the color palette for this project.
-* Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's and the buttons' color every time when a new collection is out, so it fully complements the scheme of the collection. 
+![color palette](readme-docs/coolors.png)
+* [Coolors](https://coolors.co/) was used to create the color palette for this project.
+* Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's color every time when a new collection is out, so it fully complements the color scheme of the collection. 
 * Light grey and black were used for the rest of the elements to keep it simple and less cluttered as products' images can be quite colourful. 
+
 
 - [x] **Typography**
 * Google Fonts *Noto Sans* used accross the site for a harmonious look and feel.
@@ -212,6 +214,10 @@ ___
 -  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
 
 ## Information Architecture 
+
+
+
+
 
 ## Testing
 ___

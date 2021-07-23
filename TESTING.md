@@ -5,7 +5,7 @@
 
 
 ## Code Validity
----
+------
 - HTML Markup Validation - [](https://validator.w3.org/nu/)
 - CSS Validation - [](https://jigsaw.w3.org/css-validator/)
 - JavaScript Code Quality Tool JSHint - [](https://jshint.com/)
@@ -15,7 +15,7 @@
 **[back to top](#testing)**
 
 ## Testing User Stories
----
+------
 
 - [x] **First-Time / Casual Visitor** 
 
@@ -28,7 +28,7 @@
 | View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.| Users can click on the product to view the product details on a new page.|
 | View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the costs before I decide to checkout.| *Product detail* page also allows users to select the product size, add it to the bag, view ratings and reviews (if any). They get confirmation of their actions as well as the bag items preview and a subtotal on a toast message.|
 | Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.| The *Register* button is easily accessible for the users who wish to sign up to enable faster checkouts in the future as well as accessing their order history.|
-
+------
 
 
 - [x] **Registered / Returning Visitor**
@@ -49,7 +49,7 @@
 |Edit and delete my reviews if I change my mind or if they are no longer relevant. | Logged in users are provided with *Edit* and *Delete* links under their reviews.|
 | Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.| Logged In user can use *Add to Wishlist* feature to add their favourite items to the wishlist and view all products in *My Wishlist* page. |
 | Remove items that I am no longer interested in from my wishlist. | Items no longer wanted in the wishlist can easily be removed .....................|
-
+------
 
 - [x] **Store owner / Superuser**
 
@@ -58,12 +58,14 @@
 | Add products to enable me to add new items to the store. | Superuser can access *Product Management* page when logged in to allow them to add new products to the site.|
 | Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.| Logged in Superuser is provided with *Edit* button under each product to allow them to make changes to the product.|
 | Delete products, if they are no longer available, to keep the stocks up to date.| Logged in Superuser is provided with a *Delete* button under each product, which they can use to remove a product/s from the store if need be. |
-
-
+------
 
 ## Functionality Testing
 ---
+
 **Navigation Bar**
+
+---
 * The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a compact mobile navbar that contains the hamburger menu button, brand logo and *Search*, *My Wishlist* and *Bag* buttons. 
 * When clicked, the hamburger menu dropdown displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
 * *My Account* link can also be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
@@ -81,12 +83,15 @@
 * The *Bag* button is working as intended and takes users to their shopping bag page when clicked. 
 
 
-
 **Toast Messages**
+
+---
 * Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
 
 - [x] **Home Page**
+
+---
 * Home page is responsive and all the items displaying as intended on different screen sizes.
 * Jumbotrons are displayed correctly and call to action buttons are working as they should, taking the users to the appropriate pages.
 * *Handpicked Favourites* owl-carousel is working as desired by automatically looping through the shuffled products cards, displaying the correct amount of cards depending on the screen size and displaying a navigation on small screen sizes. If the card is clicked, it takes users to the *Product Detail* page.
@@ -96,6 +101,8 @@
 
 
 - [x] **Products Page**
+
+---
 * The *Product Page* correctly dispays all products cards in a responsive grid layout. The amount of cards in each row varies depending on screen sizes.
 * The total products count is displayed on top of the page for users convenience.
 * The *Sort by...* box is located on top of the page and allows users to sort results by Price, Rating, Name and Category in ascending and descending orders. It was tested by selecting each option from the dropdown menu and is working as intended.
@@ -104,7 +111,10 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 * *Back to top* button is working as intended and takes users to the top of the page. 
 * When users click on the product card, it navigates them to the Product Detail page for the selected product. 
 
+
 - [x] **Product Detail Page**
+
+---
 * The *Product Detail* page is correctly displaying product image, name, category as well as the full description for the product.
 * Users can select a value between 1 and 99 by *manually* entering it, by using *up* or *down* arrows or *+* and *-* buttons provided, in order for them to add the desired product quantity to the bag. Arrows and buttons are disabled functionally and style wise to stop users from increasing / decreasing values outside the valid numbers.
 * If value of less than 1 or greater than 99 is selected, the form validation error message is displayed informing users. 
@@ -120,12 +130,17 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 * *Keep shopping* button takes users back to the *Products* page. 
 
+
 - [x] **Profile Page**
+
+----
 * Authenticated users are able to access *My Profile* page by clicking on *My Account* button on the main navbar on larger screens or clicking on the hamburger menu button and selecting it from the dropdown menu on medium and small screens. 
 * The page renders the form where users defaul delivery information is saved (if they choose to) when they checkout for the first tima. This information can be updated by submitting an amended form and if successful, users see a confirmation toast message. 
 * *Order History* section allows users to view their previous order details.   
 
 - [x] **Bag Page**
+
+---
 * Items added to the bag can be viewed in the *Bag* page. 
 * The number of items in the bag is correctly displayed next to the bag icon.  
 * The page contains details of the products added to the bag and also allows users to adjust the product quantity or remove the item completely from the bag. 
@@ -135,6 +150,8 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Checkout Page**
+
+---
 * This page contains the checkout form for user details, delivery information and payment details for users who are not logged in. 
 * Logged in users can choose to save this information by ticking the appropriate box when checking out for the first time for faster future checkouts. The credit card information will not be stored for security purposes and has to be re-entered on each checkout.
 * The *Order Summary* section contains summary of the products in the bag, delivery charges, if any and transaction total. 
@@ -143,13 +160,15 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Django allauth features**
-* *Registration*: 
+
+---
+* **_Registration_**: 
     * Users can click on the *Register* button on the *My Account* dropdown menu.
     * The allauth registration form is rendered as expected. As all the fields are required in the form, leaving any of them unfilled prompts an allauth validation error.
     * Allauth validation errors could also be caused by entering unmatched emails, already registered email, unmatching passwords, short password (less than 8 characters), too easy password, existing username, etc.
     * When the valid form is submitted, users are required to verify their email address by clicking on the link in the email sent to the newly registered email address. 
 
-* *Login*:
+* **_Login_**:
     * *Log In* form is rendered on the *Sign In* page.
     * *Sign up* link is provided if users haven't registered yet and redirects them to the registration page.
     * *The username and/or password you specified are not correct.* error is generated if wrong username / email address or password entered. 
@@ -157,7 +176,7 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
     * If all the entries are valid, a toast success message is displayed and users are redirected to the Home page. 
     
 
-* *Logout*:
+* **_Logout_**:
     * *Sign Out* page is accessed by clicking on *My Account* and *Logout*. 
     * Users need to confirm sighning out by clicking on the *Sign Out* button. 
     * A toast message is displayed to confirm successful sign out and users are redirected to the Home Page.
