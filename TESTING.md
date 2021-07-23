@@ -28,7 +28,6 @@
 | View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.| Users can click on the product to view the product details on a new page.|
 | View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the costs before I decide to checkout.| *Product detail* page also allows users to select the product size, add it to the bag, view ratings and reviews (if any). They get confirmation of their actions as well as the bag items preview and a subtotal on a toast message.|
 | Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.| The *Register* button is easily accessible for the users who wish to sign up to enable faster checkouts in the future as well as accessing their order history.|
-------
 
 
 - [x] **Registered / Returning Visitor**
@@ -58,13 +57,12 @@
 | Add products to enable me to add new items to the store. | Superuser can access *Product Management* page when logged in to allow them to add new products to the site.|
 | Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.| Logged in Superuser is provided with *Edit* button under each product to allow them to make changes to the product.|
 | Delete products, if they are no longer available, to keep the stocks up to date.| Logged in Superuser is provided with a *Delete* button under each product, which they can use to remove a product/s from the store if need be. |
-------
+
 
 ## Functionality Testing
 ---
 
 **Navigation Bar**
-
 ---
 * The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a compact mobile navbar that contains the hamburger menu button, brand logo and *Search*, *My Wishlist* and *Bag* buttons. 
 * When clicked, the hamburger menu dropdown displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
@@ -84,13 +82,11 @@
 
 
 **Toast Messages**
-
 ---
 * Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
 
 - [x] **Home Page**
-
 ---
 * Home page is responsive and all the items displaying as intended on different screen sizes.
 * Jumbotrons are displayed correctly and call to action buttons are working as they should, taking the users to the appropriate pages.
@@ -101,7 +97,6 @@
 
 
 - [x] **Products Page**
-
 ---
 * The *Product Page* correctly dispays all products cards in a responsive grid layout. The amount of cards in each row varies depending on screen sizes.
 * The total products count is displayed on top of the page for users convenience.
@@ -113,7 +108,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Product Detail Page**
-
 ---
 * The *Product Detail* page is correctly displaying product image, name, category as well as the full description for the product.
 * Users can select a value between 1 and 99 by *manually* entering it, by using *up* or *down* arrows or *+* and *-* buttons provided, in order for them to add the desired product quantity to the bag. Arrows and buttons are disabled functionally and style wise to stop users from increasing / decreasing values outside the valid numbers.
@@ -121,7 +115,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 * If user manually enters a value of 0 or greater than 100 and click on the *Add to bag* button, an error form validation message is displayed and quantity not added.
 * When a valid quantity is selected and *Add to Bag* button is clicked, the product is added to the bag. Users then see a confirmation toast message containing product image, price quantity and subtotal.
 * The *Add to Wishlist* button allows users to add the selected product to their wishlist. It is working as intended.
-
 * All website users can read reviews left by other customers. Reviews (if any) are displayed below the product description. 
 * *Add a review* button is displayed only for logged in users and admin. 
 * Authenticated users can click on the *Add a review* button and open up form containing *Review Headline*, *Your Comments* and a *rating* required fields. If the form is submitted successfully, users get a toast notification confirming it.
@@ -132,14 +125,13 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Profile Page**
-
 ----
 * Authenticated users are able to access *My Profile* page by clicking on *My Account* button on the main navbar on larger screens or clicking on the hamburger menu button and selecting it from the dropdown menu on medium and small screens. 
 * The page renders the form where users defaul delivery information is saved (if they choose to) when they checkout for the first tima. This information can be updated by submitting an amended form and if successful, users see a confirmation toast message. 
 * *Order History* section allows users to view their previous order details.   
 
-- [x] **Bag Page**
 
+- [x] **Bag Page**
 ---
 * Items added to the bag can be viewed in the *Bag* page. 
 * The number of items in the bag is correctly displayed next to the bag icon.  
@@ -150,7 +142,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Checkout Page**
-
 ---
 * This page contains the checkout form for user details, delivery information and payment details for users who are not logged in. 
 * Logged in users can choose to save this information by ticking the appropriate box when checking out for the first time for faster future checkouts. The credit card information will not be stored for security purposes and has to be re-entered on each checkout.
@@ -160,7 +151,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Django allauth features**
-
 ---
 * **_Registration_**: 
     * Users can click on the *Register* button on the *My Account* dropdown menu.

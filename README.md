@@ -97,7 +97,7 @@ Some changes were made to the original wireframes during development process, pa
 ### Surface
 
 - [x] **Color Scheme**
-![color palette](readme-docs/coolors.png)
+![color palette](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/coolors.png "Project color scheme palette from Coolors")
 * [Coolors](https://coolors.co/) was used to create the color palette for this project.
 * Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's color every time when a new collection is out, so it fully complements the color scheme of the collection. 
 * Light grey and black were used for the rest of the elements to keep it simple and less cluttered as products' images can be quite colourful. 
