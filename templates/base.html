@@ -21,8 +21,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <!-- Owl Slider -->
     <!-- <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css"> -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -181,8 +181,6 @@
     
 
     {% block postloadjs %}
-    <script src="jquery.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
         integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -197,42 +195,32 @@
         //     delay: 5000
         // });
 
-        // $(".like").click(function(){
-        //     $(this).toggleClass("heart");
-
-        // });
-
         $(".owl-carousel").owlCarousel({
+            margin: 10,
             loop: true,
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
-            nav: false,
-            dots: false,
+            nav: true,
+            navText : ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
             responsive:{
                 0:{
                     items:1,
-                    nav:true
                 },
                 600:{
                     items:3,
-                    nav:false
                 },
                 1000:{
                     items:4,
-                    nav:false,
                 },
                 1200:{
                     items:5,
-                    nav:false,
                 }
             }
-            
         });
     });
     </script>
     {% endblock %}
-
 
 </body>
 

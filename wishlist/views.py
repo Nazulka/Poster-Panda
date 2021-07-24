@@ -10,7 +10,7 @@ from wishlist.models import Wishlist, WishlistItem
 
 @login_required
 def view_wishlist(request):
-   
+
     user = UserProfile.objects.get(user=request.user)
     wishlist = Wishlist.objects.get(user=user)
     wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
@@ -33,6 +33,5 @@ def add_to_wishlist(request, product_id):
         # create a new wishlist item
         product = get_object_or_404(Product, pk=product_id)
         item = WishlistItem.objects.create(product=product, wishlist=wishlist)
-    
-    return redirect(reverse('view_wishlist'))
 
+    return redirect(reverse('view_wishlist'))

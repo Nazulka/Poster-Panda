@@ -42,59 +42,18 @@
             </div>
         </div>
     </div>
-    <!-- Card Carousel -->
-    <!-- <div class="container text-center my-5">
-        <h2 class="logo-font">Handpicked Favourites</h2>
-        <div class="row mx-auto mt-4">
-            <div id="cardCarousel" class="col-10 offset-1 carousel slide w-100" data-ride="carousel">
-                <div class="carousel-inner w-100" role="listbox">
-                    {% for product in products %}
-                    <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                        <div class="col-sm-4 col-md-3">
-                            <div class="card">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top product-card img-fluid" src="{{ product.image.url }}"
-                                        alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top product-card img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                        alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card card-body pb-0">
-                                    <h6 class="card-title mb-0">{{ product.name }}</h6>
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <a class="carousel-control-prev w-auto" href="#cardCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
-                        aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next w-auto" href="#cardCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
-                        aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div> -->
-
     <!-- Owl Card Slider -->
     <div class="container text-center my-5">
         <h2 class="logo-font mb-3">Handpicked Favourites</h2>
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-                {% include 'includes/owl-carousel.html'%}
+        <div class="carousel-wrap">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    {% include 'includes/owl-carousel.html'%}
+                </div>
             </div>
         </div>
     </div>
+    <!-- Footer -->
     <div class="container-fluid mt-5">
         <footer>
             {% include 'includes/footer.html' %}

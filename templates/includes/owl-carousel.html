@@ -1,7 +1,7 @@
 <!-- Handpicked Favourites owl-carousel cards -->
 <div class="owl-carousel owl-theme">
     {% for item in pool %}
-    <div class="mr-2 ml-2">
+    <div class="item mr-2 ml-2">
         <div class="card carousel-card my-2">
             {% if item.image %}
             <a href="{% url 'product_detail' item.id %}">
@@ -14,7 +14,7 @@
                     alt="{{ item.name }}">
             </a>
             {% endif %}
-            <div class="card card-body pb-0">
+            <div class="card card-body owl-card-body pb-0">
                 <h6 class="card-title text-left mb-0">{{ item.name }}</h6>
                 <p class="lead mt-3 mb-0 text-left font-weight-bold">£{{ item.price }}</p>
             </div>

@@ -19,7 +19,7 @@ body {
     display: flex;
     background: url('/media/hero.jpg') no-repeat center center;
     background-size: cover;
-    /* height: 700px; */
+    height: 650px;
     width: 100%;
 }
 .jumbotron-inner {
@@ -28,13 +28,13 @@ body {
 .jumbotron-left {
     background: url('/media/cali.jpg') no-repeat center center;
     background-size: cover;
-    /* height: 500px; */
+    height: 500px;
     width: 100%;
 }
 .jumbotron-right {
     background: url('/media/surf.jpg') no-repeat center center;
     background-size: cover;
-    /* height: 500px; */
+    height: 500px;
     width: 100%;
 }
 /* .like {
@@ -223,7 +223,57 @@ input[name='q']::placeholder {
     border-radius: 10px;
     border: none;
 }
+.owl-card-body {
+    height: 120px;
+    border: #fff;
+}
 
+.carousel-wrap {
+    margin: auto;
+    position: relative;
+}
+
+.owl-carousel .owl-nav {
+    overflow: hidden;
+    height: 0px;
+}
+
+.owl-theme .owl-dots .owl-dot.active,
+.owl-theme .owl-dots .owl-dot:hover{
+    background: #118592;
+}
+
+.owl-carousel .nav-btn {
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 140px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.owl-carousel .prev-slide {
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll 0 0;
+    left: -33px;
+}
+
+.owl-carousel .next-slide {
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll -24px 0px;
+    right: -33px;
+}
+
+.owl-carousel .prev-slide:hover {
+    background-position: 0px -53px;
+}
+
+.owl-carousel .next-slide:hover {
+    background-position: -24px -53px;
+}
 
 
 
