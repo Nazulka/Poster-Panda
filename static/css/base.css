@@ -454,14 +454,6 @@ input[name='q']::placeholder {
         padding: 1rem;
         border: 3px solid black;
     }
-    .product-view-img {
-        max-height: 32rem !important;
-        width: fit-content;
-        max-width: 20rem;
-        object-fit: cover;
-        padding: 1rem;
-        border: 2px solid black !important;
-    }
     
     
 }
@@ -483,6 +475,14 @@ input[name='q']::placeholder {
 
     .img-bag {
         padding: 0.5rem;
+    }
+    .product-view-img {
+        max-height: 32rem !important;
+        width: fit-content;
+        max-width: 20rem;
+        object-fit: cover;
+        padding: 1rem;
+        border: 2px solid black !important;
     }
 }
 
@@ -507,6 +507,15 @@ input[name='q']::placeholder {
 
        .navbar-toggler {
            font-size: 1rem;
+       }
+       .product-view-img {
+           max-height: 28rem !important;
+           /* width: fit-content; */
+           max-width: 18rem;
+           object-fit: cover;
+           padding: 1rem;
+           border: 2px solid black !important;
+           text-align: center;
        }
 }
 
