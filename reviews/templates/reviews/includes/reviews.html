@@ -1,23 +1,29 @@
 <!-- Product reviews -->
-<div class="row mx-auto">
+<div class="row mx-auto mt-5">
     <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-        <h4 class="subtitle logo-font m-2 p-3">Review Snapshot</h4>
+        <h5 class="subtitle logo-font font-weight-bold m-2 p-3">Review Snapshot</h5>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
         <hr>
         {% if reviews %}
             <div class="row">
                 {% for review in reviews %}
                 <div class="col-12">
                     <div class="review-notification">
-                        <h5 class="text-center"><i class="far fa-star"></i>{{ review.rating }} / 5 {{ review.headline }}
+                        <h5 class="text-center font-weight-bold"></i>{{ review.rating }} / 5
+                            {{ review.headline }}
                         </h5>
-                        {{ review.comments }}
+                        <p class="text-left">{{ review.comments }}</p>
                         
                         <p class="text-right text-muted">Submitted
                             <strong>{{ review.date_posted|date:"d-M-y" }}</strong></p>
                         <p class="text-right text-muted">By <strong>{{ review.user }}</strong></p>
                     </div>
                     {% if request.user == review.user or request.user.is_superuser %}
-                    <div class="text-right m-3">
+                    <div class="text-right my-2">
                         <a href="{% url 'edit_review' review.pk %}">Edit</a> |
                         <!-- Button trigger modal -->
                         <a class="text-danger" data-toggle="modal" data-target="#delete-review-modal">

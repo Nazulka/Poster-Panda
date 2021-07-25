@@ -209,20 +209,17 @@ input[name='q']::placeholder {
     transition: 0.3s;
     transform: translateY(-4px);
 }
-/* .fa-heart {
-    font-size: 1.1rem;
-    color: #000;
+.fa-star {
+    color: #ff9529;
 }
-.heart i.fa-heart {
-    color: #f44336;
-} */
 
 /* --- Image Thumbnail --*/
 .img-thumbnail {
-    height: 150px;
-    width: 90px !important;
+    height: 12rem;
+    width: 8rem !important;
     padding: 6px;
     border: 1px solid black;
+    border-radius: 0%;
 }
 
 /*-- Carousel-owl --*/
@@ -359,6 +356,9 @@ input[name='q']::placeholder {
     padding-left: 0;
     padding-right: 0;
 }
+.subtitle {
+    background-color: #eeeeee;
+}
 
 
 
@@ -372,10 +372,8 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
-
     .product-card {
-        width: 80%;
-        height: 50vw;
+        width: 90%;
     }
 }
 /* Allauth form formatting */
@@ -468,7 +466,8 @@ input[name='q']::placeholder {
 /* Small (sm) devices (landscape phones) */
 @media (min-width: 576px) {
     .product-card {
-        height: 20rem;
+        height: 22rem;
+
         padding: 0.7rem;
         border: 2px solid black !important;
     }
@@ -493,9 +492,8 @@ input[name='q']::placeholder {
     } */
 
     .product-card {
-        width: 12rem;
-        height: auto;
-        max-height: 18rem;
+        width: 16rem;
+        height: 25rem;
         object-fit: cover;
         padding: 0.5rem;
         border: 1.5px solid black !important;
@@ -517,6 +515,12 @@ input[name='q']::placeholder {
            border: 2px solid black !important;
            text-align: center;
        }
+       .img-thumbnail {
+           height: auto;
+           padding: 6px;
+           border: 1px solid black;
+       }
+       
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -544,6 +548,9 @@ input[name='q']::placeholder {
         font-size: 1.2rem;
         background-color: transparent;
         border: none;
+    }
+    .image-container {
+        text-align: center !important;
     }
     
 }

@@ -13,8 +13,8 @@
     <div class="overlay"></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                    <div class="image-container text-center px-4 ml-3 my-5">
+                <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+                    <div class="image-container text-right px-4 m-5">
                         {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top product-view-img img-fluid" src="{{ product.image.url }}"
@@ -29,8 +29,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="product-details-container mb-5 ml-4 mt-md-5">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="product-details-container text-left mb-5 ml-4 mt-md-5 pl-4">
                         <p class="mb-0 mt-3 logo-font">{{ product.name }}</p>
                         <p class="lead mb-0 mt-2 text-left font-weight-bold">£{{ product.price }}</p>
                         {% if product.category %}
@@ -114,7 +114,6 @@
                     </div>
                 </div>
             </div>
-            <hr class="w-50 mb-1">
         </div>
         <!-- Product reviews -->
         <div class="reviews-container text-center">

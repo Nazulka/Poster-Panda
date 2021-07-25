@@ -13,7 +13,7 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container mb-2">
-    <div class="row mt-sm-5">
+    <div class="row mt-sm-3">
         <div class="col">
             <h2 class="text-center logo-font my-4">My Wishlist</h2>
             <hr>
@@ -54,7 +54,7 @@
                             </td>
                             <td class="p-3 w-25 text-center">
                                 <a href="{% url 'product_detail' item.product.id %}"
-                                    class="btn btn-black rounded-0 text-uppercase" aria-disabled="true">
+                                    class="btn btn-small btn-black rounded-0 text-uppercase" aria-disabled="true">
                                     <span class="icon">
                                         <i class="fas fa-info-circle" aria-hidden="true"></i>
                                     </span>
@@ -65,13 +65,13 @@
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-2">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg mt-2">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
