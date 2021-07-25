@@ -1,9 +1,11 @@
     <li class="list-inline-item d-lg-none">
-        <div class="text-center">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h4 id="logo-mobile" class="logo-font text-center">Poster Panda</h4>
-            </a>
-        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger"><i class="fas fa-bars"></i></span>
+        </button>
+        <a class="nav-link navbar-brand main-logo-link" href="{% url 'home' %}" alt="brand-logo"
+            src="{{ MEDIA_URL }}panda2.png">
+        </a>
     </li>
     <li class="list-inline-item pr-0">
         <a class="text-black nav-link nav-link-left d-inline-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
@@ -14,7 +16,7 @@
         </a>
         <div class="dropdown-menu border-0 w-100 p-1 rounded-0 my-0" aria-labelledby="mobile-search">
             <form class="form" method="GET" action="{% url 'products' %}">
-                <div class="input-group w-100">
+                <div class="input-group w-100 px-2">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
                         placeholder="Search our site">
                     <div class="input-group-append text-center">
@@ -38,7 +40,7 @@
                 {% endif %}
             </div>
         </a>
-        <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-inline-block d-lg-none pl-1 pr-0"
+        <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-inline-block d-lg-none pl-1 pr-3"
             href="{% url 'view_bag' %}">
             <div class="text-center">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>

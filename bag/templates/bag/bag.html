@@ -40,10 +40,10 @@
                     <tr>
                         <td class="p-3 w-25">
                             {% if item.product.image %}
-                            <img class="img-fluid product-card" src="{{ item.product.image.url }}"
+                            <img class="img-fluid img-thumbnail" src="{{ item.product.image.url }}"
                                 alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="img-fluid product-card" src="{{ MEDIA_URL }}noimage.png"
+                            <img class="img-fluid img-thumbnail" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ item.product.name }}">
                             {% endif %}
                         </td>
@@ -111,13 +111,13 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-1">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg mt-1">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>

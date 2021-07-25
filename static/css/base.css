@@ -88,6 +88,10 @@ body {
 .bg-banner {
     background: #118592 !important;
 }
+.navbar-brand img{
+    height: 3.5rem;
+    width: auto;
+}
 
 /* from Bulma */
 .icon {
@@ -168,7 +172,7 @@ input[name='q']::placeholder {
     /* position: absolute; */
     bottom: 0;
     padding: 0;
-    margin-top: 10rem;
+    margin-top: 8rem;
     text-align: center;
     background-color: #ebebeb;
 
@@ -216,7 +220,9 @@ input[name='q']::placeholder {
 /* --- Image Thumbnail --*/
 .img-thumbnail {
     height: 150px;
-    width: 100px !important;
+    width: 90px !important;
+    padding: 6px;
+    border: 1px solid black;
 }
 
 /*-- Carousel-owl --*/
@@ -366,11 +372,11 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
-}
 
-.product-card {
-    width: 80%;
-    height: 50vw;
+    .product-card {
+        width: 80%;
+        height: 50vw;
+    }
 }
 /* Allauth form formatting */
 
@@ -457,6 +463,7 @@ input[name='q']::placeholder {
         border: 2px solid black !important;
     }
     
+    
 }
 /* Medium (md) devices (tablets) */
 @media (min-width: 768px) {
@@ -490,8 +497,8 @@ input[name='q']::placeholder {
         height: auto;
         max-height: 18rem;
         object-fit: cover;
-        padding: 0.3rem;
-        border: 1.3px solid black !important;
+        padding: 0.5rem;
+        border: 1.5px solid black !important;
     }
        .hamburger {
            width: 25px;
