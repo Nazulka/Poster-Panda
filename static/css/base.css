@@ -1,7 +1,6 @@
 html {
     height: 100%;
 }
-
 body {
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
@@ -11,7 +10,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
 #topnav {
     background: #fff;
 }
@@ -52,7 +50,6 @@ body {
     color: white;
     display: inline-block;
     cursor: pointer;
-    /* margin-top: 80%; */
     min-width: 260px;
 }
 
@@ -88,9 +85,11 @@ body {
 .bg-banner {
     background: #118592 !important;
 }
-.navbar-brand img{
-    height: 3.5rem;
-    width: auto;
+.navbar-brand {
+    height: 4rem;
+    width: 10rem;
+    object-fit: contain;
+    vertical-align: center;
 }
 
 /* from Bulma */
@@ -278,9 +277,13 @@ input[name='q']::placeholder {
 .owl-carousel .next-slide:hover {
     background-position: -24px -53px;
 }
-
-
-
+.owl-card-img {
+    height: 16rem !important;
+    /* width: 10rem !important; */
+    object-fit: cover;
+    padding: 0.8rem;
+    border: 2px solid black !important;
+}
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
@@ -333,19 +336,7 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-#product-card{
-    width: 80%;
-    height: auto;
-    max-height: 28rem;
-    object-fit: cover;
-}
-
-.img-bag {
-    padding: 0.3rem;
-    border: 1.5px solid black;
-}
-
-#badge-pill {
+.badge-pill {
     position: absolute;
     top: 0px;
     right: 16px;
@@ -358,8 +349,6 @@ input[name='q']::placeholder {
 .subtitle {
     background-color: #eeeeee;
 }
-
-
 
 
 /*---------------- Media Queries -----------------*/
@@ -375,8 +364,8 @@ input[name='q']::placeholder {
         width: 90%;
     }
 }
-/* Allauth form formatting */
 
+/* Allauth form formatting */
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
     /* mt-4 */
@@ -447,10 +436,7 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 160px;
     }
-    .img-bag {
-        padding: 1rem;
-        border: 3px solid black;
-    }
+
     #jumbotron-hero {
         margin-top: 20px !important;
     }
@@ -458,23 +444,17 @@ input[name='q']::placeholder {
 }
 /* Medium (md) devices (tablets) */
 @media (min-width: 768px) {
-    .img-bag {
-        padding: 0.75rem;
-        border: 2px solid black;
-    }
+    
 }
 
 /* Small (sm) devices (landscape phones) */
 @media (min-width: 576px) {
     .product-card {
-        height: 18rem;
+        height: 21rem;
         padding: 0.7rem;
         border: 2px solid black !important;
     }
 
-    .img-bag {
-        padding: 0.5rem;
-    }
     .product-view-img {
         max-height: 32rem !important;
         width: fit-content;
@@ -487,9 +467,6 @@ input[name='q']::placeholder {
 
 /* Extra small (xs) devices (landscape phones) */
 @media (max-width: 576px) {
-    /* .main-logo-link {
-        font-size: 1.5rem !important;
-    } */
     #jumbotron-hero {
         height: 450px;
     }
@@ -504,28 +481,30 @@ input[name='q']::placeholder {
         padding: 0.5rem;
         border: 1.5px solid black !important;
     }
-       .hamburger {
-           width: 25px;
-           height: 35px;
-       }
 
-       .navbar-toggler {
-           font-size: 1rem;
-       }
-       .product-view-img {
-           max-height: 28rem !important;
-           /* width: fit-content; */
-           max-width: 18rem;
-           object-fit: cover;
-           padding: 1rem;
-           border: 2px solid black !important;
-           text-align: center;
-       }
-       .img-thumbnail {
-           height: auto;
-           padding: 6px;
-           border: 1px solid black;
-       }
+    .hamburger {
+        width: 25px;
+        height: 35px;
+    }
+
+    .navbar-toggler {
+        font-size: 1rem;
+    }
+
+    .product-view-img {
+        max-height: 28rem !important;
+        max-width: 18rem;
+        object-fit: cover;
+        padding: 1rem;
+        border: 2px solid black !important;
+        text-align: center;
+    }
+
+    .img-thumbnail {
+        height: auto;
+        padding: 6px;
+        border: 1px solid black;
+    }
        
 }
 
@@ -558,5 +537,4 @@ input[name='q']::placeholder {
     .image-container {
         text-align: center !important;
     }
-    
 }

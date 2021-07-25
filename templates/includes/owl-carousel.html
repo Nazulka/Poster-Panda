@@ -5,12 +5,12 @@
         <div class="card carousel-card mx-sm-4 my-2">
             {% if item.image %}
             <a href="{% url 'product_detail' item.id %}">
-                <img class="card-img-top product-card img-fluid" src="{{ item.image.url }}"
+                <img class="card-img-top owl-card-img img-fluid" src="{{ item.image.url }}"
                     alt="{{ item.name }}">
             </a>
             {% else %}
             <a href="{% url 'product_detail' item.id %}">
-                <img class="card-img-top product-card img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                <img class="card-img-top owl-card-img img-fluid" src="{{ MEDIA_URL }}noimage.png"
                     alt="{{ item.name }}">
             </a>
             {% endif %}
