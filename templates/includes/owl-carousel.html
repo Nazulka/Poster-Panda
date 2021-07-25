@@ -2,7 +2,7 @@
 <div class="owl-carousel owl-theme">
     {% for item in pool %}
     <div class="item mr-2 ml-2">
-        <div class="card carousel-card my-2">
+        <div class="card carousel-card mx-sm-4 my-2">
             {% if item.image %}
             <a href="{% url 'product_detail' item.id %}">
                 <img class="card-img-top product-card img-fluid" src="{{ item.image.url }}"

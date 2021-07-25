@@ -193,24 +193,30 @@
 
         $(".owl-carousel").owlCarousel({
             margin: 10,
-            loop: false,
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
-            nav: true,
             navText : ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
             responsive:{
                 0:{
                     items:1,
+                    nav: false,
+                    loop: true,
                 },
                 600:{
                     items:3,
+                    nav: true,
+                    loop: false,
                 },
                 1000:{
                     items:4,
+                    nav: true,
+                    loop: false,
                 },
                 1200:{
                     items:5,
+                    nav: true,
+                    loop: false,
                 }
             }
         });
