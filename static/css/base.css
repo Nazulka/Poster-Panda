@@ -23,7 +23,7 @@ body {
     width: 100%;
 }
 .jumbotron-inner {
-    margin-top: 40%;
+    margin-top: 30%;
 }
 .jumbotron-left {
     background: url('/media/cali.jpg') no-repeat center center;
@@ -37,9 +37,6 @@ body {
     height: 500px;
     width: 100%;
 }
-/* .like {
-    text-decoration: none;
-} */
 
 .shop-now-button,
 .btn-black {
@@ -55,7 +52,7 @@ body {
     color: white;
     display: inline-block;
     cursor: pointer;
-    /* margin-top: 60%; */
+    /* margin-top: 80%; */
     min-width: 260px;
 }
 
@@ -100,6 +97,7 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+
 .dropdown-toggle::after {
     content: none;
 }
@@ -158,6 +156,10 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
+.nav-link {
+    padding: 10px;
+}
+
 
 /*-- Footer --*/
 #footer {
@@ -166,7 +168,7 @@ input[name='q']::placeholder {
     /* position: absolute; */
     bottom: 0;
     padding: 0;
-    margin-top: 15rem;
+    margin-top: 10rem;
     text-align: center;
     background-color: #ebebeb;
 
@@ -341,7 +343,16 @@ input[name='q']::placeholder {
     border: 1.5px solid black;
 }
 
-
+#badge-pill {
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 
 
@@ -473,14 +484,14 @@ input[name='q']::placeholder {
     /* .main-logo-link {
         font-size: 1.5rem !important;
     } */
-    
+
     .product-card {
         width: 12rem;
         height: auto;
         max-height: 18rem;
         object-fit: cover;
-        padding: 0.6rem;
-        border: 1.5px solid black !important;
+        padding: 0.3rem;
+        border: 1.3px solid black !important;
     }
        .hamburger {
            width: 25px;
@@ -518,4 +529,5 @@ input[name='q']::placeholder {
         background-color: transparent;
         border: none;
     }
+    
 }

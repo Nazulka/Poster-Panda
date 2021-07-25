@@ -314,7 +314,7 @@ ___
 ### Code
 * John CI - for helping me to restore my worksapace.
 * Sean CI - for helping to debug the code to automatically create a wishlist for the new users
-* Owl-carousel feature was inspired by this [YouTUbe tutorial](https://www.youtube.com/watch?v=YunLfczBbkY) 
+* Owl-carousel custom nav arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/) 
 
 ### Content
 * The website was inspired by CI Project- Boutique Ado

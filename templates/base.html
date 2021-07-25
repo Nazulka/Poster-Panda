@@ -19,10 +19,6 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-    <!-- Owl Slider -->
-    <!-- <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css"> -->
-    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"> -->
-    <!-- <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -83,7 +79,7 @@
                             <div class="text-center">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 {% if wishlist_products %}
-                                <span class="badge badge-pill badge-info">{{ wishlist_products|length }}</span>
+                                <span id="badge-pill" class="badge badge-pill badge-info">{{ wishlist_products|length }}</span>
                                 {% endif %}
                                 <p class="my-0">My Wishlist</p>
                                 
@@ -118,7 +114,7 @@
                                 <div>
                                     <i class="fas fa-shopping-cart fa-lg"></i>
                                     {% if bag_items %}
-                                    <span class="badge badge-pill badge-danger">{{ product_count }}</span>
+                                    <span id="badge-pill" class="badge badge-pill badge-danger">{{ product_count }}</span>
                                     {% endif %}
                                     <p class="my-0 pr-2 {% if grand_total %}text-primary{% else %}text-black{% endif %}">
                                         {% if grand_total %}
@@ -137,10 +133,10 @@
 
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100 mx-xs-1 mx-md-3 my-auto py-0">
-                <button class="navbar-toggler mr-md-5" type="button" data-toggle="collapse" data-target="#main-nav"
+                <!-- <button class="navbar-toggler mr-md-5" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="hamburger"><i class="fas fa-bars"></i></span>
-                </button>
+                </button> -->
                 
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
@@ -197,7 +193,7 @@
 
         $(".owl-carousel").owlCarousel({
             margin: 10,
-            loop: true,
+            loop: false,
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,

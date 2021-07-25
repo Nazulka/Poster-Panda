@@ -10,7 +10,7 @@
                     <div class="container jumbotron-inner">
                         <h1 class="display-4">Staycation Collection!</h1>
                         <h4 class="my-3">Create the most memorable moments at home.</h4>
-                        <p>
+                        <p class="mb-5">
                             <a class="btn btn-lg border-black shop-now-button text-uppercase py-2 mx-auto"
                                 href="{% url 'products' %}" role="button">Shop Now</a>
                         </p>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <!-- Card Jumbotron -->
+    <!-- Card Jumbotrons -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2 px-0">
@@ -27,14 +27,14 @@
                     <div class="col-sm-6">
                         <div class="jumbotron jumbotron-fluid jumbotron-left text-center mr-auto mt-3 mx-auto">
                             <p>
-                                <a class="btn btn-lg border-black product-btn text-uppercase mx-auto py-2">New In</a>
+                                <a class="btn btn-lg border-black jumbotron-btn product-btn text-uppercase mx-auto py-2">New In</a>
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="jumbotron jumbotron-fluid jumbotron-right text-center ml-auto mt-3 mx-auto">
                             <p>
-                                <a class="btn btn-lg border-black product-btn text-uppercase mx-auto py-2">Bestsellers</a>
+                                <a class="btn btn-lg border-black jumbotron-btn product-btn text-uppercase mx-auto py-2">Bestsellers</a>
                             </p>
                         </div>
                     </div>
@@ -43,9 +43,10 @@
         </div>
     </div>
     <!-- Owl Card Slider -->
-    <div class="container text-center my-5">
+    <div class="container text-center my-sm-3 my-md-5">
         <h2 class="logo-font mb-3">Handpicked Favourites</h2>
-        <div class="carousel-wrap">
+        <div class="carousel-wrap
+        ">
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     {% include 'includes/owl-carousel.html'%}
