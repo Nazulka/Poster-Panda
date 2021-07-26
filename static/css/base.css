@@ -170,7 +170,7 @@ input[name='q']::placeholder {
     height: auto;
     bottom: 0;
     padding: 0;
-    margin-top: 4rem;
+    margin-top: 3rem;
     text-align: center;
     background-color: #ebebeb;
 
@@ -278,11 +278,11 @@ input[name='q']::placeholder {
     background-position: -24px -53px;
 }
 .owl-card-img {
-    height: 16rem !important;
-    /* width: 10rem !important; */
+    height: 15rem !important;
+    width: 10rem !important;
     object-fit: cover;
     padding: 0.8rem;
-    border: 2px solid black !important;
+    border: 1.8px solid black !important;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -335,17 +335,25 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 .badge-pill {
     position: absolute;
-    top: 0px;
-    right: 16px;
-    width: 16px;
-    height: 16px;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
 }
+.mobile-pill {
+    width: 14px;
+    height: 16px;
+    top: 10px;
+    right: 16px;
+}
+.lg-pill {
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    right: 22px;
+}
+
 .subtitle {
     background-color: #eeeeee;
 }
@@ -451,7 +459,7 @@ input[name='q']::placeholder {
 @media (min-width: 576px) {
     .product-card {
         height: 21rem;
-        padding: 0.7rem;
+        padding: 0.8rem;
         border: 2px solid black !important;
     }
 
@@ -475,11 +483,15 @@ input[name='q']::placeholder {
         height: 400px;
     }
     .product-card {
-        width: 16rem;
+        width: 18rem !important;
         height: 25rem;
         object-fit: cover;
-        padding: 0.5rem;
-        border: 1.5px solid black !important;
+        padding: 1rem;
+        border: 2px solid black !important;
+    }
+    .owl-card-img {
+        height: 25rem !important;
+        width: 18rem !important;
     }
 
     .hamburger {
@@ -511,11 +523,11 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 100px;
+        padding-top: 120px;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 120px);
     } 
     .product-btn {
        margin-top: -20px;
@@ -529,7 +541,6 @@ input[name='q']::placeholder {
         color: #000;
     }
     .navbar-toggler {
-        /* padding: .25rem; */
         font-size: 1.2rem;
         background-color: transparent;
         border: none;
