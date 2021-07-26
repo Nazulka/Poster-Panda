@@ -448,6 +448,10 @@ input[name='q']::placeholder {
     #jumbotron-hero {
         margin-top: 20px !important;
     }
+    .review-img {
+        height: 18rem !important;
+        width: 12rem !important;
+    }
     
 }
 /* Medium (md) devices (tablets) */
@@ -514,7 +518,7 @@ input[name='q']::placeholder {
 
     .img-thumbnail {
         height: auto;
-        padding: 6px;
+        padding: 0.6px;
         border: 1px solid black;
     }
        
@@ -547,5 +551,9 @@ input[name='q']::placeholder {
     }
     .image-container {
         text-align: center !important;
+    }
+    .review-img {
+        height: 16rem !important;
+        width: 10rem !important;
     }
 }
