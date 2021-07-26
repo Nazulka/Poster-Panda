@@ -15,28 +15,28 @@
 <div class="container mb-2">
     <div class="row mt-sm-3">
         <div class="col">
-            <h2 class="text-center logo-font my-4">My Wishlist</h2>
+            <h2 class="text-center logo-font mt-4">My Wishlist</h2>
             <hr>
         </div>
     </div>
 
     <div class="row text-center">
-        <div class="col">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             {% if wishlist_products %}
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
-                        <thead class="text-black">
+                        <!-- <thead class="text-black">
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Product Name</th>
                                 <th scope="col">Price</th>
                                 <th scope="col"></th>
                             </tr>
-                        </thead>
+                        </thead> -->
 
                         {% for item in wishlist_products %}
                         <tr>
-                            <td class="p-3 w-25 text-center">
+                            <td class="p-3 w-40 text-center">
                                 {% if item.product.image %}
                                 <img class="img-fluid img-thumbnail"
                                     src="{{ item.product.image.url }}"
@@ -48,13 +48,15 @@
                             </td>
                             <td class="p-3 w-25 text-center">
                                 <p class="my-0">{{ item.product.name }}</p>
-                            </td>
-                            <td class="p-3 w-25 text-center">
                                 <p class="my-0">£{{ item.product.price }}</p>
+
                             </td>
-                            <td class="p-3 w-25 text-center">
+                            <!-- <td class="p-3 w-25 text-center">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </td> -->
+                            <td class="p-3 w-35 text-center">
                                 <a href="{% url 'product_detail' item.product.id %}"
-                                    class="btn btn-small btn-black rounded-0 text-uppercase" aria-disabled="true">
+                                    class="btn btn-small btn-black rounded-0 text-uppercase p-sm-1 p-lg-2" aria-disabled="true">
                                     <span class="icon">
                                         <i class="fas fa-info-circle" aria-hidden="true"></i>
                                     </span>

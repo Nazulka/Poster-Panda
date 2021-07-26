@@ -215,7 +215,7 @@ input[name='q']::placeholder {
 .img-thumbnail {
     height: auto;
     width: 8rem !important;
-    padding: 6px;
+    padding: 0.6rem;
     border: 1px solid black;
     border-radius: 0%;
 }
@@ -282,7 +282,7 @@ input[name='q']::placeholder {
     width: 10rem !important;
     object-fit: cover;
     padding: 0.8rem;
-    border: 1.8px solid black !important;
+    border: 2px solid black !important;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -335,25 +335,36 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
-.badge-pill {
+/* .badge-pill {
     position: absolute;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
 }
-.mobile-pill {
+.bag-pill-mob {
     width: 14px;
     height: 16px;
     top: 10px;
     right: 16px;
 }
-.lg-pill {
+/* .wishlist-pill-mob {
+    width: 14px;
+    height: 16px;
+    top: 10px;
+    right: 16px;
+} */
+/* .bag-pill-lg {
     width: 16px;
     height: 16px;
     top: 2px;
-    right: 22px;
-}
-
+    right: 122px;
+} */ 
+/* .wishlist-pill-lg {
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    right: 42px;
+} */
 .subtitle {
     background-color: #eeeeee;
 }
@@ -369,7 +380,7 @@ input[name='q']::placeholder {
         max-width: 80%;
     }
     .product-card {
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -518,7 +529,7 @@ input[name='q']::placeholder {
 
     .img-thumbnail {
         height: auto;
-        padding: 0.6px;
+        padding: 0.6rem;
         border: 1px solid black;
     }
        
