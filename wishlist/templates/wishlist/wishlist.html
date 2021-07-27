@@ -23,9 +23,9 @@
     <div class="row text-center">
         <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             {% if wishlist_products %}
-                <div class="table-responsive rounded">
-                    <table class="table table-sm table-borderless">
-                        <!-- <thead class="text-black">
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <!-- <thead class="text-black">
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Product Name</th>
@@ -34,69 +34,69 @@
                             </tr>
                         </thead> -->
 
-                        {% for item in wishlist_products %}
-                        <tr>
-                            <td class="pt-3 w-40 text-center">
-                                {% if item.product.image %}
-                                <img class="img-fluid img-thumbnail"
-                                    src="{{ item.product.image.url }}"
-                                    alt="{{ item.product.name }}">
-                                {% else %}
-                                <img class="img-fluid img-thumbnail" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="{{ item.product.name }}">
-                                {% endif %}
-                            </td>
-                            <td class="p-3 w-25 text-center">
-                                <p class="my-0">{{ item.product.name }}</p>
-                                <p class="my-0">£{{ item.product.price }}</p>
+                    {% for item in wishlist_products %}
+                    <tr>
+                        <td class="pt-3 w-40 text-center">
+                            {% if item.product.image %}
+                            <img class="img-fluid img-thumbnail" src="{{ item.product.image.url }}"
+                                alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-fluid img-thumbnail" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ item.product.name }}">
+                            {% endif %}
+                        </td>
+                        <td class="p-3 w-25 text-center">
+                            <p class="my-0">{{ item.product.name }}</p>
+                            <p class="my-0">£{{ item.product.price }}</p>
 
-                            </td>
-                            <!-- <td class="p-3 w-25 text-center">
-                                <p class="my-0">£{{ item.product.price }}</p>
-                            </td> -->
-                            <td class="p-3 w-35 text-center">
-                                <a href="{% url 'product_detail' item.product.id %}"
-                                    class="btn btn-small btn-black rounded-0 text-uppercase p-sm-1 p-lg-2" aria-disabled="true">
-                                    <span class="icon">
-                                        <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="text-uppercase">View Product</span>
-                                </a>
-                                <a href="{% url 'add_to_wishlist' item.product.id %}"
-                                    class="btn btn-small btn-outline-black rounded-0 text-uppercase p-sm-1 p-lg-2"
-                                    aria-disabled="true">
-                                    <span class="text-uppercase">Remove from Wishlist</span>
-                                </a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                        
-                        <tr>
-                            <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-2">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg mt-2">
-                                    <span class="text-uppercase">Secure Checkout</span>
-                                    <span class="icon">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                {% else %}
-                <p class="lead mb-5">This list is empty</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Back</span>
-                </a>
+                        </td>
+                        <td class="p-3 w-35 text-center">
+                            <a href="{% url 'product_detail' item.product.id %}"
+                                class="btn btn-small btn-black rounded-0 text-uppercase mt-2 ml-1 p-sm-1 p-lg-2"
+                                aria-disabled="true">
+                                <span class="icon">
+                                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                </span>
+                                <span class="text-uppercase">View Product</span>
+                            </a>
+                            <a href="{% url 'add_to_wishlist' item.product.id %}"
+                                class="btn btn-small btn-outline-black rounded-0 text-uppercase mt-2 ml-1 p-sm-1 p-lg-2"
+                                aria-disabled="true">
+                                <span class="icon">
+                                    <i class="far fa-trash-alt"></i>
+                                </span>
+                                <span class="text-uppercase">Remove</span>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-2">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg mt-2">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">This list is empty</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-4">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Back</span>
+            </a>
             {% endif %}
         </div>
     </div>

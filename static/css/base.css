@@ -52,7 +52,7 @@ body {
     color: white;
     display: inline-block;
     cursor: pointer;
-    min-width: 260px;
+    /* min-width: 200px; */
 }
 
 .btn-outline-black {
