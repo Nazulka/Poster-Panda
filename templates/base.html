@@ -22,6 +22,7 @@
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    
     {% endblock %}
 
     {% block extra_css %}
@@ -187,7 +188,6 @@
     {% block postload_js %}
     <script type="text/javascript">
         $('.toast').toast('show');
-
         $(".owl-carousel").owlCarousel({
             margin: 8,
             autoplay: true,
@@ -221,6 +221,4 @@
     {% endblock %}
 
 </body>
-
 </html>
-

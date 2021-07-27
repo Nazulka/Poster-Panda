@@ -88,10 +88,9 @@ body {
     background: #118592 !important;
 }
 .navbar-brand {
-    height: 4rem;
-    /* width: 10rem; */
+    height: 3.7rem;
+    max-width: 10rem;
     object-fit: contain;
-    vertical-align: center;
 }
 
 /* from Bulma */
@@ -337,39 +336,36 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/*-- Bag and wishlist count pill badges --*/
 .fa-shopping-cart {
     position: relative;
 }
-/* .badge-pill {
+.badge-pill {
     position: absolute;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
+    width: 1.6em;
+    height: 1.6em;
+    font-size: 0.6em;
 }
 .bag-pill-mob {
-    width: 14px;
-    height: 16px;
-    top: 10px;
-    right: 16px;
+    top: 1.2em;
+    right: 1.6em;
 }
-/* .wishlist-pill-mob {
-    width: 14px;
-    height: 16px;
-    top: 10px;
-    right: 16px;
-} */
+.wishlist-pill-mob {
+    top: 1.4em;
+    right: 5.3em;
+}
 .bag-pill-lg {
-    width: 16px;
-    height: 16px;
-    top: 10px;
-    right: 5px;
+    top: 0.5em;
+    right: 3em;
 } 
-/* .wishlist-pill-lg {
-    width: 16px;
-    height: 16px;
-    top: 2px;
-    right: 42px;
-} */
+.wishlist-pill-lg {
+    top: 0.8em;
+    right: 22em;
+}
 .subtitle {
     background-color: #eeeeee;
 }
