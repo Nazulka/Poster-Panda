@@ -60,6 +60,12 @@ body {
     color: black !important;
     border: 1px solid black;
 }
+.btn-outline-black:active,
+.btn-outline-black:hover,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -161,7 +167,7 @@ input[name='q']::placeholder {
 }
 
 .nav-link {
-    padding: 10px;
+    padding: 8px;
 }
 
 
@@ -490,8 +496,10 @@ input[name='q']::placeholder {
 }
 
 /* Extra small (xs) devices (landscape phones) */
-@media (max-width: 576px) {
-
+@media (max-width: 575.98px) {
+    .header-container {
+        padding-top: 105px !important;
+    }
     #jumbotron-hero {
         height: 450px;
     }
@@ -522,7 +530,12 @@ input[name='q']::placeholder {
     }
 
     .navbar-toggler {
-        font-size: 1rem;
+        font-size: 1rem !important;
+    }
+    .navbar-brand {
+        height: 3rem;
+        max-width: 7rem;
+        margin-right: 0;
     }
 
     .product-view-img {
@@ -543,7 +556,7 @@ input[name='q']::placeholder {
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
     .header-container {
         padding-top: 120px;
     }

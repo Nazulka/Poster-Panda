@@ -62,6 +62,11 @@
                                     </span>
                                     <span class="text-uppercase">View Product</span>
                                 </a>
+                                <a href="{% url 'product_detail' item.product.id %}"
+                                    class="btn btn-small btn-outline-black rounded-0 text-uppercase p-sm-1 p-lg-2"
+                                    aria-disabled="true">
+                                    <span class="text-uppercase">Remove from Wishlist</span>
+                                </a>
                             </td>
                         </tr>
                         {% endfor %}

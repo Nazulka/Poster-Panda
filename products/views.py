@@ -5,6 +5,9 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
+from products.models import Product
+from profiles.models import UserProfile
+
 from reviews.models import ProductReview
 from wishlist.models import Wishlist, WishlistItem
 
@@ -21,6 +24,10 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+
+    user = UserProfile.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=user)
+    wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -58,6 +65,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'wishlist_products': wishlist_products,
     }
 
     return render(request, 'products/products.html', context)
@@ -93,7 +101,7 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed! Please ensure the form is valid.')
     else:
         form = ProductForm()
         
