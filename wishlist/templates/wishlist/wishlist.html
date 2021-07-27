@@ -62,7 +62,7 @@
                                     </span>
                                     <span class="text-uppercase">View Product</span>
                                 </a>
-                                <a href="{% url 'product_detail' item.product.id %}"
+                                <a href="{% url 'add_to_wishlist' item.product.id %}"
                                     class="btn btn-small btn-outline-black rounded-0 text-uppercase p-sm-1 p-lg-2"
                                     aria-disabled="true">
                                     <span class="text-uppercase">Remove from Wishlist</span>
@@ -70,6 +70,7 @@
                             </td>
                         </tr>
                         {% endfor %}
+                        
                         <tr>
                             <td colspan="5" class="text-right">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-2">

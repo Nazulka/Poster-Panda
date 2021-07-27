@@ -31,8 +31,14 @@ def add_to_wishlist(request, product_id):
         wishlist = Wishlist.objects.get(user=user)
 
         # create a new wishlist item
-        product = get_object_or_404(Product, pk=product_id)
-        item = WishlistItem.objects.create(product=product, wishlist=wishlist)
-        item.delete()
+        if request.user.is_authenticated:
+            product = get_object_or_404(Product, pk=product_id)
+            item = WishlistItem.objects.filter(product=product, wishlist=wishlist)
+
+            if item.exists():
+                item.delete()
+            else:
+                item = WishlistItem.objects.create(product=product, wishlist=wishlist)
+
 
     return redirect(reverse('view_wishlist'))
