@@ -14,14 +14,16 @@ body {
     background: #fff;
 }
 #jumbotron-hero {
-    display: flex;
+    position: relative;
     background: url('/media/hero.jpg') no-repeat center center;
     background-size: cover;
     height: 650px;
     width: 100%;
 }
 .jumbotron-inner {
-    margin-top: 30%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
 }
 .jumbotron-left {
     background: url('/media/cali.jpg') no-repeat center center;
@@ -87,7 +89,7 @@ body {
 }
 .navbar-brand {
     height: 4rem;
-    width: 10rem;
+    /* width: 10rem; */
     object-fit: contain;
     vertical-align: center;
 }
@@ -335,6 +337,9 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+.fa-shopping-cart {
+    position: relative;
+}
 /* .badge-pill {
     position: absolute;
     text-align: center;
@@ -353,12 +358,12 @@ input[name='q']::placeholder {
     top: 10px;
     right: 16px;
 } */
-/* .bag-pill-lg {
+.bag-pill-lg {
     width: 16px;
     height: 16px;
-    top: 2px;
-    right: 122px;
-} */ 
+    top: 10px;
+    right: 5px;
+} 
 /* .wishlist-pill-lg {
     width: 16px;
     height: 16px;
@@ -490,8 +495,14 @@ input[name='q']::placeholder {
 
 /* Extra small (xs) devices (landscape phones) */
 @media (max-width: 576px) {
+
     #jumbotron-hero {
         height: 450px;
+    }
+    .jumbotron-inner {
+        top: 30%;
+        left: 5%;
+        right: 5%;
     }
     .jumbotron-left,
     .jumbotron-right {
