@@ -25,9 +25,9 @@ def all_products(request):
     sort = None
     direction = None
 
-    user = UserProfile.objects.get(user=request.user)
-    wishlist = Wishlist.objects.get(user=user)
-    wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
+    # user = UserProfile.objects.get(user=request.user)
+    # wishlist = Wishlist.objects.get(user=user)
+    # wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -65,7 +65,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'wishlist_products': wishlist_products,
+        # 'wishlist_products': wishlist_products,
     }
 
     return render(request, 'products/products.html', context)

@@ -62,9 +62,18 @@
                 {% endfor %}
             </div>
         {% else %}
-            <div class="review-notification">
-                Write the first review.
+             {% if request.user.is_authenticated %}
+             <div class="my-4 review-notification">
+                 <p>Write the first review.</p>
+             </div>
+             {% else %}
+            <div class="my-4 review-notification">
+                <a href="{% url 'account_signup' %}">Sign up</a>
+                or 
+                <a class="login-link" href="{% url 'account_login' %}">Log in</a> 
+                to write the first review.
             </div>
+            {% endif %}
         {% endif %}
                 
         <div class="review-notification">

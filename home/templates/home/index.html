@@ -28,7 +28,9 @@
                         <div
                             class="d-flex justify-content-center align-items-end jumbotron jumbotron-fluid jumbotron-left mr-auto">
                             <p>
-                                <a class="btn btn-lg border-black jumbotron-btn product-btn text-uppercase py-2">New In</a>
+                                <a href="{% url 'products' %}?category=new_in" 
+                                    class="btn btn-lg border-black jumbotron-btn product-btn text-uppercase py-2">New In
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -36,7 +38,9 @@
                         <div
                             class="d-flex justify-content-center align-items-end jumbotron jumbotron-fluid jumbotron-right ml-auto">
                             <p>
-                                <a class="btn btn-lg border-black jumbotron-btn product-btn text-uppercase py-2">Bestsellers</a>
+                                <a href="{% url 'products' %}?category=bestsellers"
+                                    class="btn btn-lg border-black jumbotron-btn product-btn text-uppercase py-2">Bestsellers
+                                </a>
                             </p>
                         </div>
                     </div>

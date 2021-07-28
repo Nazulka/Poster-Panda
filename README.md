@@ -89,7 +89,7 @@ The database structure was created as a visual representation for logical unders
 
 ### Skeleton 
 - [x] **Desktop/Tablet and Mobile Wireframes**
-!![Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
+[Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
 
 Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
 
@@ -298,7 +298,7 @@ python3 manage.py runserver
 - [x] **Deployment to Heroku**
 ---
 
-1. Create an account in [Heroku](https://id.heroku.com/login) if you haven't got it already and log in. Create a new app, give it a unique name and select a region closest to you.
+1. Create an account in [Heroku](https://id.heroku.com/login) if you haven't got it already and log in. Create a new app, give it a unique name and select the region closest to you.
 ![Heroku app](./readme_docs/heroku-app.png)
 
 2. Create an AWS account or log in to your existing one
