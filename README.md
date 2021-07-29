@@ -82,10 +82,7 @@ ___
     * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
 ### Structure
-The database structure was created as a visual representation for logical understanding of the data. Detailed information can be found in the _Information Architecture_ section. 
-
-![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-structure.png)
-
+Detailed information can be found in the _Information Architecture_ section. 
 
 ### Skeleton 
 - [x] **Desktop/Tablet and Mobile Wireframes**
@@ -216,7 +213,15 @@ ___
 -  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
 
 ## Information Architecture 
+- [x] **Database**
+* SQLite database engine was used in development and Heroku Postgres for deployed project.
 
+
+- [x] **Database Relationship**
+
+* The database structure below was created as a visual representation for logical understanding of the data. 
+
+![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-structure.png)
 
 
 
@@ -252,20 +257,22 @@ Testing documentation can be found [HERE](TESTING.md)
 * Once created, click on green Gitpod button to open your new workspace.
 
 
-- [x] **Local Deployment**
+### **Local Deployment**
+---
 1.  Clone the project repository from GitHub
     * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
     * Click on the _Code_ button and Download ZIP. You can unzip the files in the directory of your choice.
     * Alternatively, you can run this command in your IDE:    
     ``` 
-    git clone https://github.com/Nazulka/Poster-Panda
+    git clone https://github.com/Nazulka/Poster-Panda.git
     ```
+    * Copy the repository in your IDE.
 
-2. To install Python required modules, run in the command line
+2. To install Python required modules, run in the command line:
 
     ``` pip3 install -r requirements.txt```
 
-3. Create an ```env.py```  file to store environmental variables: 
+3. If Gitpod is used for development, these environmental variables can be stored in _Settings_ / _Variables_ on the Gitpod Workspaces page. 
 
 ``` 
 'DEVELOPMENT', set to 'True'
@@ -274,9 +281,6 @@ Testing documentation can be found [HERE](TESTING.md)
 'STRIPE_SECRET_KEY', '<your value - API secret key from Stripe dashboard>'
 'STRIPE_WH_SECRET', '<your value - from Stripe's developer API after creating a webhook>'
 ```
-
-If Gitpod is used for development, these environmental variables can be stored in _Settings_ and _Variables_ on the Gitpod Workspaces page. 
-
 
 4. To set up the local database, run:
 ```
@@ -295,13 +299,58 @@ python3 manage.py runserver
 ```
 
 
-- [x] **Deployment to Heroku**
+### **Deployment to Heroku**
 ---
 
 1. Create an account in [Heroku](https://id.heroku.com/login) if you haven't got it already and log in. Create a new app, give it a unique name and select the region closest to you.
 ![Heroku app](./readme_docs/heroku-app.png)
 
-2. Create an AWS account or log in to your existing one
+2. On the _Resources_ tab provision a new **Postgres** database. 
+3. To use Postgres, go back to Gitpod and install:
+```
+pip3 install dj_database_url
+pip3 install psycopg2-binary
+```
+4. Freeze the requirements:
+``` pip3 freeze > requirements.txt
+```
+5. To set up the new database:
+* Go to
+_settings.py_ and 
+``` import dj_databas_url
+```
+* Then comment out the default _SQLite_ database and replace it with _Postgres_. Your URL link can be obtained by revealing _Config Vars_ in Heroku _Settings_. 
+```
+DATABASES = {
+    'default': dj_database_url.parse('your-url')
+```
+
+6. Apply migrations to get the Postgres database set up.
+``` 
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+7. To import the product data, load categories and then products.
+``` 
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+```
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Create an AWS account or log in to your existing one
 
 
 
@@ -314,7 +363,7 @@ ___
 ### Code
 * John CI - for helping me to restore my worksapace.
 * Sean CI - for helping to debug the code to automatically create a wishlist for the new users
-* Owl-carousel custom nav arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/) 
+* Owl-carousel custom navigation arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/) 
 
 ### Content
 * The website was inspired by CI Project- Boutique Ado
