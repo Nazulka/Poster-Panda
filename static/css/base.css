@@ -3,15 +3,18 @@
 html {
     height: 100%;
 }
+
 body {
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .container-fluid {
     padding: 0;
     margin: 0;
 }
+
 .border-black {
     border: 1px solid black !important;
 }
@@ -24,6 +27,7 @@ body {
     color: black;
     text-transform: uppercase;
 }
+
 .dropdown-toggle::after {
     content: none;
 }
@@ -47,6 +51,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+
 /* ---- Links ---- */
 
 .btt-link,
@@ -59,6 +64,7 @@ input[name='q']::placeholder {
 .remove-item {
     text-decoration: none;
 }
+
 
 /*---- Navigation ----*/
 
@@ -76,6 +82,7 @@ input[name='q']::placeholder {
     padding: 8px;
 }
 
+
 /*---- Home Page Jumbotrons ----*/
 
 #jumbotron-hero {
@@ -85,28 +92,34 @@ input[name='q']::placeholder {
     height: 650px;
     width: 100%;
 }
+
 .jumbotron-inner {
     position: absolute;
     top: 50%;
     left: 5%;
 }
+
 .jumbotron-left {
     background: url('/media/cali.jpg') no-repeat center center;
     background-size: cover;
     height: 500px;
     width: 100%;
 }
+
 .jumbotron-right {
     background: url('/media/surf.jpg') no-repeat center center;
     background-size: cover;
     height: 500px;
     width: 100%;
 }
+
 .bg-banner {
     background: #118592 !important;
 }
 
+
 /*---- From Bulma ----*/
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -114,6 +127,7 @@ input[name='q']::placeholder {
     height: 1.5rem;
     width: 1.5rem;
 }
+
 
 /*---- Buttons ----*/
 
@@ -123,6 +137,7 @@ input[name='q']::placeholder {
     color: white;
     /* min-width: 260px; */
 }
+
 .product-btn {
     background: black;
     color: white;
@@ -167,6 +182,7 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
+
 /*---- Bootstrap Toasts ----*/
 
 .message-container {
@@ -185,7 +201,6 @@ input[name='q']::placeholder {
 }
 
 
-
 /*----- Footer and Social Icons -----*/
 
 #footer {
@@ -196,7 +211,6 @@ input[name='q']::placeholder {
     margin-top: 3rem;
     text-align: center;
     background-color: #ebebeb;
-
 }
 
 .footer-copyright {
@@ -206,18 +220,23 @@ input[name='q']::placeholder {
     padding-right: 0;
     margin: 0 auto;
 }
+
 .social-links {
     text-decoration: none;
 }
+
 .fa-facebook {
     color: #3b5998;
-} 
+}
+
 .fa-twitter {
     color: #00aced;
 }
+
 .fa-instagram {
     color: #517fa4;
 }
+
 .fa-pinterest {
     color: #cb2027;
 }
@@ -231,6 +250,7 @@ input[name='q']::placeholder {
     transform: translateY(-4px);
 }
 
+
 /*------ Reviews ------*/
 
 .fa-star {
@@ -240,6 +260,7 @@ input[name='q']::placeholder {
 .review-title {
     background-color: #eeeeee;
 }
+
 
 /* ----- Image Thumbnail -----*/
 
@@ -251,7 +272,10 @@ input[name='q']::placeholder {
     border-radius: 0%;
 }
 
+
 /*------- Owl-carousel ------*/
+
+
 /*-- Custom navigation is from: www.freakyjolly.com --*/
 
 .carousel-card {
@@ -283,7 +307,7 @@ input[name='q']::placeholder {
 }
 
 .owl-theme .owl-dots .owl-dot.active,
-.owl-theme .owl-dots .owl-dot:hover{
+.owl-theme .owl-dots .owl-dot:hover {
     background: #118592;
 }
 
@@ -319,6 +343,7 @@ input[name='q']::placeholder {
     background-position: -24px -53px;
 }
 
+
 /*-- From CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ --*/
 
 .arrow-up {
@@ -331,6 +356,7 @@ input[name='q']::placeholder {
     top: -10px;
     right: 36px;
 }
+
 
 /*-- Convenience classes - colors copied from Bootstrap --*/
 
@@ -372,6 +398,7 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+
 /*-- Bag and wishlist items badge-pills --*/
 
 .fa-shopping-cart {
@@ -401,7 +428,7 @@ input[name='q']::placeholder {
 .bag-pill-lg {
     top: 0.5em;
     right: 3em;
-} 
+}
 
 .wishlist-pill-lg {
     top: 0.8em;
@@ -409,21 +436,8 @@ input[name='q']::placeholder {
 }
 
 
-/*---------------- Media Queries -----------------*/
+/*---- Allauth form formatting ----*/
 
-/* Extra (xl) large devices (large desktops)*/ 
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-    .product-card {
-        width: 80%;
-    }
-}
-
-/* Allauth form formatting */
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
     /* mt-4 */
@@ -462,7 +476,6 @@ input[name='q']::placeholder {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
@@ -480,9 +493,26 @@ input[name='q']::placeholder {
 }
 
 
+/*================ Media Queries ===============*/
+
+/*-- Extra (xl) large devices (large desktops) --*/
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .product-card {
+        width: 14rem;
+    }
+}
+
+
+
 /* Large (lg) devices (desktops) */
 
 /* fixed top navbar only on medium and up */
+
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -491,6 +521,7 @@ input[name='q']::placeholder {
         left: 0;
         z-index: 1030;
     }
+
     .header-container {
         padding-top: 160px;
     }
@@ -498,21 +529,19 @@ input[name='q']::placeholder {
     #jumbotron-hero {
         margin-top: 20px !important;
     }
+
     .review-img {
         height: 18rem !important;
         width: 12rem !important;
     }
-    
-}
-/* Medium (md) devices (tablets) */
-@media (min-width: 768px) {
-    
 }
 
+
 /* Small (sm) devices (landscape phones) */
+
 @media (min-width: 576px) {
     .product-card {
-        height: 21rem;
+        height: 19rem;
         padding: 0.8rem;
         border: 2px solid black !important;
     }
@@ -527,23 +556,29 @@ input[name='q']::placeholder {
     }
 }
 
+
 /* Extra small (xs) devices (landscape phones) */
+
 @media (max-width: 575.98px) {
     .header-container {
         padding-top: 105px !important;
     }
+
     #jumbotron-hero {
         height: 450px;
     }
+
     .jumbotron-inner {
         top: 30%;
         left: 5%;
         right: 5%;
     }
+
     .jumbotron-left,
     .jumbotron-right {
         height: 400px;
     }
+
     .product-card {
         width: 18rem !important;
         height: 25rem;
@@ -551,6 +586,7 @@ input[name='q']::placeholder {
         padding: 1rem;
         border: 2px solid black !important;
     }
+
     .owl-card-img {
         height: 25rem !important;
         width: 18rem !important;
@@ -564,6 +600,7 @@ input[name='q']::placeholder {
     .navbar-toggler {
         font-size: 1rem !important;
     }
+
     .navbar-brand {
         height: 3rem;
         width: 7rem;
@@ -584,10 +621,9 @@ input[name='q']::placeholder {
         padding: 0.6rem;
         border: 1px solid black;
     }
-       
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991.98px) {
     .header-container {
         padding-top: 120px;
@@ -595,11 +631,13 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 120px);
-    } 
-    .product-btn {
-       margin-top: -20px;
-       min-width: 200px;
     }
+
+    .product-btn {
+        margin-top: -20px;
+        min-width: 200px;
+    }
+
     .hamburger {
         position: relative;
         width: 30px;
@@ -607,14 +645,17 @@ input[name='q']::placeholder {
         overflow: hidden;
         color: #000;
     }
+
     .navbar-toggler {
         font-size: 1.2rem;
         background-color: transparent;
         border: none;
     }
+
     .image-container {
         text-align: center !important;
     }
+
     .review-img {
         height: 16rem !important;
         width: 10rem !important;
