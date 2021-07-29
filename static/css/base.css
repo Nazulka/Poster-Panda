@@ -534,7 +534,7 @@ input[name='q']::placeholder {
     }
     .navbar-brand {
         height: 3rem;
-        max-width: 7rem;
+        width: 7rem;
         margin-right: 0;
     }
 
