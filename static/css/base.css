@@ -1,3 +1,5 @@
+/*---- General ----*/
+
 html {
     height: 100%;
 }
@@ -10,9 +12,72 @@ body {
     padding: 0;
     margin: 0;
 }
+.border-black {
+    border: 1px solid black !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.logo-font {
+    color: black;
+    text-transform: uppercase;
+}
+.dropdown-toggle::after {
+    content: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ---- Links ---- */
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.update-link,
+.remove-item {
+    text-decoration: none;
+}
+
+/*---- Navigation ----*/
+
 #topnav {
     background: #fff;
 }
+
+.navbar-brand {
+    height: 3.7rem;
+    max-width: 10rem;
+    object-fit: contain;
+}
+
+.nav-link {
+    padding: 8px;
+}
+
+/*---- Home Page Jumbotrons ----*/
+
 #jumbotron-hero {
     position: relative;
     background: url('/media/hero.jpg') no-repeat center center;
@@ -37,6 +102,20 @@ body {
     height: 500px;
     width: 100%;
 }
+.bg-banner {
+    background: #118592 !important;
+}
+
+/*---- From Bulma ----*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*---- Buttons ----*/
 
 .shop-now-button,
 .btn-black {
@@ -44,15 +123,11 @@ body {
     color: white;
     /* min-width: 260px; */
 }
-.header-right {
-    padding: 0;
-}
 .product-btn {
     background: black;
     color: white;
     display: inline-block;
     cursor: pointer;
-    /* min-width: 200px; */
 }
 
 .btn-outline-black {
@@ -60,6 +135,7 @@ body {
     color: black !important;
     border: 1px solid black;
 }
+
 .btn-outline-black:active,
 .btn-outline-black:hover,
 .btn-outline-black:focus {
@@ -79,51 +155,7 @@ body {
     background: white;
     color: black;
 }
-.border-black {
-    border: 1px solid black !important; 
-}
-.text-black {
-    color: #000 !important;
-}
 
-.logo-font {
-    color: black;
-    text-transform: uppercase;
-}
-.bg-banner {
-    background: #118592 !important;
-}
-.navbar-brand {
-    height: 3.7rem;
-    max-width: 10rem;
-    object-fit: contain;
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.dropdown-toggle::after {
-    content: none;
-}
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
-}
-a.category-badge>span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}
 .btt-button {
     height: 40px;
     width: 40px;
@@ -135,22 +167,8 @@ a.category-badge>span.badge:hover {
     color: #fff;
 }
 
-.btt-link,
-.update-link, 
-.remove-item {
-    cursor: pointer;
-}
+/*---- Bootstrap Toasts ----*/
 
-.update-link,
-.remove-item {
-    text-decoration: none;
-}
-
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
-/* ------------------------------- bootstrap toasts */
 .message-container {
     position: fixed;
     top: 72px;
@@ -166,12 +184,10 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-.nav-link {
-    padding: 8px;
-}
 
 
-/*-- Footer --*/
+/*----- Footer and Social Icons -----*/
+
 #footer {
     width: 100%;
     height: auto;
@@ -214,11 +230,19 @@ input[name='q']::placeholder {
     transition: 0.3s;
     transform: translateY(-4px);
 }
+
+/*------ Reviews ------*/
+
 .fa-star {
     color: #ff9529;
 }
 
-/* --- Image Thumbnail --*/
+.review-title {
+    background-color: #eeeeee;
+}
+
+/* ----- Image Thumbnail -----*/
+
 .img-thumbnail {
     height: auto;
     width: 8rem !important;
@@ -227,15 +251,25 @@ input[name='q']::placeholder {
     border-radius: 0%;
 }
 
-/*-- Carousel-owl --*/
+/*------- Owl-carousel ------*/
+/*-- Custom navigation is from: www.freakyjolly.com --*/
 
 .carousel-card {
     border-radius: 10px;
     border: none;
 }
+
 .owl-card-body {
     height: 120px;
     border: #fff;
+}
+
+.owl-card-img {
+    height: 15rem !important;
+    width: 10rem !important;
+    object-fit: cover;
+    padding: 0.8rem;
+    border: 2px solid black !important;
 }
 
 .carousel-wrap {
@@ -284,15 +318,9 @@ input[name='q']::placeholder {
 .owl-carousel .next-slide:hover {
     background-position: -24px -53px;
 }
-.owl-card-img {
-    height: 15rem !important;
-    width: 10rem !important;
-    object-fit: cover;
-    padding: 0.8rem;
-    border: 2px solid black !important;
-}
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/*-- From CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ --*/
+
 .arrow-up {
     width: 0;
     height: 0;
@@ -304,7 +332,8 @@ input[name='q']::placeholder {
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
+/*-- Convenience classes - colors copied from Bootstrap --*/
+
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -343,10 +372,12 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/*-- Bag and wishlist count pill badges --*/
+/*-- Bag and wishlist items badge-pills --*/
+
 .fa-shopping-cart {
     position: relative;
 }
+
 .badge-pill {
     position: absolute;
     text-align: center;
@@ -356,24 +387,25 @@ input[name='q']::placeholder {
     height: 1.6em;
     font-size: 0.6em;
 }
+
 .bag-pill-mob {
     top: 1.2em;
     right: 1.6em;
 }
+
 .wishlist-pill-mob {
     top: 1.4em;
     right: 5.3em;
 }
+
 .bag-pill-lg {
     top: 0.5em;
     right: 3em;
 } 
+
 .wishlist-pill-lg {
     top: 0.8em;
     right: 22em;
-}
-.subtitle {
-    background-color: #eeeeee;
 }
 
 
