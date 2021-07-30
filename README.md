@@ -214,16 +214,32 @@ ___
 
 ## Information Architecture 
 - [x] **Database**
-* SQLite database engine was used in development and Heroku Postgres for deployed project.
-
+* SQLite database engine was used in local development and Heroku Postgres for deployed project.
 
 - [x] **Database Relationship**
 
+This project features 8 models accross 7 apps:
+* **Order Model** - handles details for each order following a successful checkout. 
+
+* **OrderLineItem** - contain information on each product added to the bag. Used for calculations by the Order Model. 
+
+* **Products Model** - contains information on each Product. 
+
+* **Category Model** - holds Product Categories
+
+* **User Profile** - holds default delivery information users select to save on their profile as well as their order history.
+
+* **Product Review** - model for performing CRUD operations on product Reviews
+
+* **Wishlist** - model for maintaining a wishlist.
+
+* **Wishlist Item** - the 'through' model that creates link between products and wishlist.
+
+
+- [x] **Database Structure**
 * The database structure below was created as a visual representation for logical understanding of the data. 
 
-![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-structure.png)
-
-
+![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-relationship.png)
 
 
 ## Testing
@@ -238,6 +254,7 @@ ZIP: any 5 digit number
 
 Testing documentation can be found [HERE](TESTING.md)
 
+[:top:](#poster-panda)
 
 ## Deployment
 ---
@@ -298,6 +315,7 @@ python3 manage.py createsuperuser
 python3 manage.py runserver
 ```
 
+[:top:](#poster-panda)
 
 ### **Deployment to Heroku**
 ---
@@ -343,7 +361,7 @@ python3 manage.py loaddata products
 ```
 python3 manage.py createsuperuser
 ```
-9. Install gunicorn to act as a webserver and update the requirements:
+9. Install _gunicorn_ to act as a webserver and update the requirements:
 ``` 
 pip3 install gunicorn
 pip3 freeze --local > requirements.txt
@@ -358,37 +376,21 @@ web: gunicorn your-app-name.wsgi:application
 
 12. In Heroku, go to your app, under -Deploy_ tab select _Connect to GitHub_ then find and connect to your repository. Click on _Enable automatic deploys_ so any changes pushed to GitHub can be automatically deployed to Heroku and finally 'Deploy Branch'.  
 
-13. Reveal Config Vars in _Settings_ to add environmental variables.
+13. Reveal Config Vars in _Settings_ to add environmental variables. 
 ```
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
-
+DATABASE_URL
+SECRET_KEY
+USE_AWS
+STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY
+STRIPE_WH_SECRET
 ```
+Remember,they should match the ones you have in your _settings.py_ file.
 
 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-Create an AWS account or log in to your existing one
-
-
-
-
-
-
-
+[:top:](#poster-panda)
 ## Credits
 ___
 ### Code
