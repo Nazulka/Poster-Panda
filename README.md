@@ -329,7 +329,7 @@ DATABASES = {
     'default': dj_database_url.parse('your-url')
 ```
 
-6. Apply all migrations to get the _Postgres SQL database_ set up.
+6. Apply all migrations to get the _Postgres SQL_ database set up.
 ``` 
 python3 manage.py makemigrations
 python3 manage.py migrate
@@ -356,9 +356,13 @@ web: gunicorn your-app-name.wsgi:application
 
 11. Add, commit the changes and push them to GitHub and then to Heroku master. Make sure you are logged in to Heroku from your CLI.
 
-12. In Heroku, go to your app, under -Deploy_ tab select _Connect to GitHub_ then find and connect to your repository. Then click on _Enable automatic deploys_ so any changes pushed to GitHub can be automatically deployed to Heroku.   
+12. In Heroku, go to your app, under -Deploy_ tab select _Connect to GitHub_ then find and connect to your repository. Click on _Enable automatic deploys_ so any changes pushed to GitHub can be automatically deployed to Heroku and finally 'Deploy Branch'.  
 
 13. Reveal Config Vars in _Settings_ to add environmental variables.
+```
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+```
 
 
 
