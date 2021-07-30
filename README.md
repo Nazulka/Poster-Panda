@@ -28,17 +28,14 @@ ___
   * [Information Architecture](#information-architecture)
   * [Testing](#testing)
   * [Deployment](#deployment)
-    + [**Local Deployment**](#--local-deployment--)
-    + [**Deployment to Heroku**](#--deployment-to-heroku--)
   * [Credits](#credits)
-    + [Code](#code)
-    + [Content](#content)
   * [Acknowledgements](#acknowledgements)
 
 
 ## UX
 ___
 ### Strategy 
+
 * #### Project Goals
     * To create a fully-optimized responsive site for flawless user experience on all devices.
     * To create a platform that allows all users to purchase stylish and affordable posters and frames.
@@ -59,8 +56,11 @@ ___
         * Home and Garden
     * Users looking to buy a trendy gift.
 
+[:top:](#poster-panda)
+
 
 ### User Stories
+
 
 * #### As a **First-time / casual visitor** I want to be able to:
     * Navigate the site intuitively and easily access all available website features from different screen size devices.
@@ -70,6 +70,7 @@ ___
     * View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.
     * View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the costs before I decide to checkout. 
     * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
+
 
 * #### As a **Registered / returning visitor** I want to be able to:
     * Get a confirmation email upon successful registration to be certain that my account has been created.
@@ -87,14 +88,18 @@ ___
     * Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.  
     * Remove items that I am no longer interested in from my wishlist.
 
+
 * #### As a **Store owner / Superuser** I want to be able to:
     * Add products to enable me to add new items to the store.
     * Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.
     * Delete products, if they are no longer available, to keep the stocks up to date.
 
 
+[:top:](#poster-panda)
+
 ### Scope 
-* To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
+
+    * To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
     * Intuitive design: allow users to navigate the site intuitively, view products.
     * Authorisation: allow users to Register, Login and Logout.
     * Wishlist: allow users to add products to the wishlist and remove from it.
@@ -104,10 +109,16 @@ ___
     * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
 ### Structure
+
+
 Detailed information can be found in the _Information Architecture_ section. 
 
 ### Skeleton 
+
+
 - [x] **Desktop/Tablet and Mobile Wireframes**
+
+
 [Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
 
 Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
@@ -116,7 +127,10 @@ Some changes were made to the original wireframes during development process, pa
 
 ### Surface
 
+
 - [x] **Color Scheme**
+
+
 ![color palette](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/coolors.png "Project color scheme palette from Coolors")
 
 * [Coolors](https://coolors.co/) was used to create the color palette for this project.
@@ -131,6 +145,9 @@ Some changes were made to the original wireframes during development process, pa
 * All supporting images for the website as well as products' images were carefully selected from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/). 
 
 
+[:top:](#poster-panda)
+
+
 ## Technologies Used
 ___
 ### Languages
@@ -140,7 +157,10 @@ ___
 * Python
 
 ### Frameworks, Libraries and Tools
+
+
 - [x] **Front-end**
+
 * **[Bootstrap v4.6](https://getbootstrap.com/)** - a front-end open source toolkit, used to create a sleek, consistent, functional and responsive website.
 The main components used: navbar, cards, footer, buttons, toasts etc.  
 * **[jQuery](https://jquery.com/)** - required to ensure proper rendering of the Bootstrap components listed above.
@@ -153,6 +173,7 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 
 
 - [x] **Back-end**
+
 * **[Django](https://www.djangoproject.com/)** - free and open-source Python Framework for rapid development and clean design.
 * **[Stripe](https://stripe.com/gb)** - for fast and easy to implement way of accepting online payments from customers.
 * **[Pillow](https://pypi.org/project/Pillow/2.2.1/)** - Python Imaging Library (PIL), that supports opening, manipulating and saving images.
@@ -165,17 +186,22 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 
 
 - [x] **IDE and Deployment**
+
 * **[Git](https://git-scm.com/)** - used to keep track of the changes made to the repository and for version control.
 * **[Gitpod](https://www.gitpod.io/)** - I used CI full template as an IDE to develop, commit and push files to GitHub. 
 * **[GitHub](https://github.com/)** - used as a hosting service and for future collaborations.
 * **[Heroku](https://id.heroku.com/login)** - my GitHub repo for this project had been connected to Heroku app to enable management and deployment of this app.
 
 
+[:top:](#poster-panda)
+
 ## Features
 ___
+
 ### Implemented Features
 
 **Features available accross all pages**
+
 **Navigation Bar**
 * The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
@@ -184,36 +210,47 @@ ___
 * My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile, My Wishlist and Logout for authorised users and an additional Product Management link for an admin user.
 
 **Toast Messages**
+
 * Django pop up toast messages displayed to keep the users informed.
 
 **Page specific features**
+
 - [x] **Home Page**
+
 * Contains a main jumbotron that features colorful and bright image to draw attention and call to action to shop the latest collection. Two additional jumbotrons also styled in similar fashion and invite users to shop. 
 * *Handpicked Favourites* section is added for extra interactivity and is an owl-carousel that cycles through cards containing product images and details. 
 * Responsive *Footer* is visible on Home Page and contains website motto, delivery information and social media icons. Icons are hoverable to let users know they are clickable and linked to the external websites and open in new tabs when clicked.
 * *Copyright* section is directly below the Footer and contains Copyright information.
 
+
 - [x] **Products Page**
+
 * Products are displayed in a responsive grid layout and provide the best shopping experience no matter what device user is using to shop. 
 * Products display can be sorted alphabetically, by price, rating and category for the user's convenience. 
 * It features back to top button to allow users to get to the top of the page if there are a lot of products on the page.
 
 
 - [x] **Product Detail Page**
+
 * When users click on a product that they are interested in it opens in a new Product detail page. This page contains a product image and details and allows users to select product size and quantity before adding the product to the bag. 
 * Product reviews and ratings for the selected product are displayed on the bottom of the page to give users chance to learn other customers feedback.
 * Logged in users are encouraged to leave their own reviews.
 
+
 - [x] **Profile Page**
+
 * This page is only available for registered users.
 * It allows users to view saved default delivery and update it if need be. 
 * Order History section contains all previous orders details. Users can click on individual order number to view full details.
 
 
 - [x] **Bag Page**
+
 * This feature allows users to view their shopping bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
 
+
 - [x] **Checkout Page**
+
 * Contains a crispy form for user details and delivery address.
 * Order summary is displayed to keep users informed and contains products details, subtotal, delivery charges and total for the bag. 
 * Links provided to create an account for all new users or to log in for existing users to.
@@ -223,6 +260,7 @@ ___
 
 
 - [x] **Django allauth features**
+
 * *Register* - allows new users to create an account to access website's full features by filling out the registration form. A verifification email is sent to the email provided for confirmation. 
 * *Log In* - registered users can log in using their username and password. 
 * *Password reset* - a link to reset password is provided if users forgot their password.
@@ -230,17 +268,25 @@ ___
 
 
 ### Future Features
+
 -  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
 -  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
 -  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
 
+
+[:top:](#poster-panda)
+
 ## Information Architecture 
+
 - [x] **Database**
+
 * SQLite database engine was used in local development and Heroku Postgres for deployed project.
+
 
 - [x] **Database Relationship**
 
 This project features 8 models accross 7 apps:
+
 * **Order Model** - handles details for each order following a successful checkout. 
 
 * **OrderLineItem** - contain information on each product added to the bag. Used for calculations by the Order Model. 
@@ -259,13 +305,16 @@ This project features 8 models accross 7 apps:
 
 
 - [x] **Database Structure**
+
 * The database structure below was created as a visual representation for logical understanding of the data. 
+
 
 ![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-relationship.png)
 
 
 ## Testing
 ___
+
 Stripe checkout test card details:
 ```
 Card number: 4242 4242 4242 4242
@@ -274,7 +323,9 @@ CVC: any 3 digit number
 ZIP: any 5 digit number
 ```
 
+
 Testing documentation can be found [HERE](TESTING.md)
+
 
 [:top:](#poster-panda)
 
@@ -282,6 +333,7 @@ Testing documentation can be found [HERE](TESTING.md)
 ---
 
 - [x] **Requirements**
+
 * *Python3* to write the code and run the application
 * *PIP* to install packages
 * *Git* for version control
@@ -291,6 +343,7 @@ Testing documentation can be found [HERE](TESTING.md)
 * *AWS* cloud storage and S3 to store and retrieve media and static files.
 
 - [x] **Project Creation**
+
 * This project was created using the CI recommended Gitpod Full Template.
 * Click on Use this template button and enter a short and memorable name of your choice for your repo and select Create repository from template.
 * Once created, click on green Gitpod button to open your new workspace.
@@ -298,6 +351,7 @@ Testing documentation can be found [HERE](TESTING.md)
 
 ### **Local Deployment**
 ---
+
 1.  Clone the project repository from GitHub
     * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
     * Click on the _Code_ button and Download ZIP. You can unzip the files in the directory of your choice.
@@ -311,8 +365,7 @@ Testing documentation can be found [HERE](TESTING.md)
 
     ``` pip3 install -r requirements.txt```
 
-3. If Gitpod is used for development, these environmental variables can be stored in _Settings_ / _Variables_ on the Gitpod Workspaces page. 
-
+3. If Gitpod is used for development, these environmental variables can be stored in _Settings_ > _Variables_ on the Gitpod Workspaces page. 
 ``` 
 'DEVELOPMENT', set to 'True'
 'SECRET_KEY', '<your value - from Django Secret Key Generator>'
@@ -354,13 +407,16 @@ pip3 install psycopg2-binary
 ```
 
 4. Freeze the requirements:
-``` pip3 freeze > requirements.txt
+```
+pip3 freeze > requirements.txt
 ```
 
 5. To set up the new database:
+
 * Go to
 _settings.py_ and 
-``` import dj_databas_url
+``` 
+import dj_databas_url
 ```
 
 * Then comment out the default _SQLite_ database and replace it with _Postgres SQL_. Your URL link can be obtained by revealing _Config Vars_ in Heroku _Settings_. 
@@ -413,14 +469,17 @@ Remember,they should match the ones you have in your _settings.py_ file.
 
 
 [:top:](#poster-panda)
+
 ## Credits
 ___
 ### Code
+
 * John CI - for helping me to restore my worksapace.
 * Sean CI - for helping to debug the code to automatically create a wishlist for the new users
 * Owl-carousel custom navigation arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/) 
 
 ### Content
+
 * The website was inspired by CI Project- Boutique Ado
 * The website design was inspired by [Desenio](https://desenio.co.uk/)
 * All images are taken from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
