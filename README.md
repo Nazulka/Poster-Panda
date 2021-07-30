@@ -6,12 +6,34 @@ ___
 
 At Poster Panda, we are passionate about interior decoration and design. We offer wide range of stylish high quality posters along with frames and have something to suit every wall. Express yourself by creating a personalized wall of posters! Inspire others and have fun!
 
-### :panda_face: [Visit the website]()
+### :panda_face: [Visit the website](https://poster-panda.herokuapp.com/)
 
 
 ## Table of Contents
 ___
-
+  * [Table of Contents](#table-of-contents)
+  * [UX](#ux)
+    + [Strategy](#strategy)
+    + [User Stories](#user-stories)
+    + [Scope](#scope)
+    + [Structure](#structure)
+    + [Skeleton](#skeleton)
+    + [Surface](#surface)
+  * [Technologies Used](#technologies-used)
+    + [Languages](#languages)
+    + [Frameworks, Libraries and Tools](#frameworks--libraries-and-tools)
+  * [Features](#features)
+    + [Implemented Features](#implemented-features)
+    + [Future Features](#future-features)
+  * [Information Architecture](#information-architecture)
+  * [Testing](#testing)
+  * [Deployment](#deployment)
+    + [**Local Deployment**](#--local-deployment--)
+    + [**Deployment to Heroku**](#--deployment-to-heroku--)
+  * [Credits](#credits)
+    + [Code](#code)
+    + [Content](#content)
+  * [Acknowledgements](#acknowledgements)
 
 
 ## UX
