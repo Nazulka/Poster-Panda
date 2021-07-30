@@ -354,7 +354,12 @@ pip3 freeze --local > requirements.txt
 web: gunicorn your-app-name.wsgi:application
 ```
 
-11. 
+11. Add, commit the changes and push them to GitHub and then to Heroku master. Make sure you are logged in to Heroku from your CLI.
+
+12. In Heroku, go to your app, under -Deploy_ tab select _Connect to GitHub_ then find and connect to your repository. Then click on _Enable automatic deploys_ so any changes pushed to GitHub can be automatically deployed to Heroku.   
+
+13. Reveal Config Vars in _Settings_ to add environmental variables.
+
 
 
 
