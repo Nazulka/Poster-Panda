@@ -325,7 +325,7 @@ DATABASES = {
     'default': dj_database_url.parse('your-url')
 ```
 
-6. Apply migrations to get the Postgres database set up.
+6. Apply all migrations to get the Postgres database set up.
 ``` 
 python3 manage.py makemigrations
 python3 manage.py migrate
@@ -334,6 +334,10 @@ python3 manage.py migrate
 ``` 
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
+```
+8. Create superuser:
+```
+python3 manage.py createsuperuser
 ```
 
 
