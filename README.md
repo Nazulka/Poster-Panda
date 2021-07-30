@@ -211,7 +211,7 @@ ___
 
 **Toast Messages**
 
-* Django pop up toast messages displayed to keep the users informed.
+* Django pop-up toast messages displayed to keep the users informed.
 
 **Page specific features**
 
