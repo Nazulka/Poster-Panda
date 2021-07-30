@@ -2,6 +2,18 @@
 ---
 ---
 #### Table of contents 
+- [Testing](#testing)
+  * [Code Validity](#code-validity)
+  * [Testing User Stories](#testing-user-stories)
+  * [Functionality Testing](#functionality-testing)
+  * [**Navigation Bar**](#--navigation-bar--)
+  * [**Toast Messages**](#--toast-messages--)
+  * [Responsiveness](#responsiveness)
+  * [Usability Testing](#usability-testing)
+  * [Performance Testing](#performance-testing)
+  * [Browser Compatibility Testing](#browser-compatibility-testing)
+  * [Known Bugs](#known-bugs)
+
 
 
 ## Code Validity
@@ -29,6 +41,7 @@
 | View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the costs before I decide to checkout.| *Product detail* page also allows users to select the product size, add it to the bag, view ratings and reviews (if any). They get confirmation of their actions as well as the bag items preview and a subtotal on a toast message.|
 | Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.| The *Register* button is easily accessible for the users who wish to sign up to enable faster checkouts in the future as well as accessing their order history.|
 
+**[back to top](#testing)**
 
 - [x] **Registered / Returning Visitor**
 
@@ -177,23 +190,33 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 ## Responsiveness
 ---
+The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro, etc using Responsinator, Am I Responsive as well as Google Dev Tools Device Mode.
 
+It was tested on physical devices including iPhone XR and iPad. All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
 
 
 ## Usability Testing
 ---
+This website was tested for usability by my family and friends. They didn't experience any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to intuitively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website.
+
 
 ## Performance Testing
 ---
-
+Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown an excellent performance and accessibility results for desktop devices. Steps taken to improve performance for the mobile devices following the initial tests.
 
 
 ## Browser Compatibility Testing
 ---
+Device/Browser | Google Chrome    | Microsoft Edge   | Firefox          | Safari           | Internet Explorer |
+-------------- | :---------------:|:----------------:| :---------------:| :---------------:| :----------------:|
+Mobile Phone   |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| n/a               |
+Tablet         |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| n/a               |
+Desktop        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| n/a               |
+
 
 
 ### Known Bugs 
 ---
-
+There are no known bags at the time of submitting this project.
 
 **[back to top](#testing)**
