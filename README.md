@@ -306,31 +306,35 @@ python3 manage.py runserver
 ![Heroku app](./readme_docs/heroku-app.png)
 
 2. On the _Resources_ tab provision a new **Postgres** database. 
+
 3. To use Postgres, go back to Gitpod and install:
 ```
 pip3 install dj_database_url
 pip3 install psycopg2-binary
 ```
+
 4. Freeze the requirements:
 ``` pip3 freeze > requirements.txt
 ```
+
 5. To set up the new database:
 * Go to
 _settings.py_ and 
 ``` import dj_databas_url
 ```
-* Then comment out the default _SQLite_ database and replace it with _Postgres_. Your URL link can be obtained by revealing _Config Vars_ in Heroku _Settings_. 
+
+* Then comment out the default _SQLite_ database and replace it with _Postgres SQL_. Your URL link can be obtained by revealing _Config Vars_ in Heroku _Settings_. 
 ```
 DATABASES = {
     'default': dj_database_url.parse('your-url')
 ```
 
-6. Apply all migrations to get the Postgres database set up.
+6. Apply all migrations to get the _Postgres SQL database_ set up.
 ``` 
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
-7. To import the product data, load categories and then products.
+7. To import the product data, load categories first and then products, as products depend on categories.
 ``` 
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
@@ -339,6 +343,19 @@ python3 manage.py loaddata products
 ```
 python3 manage.py createsuperuser
 ```
+9. Install gunicorn to act as a webserver and update the requirements:
+``` 
+pip3 install gunicorn
+pip3 freeze --local > requirements.txt
+```
+
+10. Create a _Procfile_ to tell Heroku to create a web dyno, which will run gunicorn and serve our django app. 
+```
+web: gunicorn your-app-name.wsgi:application
+```
+
+11. 
+
 
 
 
