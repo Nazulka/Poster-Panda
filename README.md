@@ -2,53 +2,64 @@
 ___
 ___
 
-#### ![responsive image]()
+### ![responsive image]()
 
 At Poster Panda, we are passionate about interior decoration and design. We offer wide range of stylish high quality posters along with frames and have something to suit every wall. Express yourself by creating a personalized wall of posters! Inspire others and have fun!
 
-### :panda_face: [Visit the website](https://poster-panda.herokuapp.com/)
+### :panda_face: [Live website](https://poster-panda.herokuapp.com/)
 
 
-## Table of Contents
+# Table of Contents
+- [UX](#ux)
+  * [Strategy](#strategy)
+    + [Project Goals](#project-goals)
+    + [Business Goals](#business-goals)
+    + [Target Audience](#target-audience)
+  * [User Stories](#user-stories)
+    + [As a **First-time / casual visitor** I want to be able to:](#as-a---first-time---casual-visitor---i-want-to-be-able-to-)
+    + [As a **Registered / returning visitor** I want to be able to:](#as-a---registered---returning-visitor---i-want-to-be-able-to-)
+    + [As a **Store owner / Superuser** I want to be able to:](#as-a---store-owner---superuser---i-want-to-be-able-to-)
+  * [Scope](#scope)
+  * [Structure](#structure)
+  * [Skeleton](#skeleton)
+  * [Surface](#surface)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Frameworks, Libraries and Tools](#frameworks--libraries-and-tools)
+- [Features](#features)
+  * [Implemented Features](#implemented-features)
+  * [Future Features](#future-features)
+- [Information Architecture](#information-architecture)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  * [**Local Deployment**](#--local-deployment--)
+  * [**Deployment to Heroku**](#--deployment-to-heroku--)
+- [Credits](#credits)
+  * [Code](#code)
+  * [Content](#content)
+- [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+nowledgements)
+
+
+# UX
 ___
-  * [Table of Contents](#table-of-contents)
-  * [UX](#ux)
-    + [Strategy](#strategy)
-    + [User Stories](#user-stories)
-    + [Scope](#scope)
-    + [Structure](#structure)
-    + [Skeleton](#skeleton)
-    + [Surface](#surface)
-  * [Technologies Used](#technologies-used)
-    + [Languages](#languages)
-    + [Frameworks, Libraries and Tools](#frameworks--libraries-and-tools)
-  * [Features](#features)
-    + [Implemented Features](#implemented-features)
-    + [Future Features](#future-features)
-  * [Information Architecture](#information-architecture)
-  * [Testing](#testing)
-  * [Deployment](#deployment)
-  * [Credits](#credits)
-  * [Acknowledgements](#acknowledgements)
-
-
-## UX
-___
-### Strategy 
-
-* #### Project Goals
+## Strategy 
+----
+* ### Project Goals
     * To create a fully-optimized responsive site for flawless user experience on all devices.
     * To create a platform that allows all users to purchase stylish and affordable posters and frames.
     * Convert website visitors into registered users to utilize the website to it's full potential. 
 
 
-* #### Business Goals
+* ### Business Goals
     * Achieve sales growth by offering competitively priced, good value products and increase profit.
     * Drive traffic to the site by promoting it on various social media sites and collaborating with influencers.
     * Offer new and exclusive collections every month by collaborating with original photographers and artists.
 
 
-* #### Target Audience
+* ### Target Audience
     * Mainly female audience (around 75% according to the market research data) aged 14-65 who have interest in:
         * Lifestyle, beauty and fashion 
         * Travel and tourism 
@@ -59,10 +70,11 @@ ___
 [:top:](#poster-panda)
 
 
-### User Stories
+## User Stories
+----
+### First-time / casual visitor
+* As a **First-time / casual visitor** I want to be able to:
 
-
-* #### As a **First-time / casual visitor** I want to be able to:
     * Navigate the site intuitively and easily access all available website features from different screen size devices.
     * See list of all the products offered on the site and use sorting and filters to narrow down the search for posters that I am interested in purchasing.
     * See the new collections and other featured favourites to be inspired and informed on latest trends.
@@ -72,7 +84,10 @@ ___
     * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
 
 
-* #### As a **Registered / returning visitor** I want to be able to:
+### Registered / returning visitor
+
+* As a **Registered / returning visitor** I want to be able to:
+
     * Get a confirmation email upon successful registration to be certain that my account has been created.
     * Easily reset the password if I forget it so I can recover access to my account.
     * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
@@ -88,8 +103,10 @@ ___
     * Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.  
     * Remove items that I am no longer interested in from my wishlist.
 
+### Store owner / Superuser
 
-* #### As a **Store owner / Superuser** I want to be able to:
+* As a **Store owner / Superuser** I want to be able to:
+
     * Add products to enable me to add new items to the store.
     * Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.
     * Delete products, if they are no longer available, to keep the stocks up to date.
@@ -97,39 +114,38 @@ ___
 
 [:top:](#poster-panda)
 
-### Scope 
 
-    * To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
-    * Intuitive design: allow users to navigate the site intuitively, view products.
-    * Authorisation: allow users to Register, Login and Logout.
-    * Wishlist: allow users to add products to the wishlist and remove from it.
-    * Reviews: allow users to add, edit, delete product reviews on the website.
-    * Simple checkout: allow users to checkut in a few simple steps. 
-    * Secure payment: allow users to securely enter their payment details to complete the purchase. 
-    * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
+## Scope 
+----
+* To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
+* Intuitive design: allow users to navigate the site intuitively, view products.
+* Authorisation: allow users to Register, Login and Logout.
+* Wishlist: allow users to add products to the wishlist and remove from it.
+* Reviews: allow users to add, edit, delete product reviews on the website.
+* Simple checkout: allow users to checkut in a few simple steps. 
+* Secure payment: allow users to securely enter their payment details to complete the purchase. 
+* Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
-### Structure
-
-
+## Structure
+----
 Detailed information can be found in the _Information Architecture_ section. 
 
-### Skeleton 
-
+## Skeleton 
+----
 
 - [x] **Desktop/Tablet and Mobile Wireframes**
 
+* Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
+
+* Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because it was considered low importance and low viability.
 
 [Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
 
-Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
-
-Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because it was considered low importance and low viability.
-
-### Surface
+## Surface
+----
 
 
 - [x] **Color Scheme**
-
 
 ![color palette](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/coolors.png "Project color scheme palette from Coolors")
 
@@ -141,6 +157,7 @@ Some changes were made to the original wireframes during development process, pa
 - [x] **Typography**
 * Google Fonts *Noto Sans* used accross the site for a harmonious look and feel.
 
+
 - [x] **Imagery**
 * All supporting images for the website as well as products' images were carefully selected from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/). 
 
@@ -148,16 +165,16 @@ Some changes were made to the original wireframes during development process, pa
 [:top:](#poster-panda)
 
 
-## Technologies Used
-___
-### Languages
+# Technologies Used
+----
+
+## Languages
 * HTML5
 * CSS3
 * JavaScript
 * Python
 
-### Frameworks, Libraries and Tools
-
+## Frameworks, Libraries and Tools
 
 - [x] **Front-end**
 
@@ -195,12 +212,13 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 
 [:top:](#poster-panda)
 
-## Features
+# Features
 ___
 
-### Implemented Features
+## Implemented Features
+----
 
-**Features available accross all pages**
+### **Features available accross all pages**
 
 **Navigation Bar**
 * The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
@@ -213,7 +231,7 @@ ___
 
 * Django pop-up toast messages displayed to keep the users informed.
 
-**Page specific features**
+### **Page specific features**
 
 - [x] **Home Page**
 
@@ -267,7 +285,8 @@ ___
 * *Logout* - a Sign Out button allows users to log out of the website for added security. 
 
 
-### Future Features
+## Future Features
+----
 
 -  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
 -  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
@@ -276,12 +295,13 @@ ___
 
 [:top:](#poster-panda)
 
-## Information Architecture 
+
+# Information Architecture 
+----
 
 - [x] **Database**
 
 * SQLite database engine was used in local development and Heroku Postgres for deployed project.
-
 
 - [x] **Database Relationship**
 
@@ -312,7 +332,7 @@ This project features 8 models accross 7 apps:
 ![Database Structure](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/db-relationship.png)
 
 
-## Testing
+# Testing
 ___
 
 Stripe checkout test card details:
@@ -324,12 +344,13 @@ ZIP: any 5 digit number
 ```
 
 
-Testing documentation can be found [HERE](TESTING.md)
+Testing documentation can be found **[HERE](TESTING.md)**
 
 
 [:top:](#poster-panda)
 
-## Deployment
+
+# Deployment
 ---
 
 - [x] **Requirements**
@@ -349,8 +370,8 @@ Testing documentation can be found [HERE](TESTING.md)
 * Once created, click on green Gitpod button to open your new workspace.
 
 
-### **Local Deployment**
----
+## **Local Deployment**
+----
 
 1.  Clone the project repository from GitHub
     * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
@@ -392,8 +413,8 @@ python3 manage.py runserver
 
 [:top:](#poster-panda)
 
-### **Deployment to Heroku**
----
+## **Remote Deployment**
+----
 
 1. Create an account in [Heroku](https://id.heroku.com/login) if you haven't got it already and log in. Create a new app, give it a unique name and select the region closest to you.
 ![Heroku app](./readme_docs/heroku-app.png)
@@ -413,8 +434,7 @@ pip3 freeze > requirements.txt
 
 5. To set up the new database:
 
-* Go to
-_settings.py_ and 
+* Go to _settings.py_ and 
 ``` 
 import dj_databas_url
 ```
@@ -470,15 +490,16 @@ Remember,they should match the ones you have in your _settings.py_ file.
 
 [:top:](#poster-panda)
 
-## Credits
-___
-### Code
+# Credits
+-----
+
+## Code
 
 * John CI - for helping me to restore my worksapace.
 * Sean CI - for helping to debug the code to automatically create a wishlist for the new users
 * Owl-carousel custom navigation arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/) 
 
-### Content
+## Content
 
 * The website was inspired by CI Project- Boutique Ado
 * The website design was inspired by [Desenio](https://desenio.co.uk/)
@@ -486,7 +507,7 @@ ___
 * Some of the poster descriptions are from [Poster Store](https://posterstore.co.uk/)
 * Favicon icon is from [ICONS8](https://icons8.com/)
 
-## Acknowledgements
+# Acknowledgements
 
 * I would like to thank my mentor Excellence Ilesanmi for his continuous support and guidance.
 * Big thanks to all tutors from Tutor Support.
