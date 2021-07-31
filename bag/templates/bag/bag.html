@@ -20,9 +20,8 @@
             <hr>
         </div>
     </div>
-
     <div class="row">
-        <div class="col">
+        <div class="col" style="min-height:100vh">
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
@@ -152,7 +151,7 @@
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
@@ -169,6 +168,6 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock %}
