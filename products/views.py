@@ -25,10 +25,6 @@ def all_products(request):
     sort = None
     direction = None
 
-    # user = UserProfile.objects.get(user=request.user)
-    # wishlist = Wishlist.objects.get(user=user)
-    # wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
-
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -43,7 +39,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -52,10 +48,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -65,7 +63,6 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        # 'wishlist_products': wishlist_products,
     }
 
     return render(request, 'products/products.html', context)
@@ -83,7 +80,7 @@ def product_detail(request, product_id):
         'wishlist': wishlist,
     }
     template = 'products/product_detail.html'
-    
+
     return render(request, template, context)
 
 
@@ -104,7 +101,7 @@ def add_product(request):
             messages.error(request, 'Failed! Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
