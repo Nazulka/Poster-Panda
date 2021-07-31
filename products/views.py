@@ -5,11 +5,9 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from products.models import Product
-from profiles.models import UserProfile
 
 from reviews.models import ProductReview
-from wishlist.models import Wishlist, WishlistItem
+from wishlist.models import WishlistItem
 
 from .forms import ProductForm
 
