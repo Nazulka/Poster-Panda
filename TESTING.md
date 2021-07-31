@@ -27,7 +27,7 @@
 ## Testing User Stories
 ------
 
-- [x] **First-Time / Casual Visitor** 
+### First-Time / Casual Visitor
 
 | **User Story** | **Testing** | 
 |:-----------|:--------|
@@ -41,7 +41,7 @@
 
 
 
-- [x] **Registered / Returning Visitor**
+### Registered / Returning Visitor
 
 | **User Story** | **Testing** | 
 |:---------------|:------------|
@@ -62,7 +62,7 @@
 
 
 
-- [x] **Store owner / Superuser**
+### Store owner / Superuser
 
 | **User Story** | **Testing** | 
 |:-----------|:--------|
@@ -75,10 +75,10 @@
 
 
 ## Functionality Testing
----
+----
 
 **Navigation Bar**
----
+
 * The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a compact mobile navbar that contains the hamburger menu button, brand logo and *Search*, *My Wishlist* and *Bag* buttons. 
 * When clicked, the hamburger menu dropdown displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
 * *My Account* link can also be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
@@ -97,13 +97,11 @@
 
 
 **Toast Messages**
----
 
 * Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
 
 - [x] **Home Page**
----
 
 * Home page is responsive and all the items displaying as intended on different screen sizes.
 * Jumbotrons are displayed correctly and call to action buttons are working as they should, taking the users to the appropriate pages.
@@ -114,7 +112,6 @@
 
 
 - [x] **Products Page**
----
 
 * The *Product Page* correctly dispays all products cards in a responsive grid layout. The amount of cards in each row varies depending on screen sizes.
 * The total products count is displayed on top of the page for users convenience.
@@ -126,7 +123,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Product Detail Page**
----
 
 * The *Product Detail* page is correctly displaying product image, name, category as well as the full description for the product.
 * Users can select a value between 1 and 99 by *manually* entering it, by using *up* or *down* arrows or *+* and *-* buttons provided, in order for them to add the desired product quantity to the bag. Arrows and buttons are disabled functionally and style wise to stop users from increasing / decreasing values outside the valid numbers.
@@ -143,7 +139,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Profile Page**
-----
 
 * Authenticated users are able to access *My Profile* page by clicking on *My Account* button on the main navbar on larger screens or clicking on the hamburger menu button and selecting it from the dropdown menu on medium and small screens. 
 * The page renders the form where users defaul delivery information is saved (if they choose to) when they checkout for the first tima. This information can be updated by submitting an amended form and if successful, users see a confirmation toast message. 
@@ -151,7 +146,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Bag Page**
----
 
 * Items added to the bag can be viewed in the *Bag* page. 
 * The number of items in the bag is correctly displayed next to the bag icon.  
@@ -162,7 +156,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Checkout Page**
----
 
 * This page contains the checkout form for user details, delivery information and payment details for users who are not logged in. 
 * Logged in users can choose to save this information by ticking the appropriate box when checking out for the first time for faster future checkouts. The credit card information will not be stored for security purposes and has to be re-entered on each checkout.
@@ -172,7 +165,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 
 - [x] **Django allauth features**
----
 
 * **_Registration_**: 
     * Users can click on the *Register* button on the *My Account* dropdown menu.
@@ -192,14 +184,13 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
     * *Sign Out* page is accessed by clicking on *My Account* and *Logout*. 
     * Users need to confirm sighning out by clicking on the *Sign Out* button. 
     * A toast message is displayed to confirm successful sign out and users are redirected to the Home Page.
-
-    
+ 
 
 [:top:](#poster-panda)
 
 
 ## Responsiveness
----
+----
 
 The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro, etc using Responsinator, Am I Responsive as well as Google Dev Tools Device Mode.
 
@@ -207,19 +198,19 @@ It was tested on physical devices including iPhone XR and iPad. All tests have s
 
 
 ## Usability Testing
----
+----
 
 This website was tested for usability by my family and friends. They didn't experience any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to intuitively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website.
 
 
 ## Performance Testing
----
+----
 
 Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown an excellent performance and accessibility results for desktop devices. Steps taken to improve performance for the mobile devices following the initial tests.
 
 
 ## Browser Compatibility Testing
----
+----
 
 Device/Browser | Google Chrome    | Microsoft Edge   | Firefox          | Safari           | Internet Explorer |
 -------------- | :---------------:|:----------------:| :---------------:| :---------------:| :----------------:|
@@ -230,9 +221,8 @@ Desktop        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_
 
 
 ### Known Bugs 
----
+----
 
 There are no known bags at the time of submitting this project.
-
 
 [:top:](#poster-panda)

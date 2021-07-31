@@ -1,6 +1,5 @@
 # POSTER PANDA
 ___
-___
 
 ### ![responsive image]()
 
@@ -10,6 +9,7 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
 
 
 # Table of Contents
+
 - [UX](#ux)
   * [Strategy](#strategy)
     + [Project Goals](#project-goals)
@@ -32,8 +32,8 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
 - [Information Architecture](#information-architecture)
 - [Testing](#testing)
 - [Deployment](#deployment)
-  * [**Local Deployment**](#--local-deployment--)
-  * [**Remote Deployment**](#--remote-deployment--)
+  * [Local Deployment](#local-deployment)
+  * [Remote Deployment](#remote-deployment)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 
@@ -43,7 +43,7 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
 # UX
 ___
 ## Strategy 
-----
+
 * ### Project Goals
     * To create a fully-optimized responsive site for flawless user experience on all devices.
     * To create a platform that allows all users to purchase stylish and affordable posters and frames.
@@ -68,8 +68,9 @@ ___
 
 
 ## User Stories
-----
+
 ### First-time / casual visitor
+
 * As a **First-time / casual visitor** I want to be able to:
 
     * Navigate the site intuitively and easily access all available website features from different screen size devices.
@@ -113,7 +114,7 @@ ___
 
 
 ## Scope 
-----
+
 * To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
 * Intuitive design: allow users to navigate the site intuitively, view products.
 * Authorisation: allow users to Register, Login and Logout.
@@ -124,11 +125,10 @@ ___
 * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
 ## Structure
-----
+
 Detailed information can be found in the _Information Architecture_ section. 
 
 ## Skeleton 
-----
 
 - [x] **Desktop/Tablet and Mobile Wireframes**
 
@@ -139,8 +139,6 @@ Detailed information can be found in the _Information Architecture_ section.
 [Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
 
 ## Surface
-----
-
 
 - [x] **Color Scheme**
 
@@ -164,8 +162,8 @@ Detailed information can be found in the _Information Architecture_ section.
 
 # Technologies Used
 ----
-
 ## Languages
+
 * HTML5
 * CSS3
 * JavaScript
@@ -210,10 +208,8 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 [:top:](#poster-panda)
 
 # Features
-___
-
+---
 ## Implemented Features
-----
 
 ### **Features available accross all pages**
 
@@ -283,11 +279,10 @@ ___
 
 
 ## Future Features
-----
 
--  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
--  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
--  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
+*  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
+*  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
+*  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
 
 
 [:top:](#poster-panda)
@@ -295,7 +290,6 @@ ___
 
 # Information Architecture 
 ----
-
 - [x] **Database**
 
 * SQLite database engine was used in local development and Heroku Postgres for deployed project.
@@ -331,7 +325,6 @@ This project features 8 models accross 7 apps:
 
 # Testing
 ___
-
 Stripe checkout test card details:
 ```
 Card number: 4242 4242 4242 4242
@@ -349,7 +342,6 @@ Testing documentation can be found **[HERE](TESTING.md)**
 
 # Deployment
 ---
-
 - [x] **Requirements**
 
 * *Python3* to write the code and run the application
@@ -367,8 +359,8 @@ Testing documentation can be found **[HERE](TESTING.md)**
 * Once created, click on green Gitpod button to open your new workspace.
 
 
-## **Local Deployment**
-----
+## Local Deployment
+
 
 1.  Clone the project repository from GitHub
     * Go to the project [repository](https://github.com/Nazulka/Poster-Panda)
@@ -410,8 +402,8 @@ python3 manage.py runserver
 
 [:top:](#poster-panda)
 
-## **Remote Deployment**
-----
+## Remote Deployment
+
 
 1. Create an account in [Heroku](https://id.heroku.com/login) if you haven't got it already and log in. Create a new app, give it a unique name and select the region closest to you.
 ![Heroku app](./readme_docs/heroku-app.png)
@@ -489,7 +481,6 @@ Remember,they should match the ones you have in your _settings.py_ file.
 
 # Credits
 -----
-
 ## Code
 
 * John CI - for helping me to restore my worksapace.
@@ -504,7 +495,7 @@ Remember,they should match the ones you have in your _settings.py_ file.
 * Some of the poster descriptions are from [Poster Store](https://posterstore.co.uk/)
 * Favicon icon is from [ICONS8](https://icons8.com/)
 
-# Acknowledgements
+## Acknowledgements
 
 * I would like to thank my mentor Excellence Ilesanmi for his continuous support and guidance.
 * Big thanks to all tutors from Tutor Support.
