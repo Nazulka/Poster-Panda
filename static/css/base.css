@@ -575,6 +575,7 @@ input[name='q']::placeholder {
     .jumbotron {
         margin-bottom: 1rem !important;
     }
+
     .jumbotron-inner {
         top: 30%;
         left: 5%;
@@ -628,6 +629,7 @@ input[name='q']::placeholder {
         padding: 0.6rem;
         border: 1px solid black;
     }
+
     #footer .fa-2x {
         font-size: 1.4rem;
     }

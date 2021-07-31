@@ -16,15 +16,15 @@ class AddReviewForm(forms.ModelForm):
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
         """
-        super().__init__(*args, **kwargs)     
+        super().__init__(*args, **kwargs)
         placeholders = {
             'headline': 'Review Headline',
             'comments': 'Your Comments',
         }
- 
+
         self.fields['headline'].widget.attrs['autofocus'] = True
         self.fields['comments'].widget.attrs['rows'] = 5
-        
+
         for field in self.fields:
             if field != 'rating':
                 if self.fields[field].required:

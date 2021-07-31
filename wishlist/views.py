@@ -46,4 +46,3 @@ def add_to_wishlist(request, product_id):
                 messages.info(request, 'Added to your wishlist!')
 
     return redirect(reverse('view_wishlist'))
-    

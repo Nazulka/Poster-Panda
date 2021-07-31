@@ -50,172 +50,172 @@
     <title>Poster Panda {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-md-4 header-left my-auto">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group mx-auto w-75">
-                        <input class="form-control border" type="text" name="q" placeholder="Search">
-                        <div class="input-group-append">
-                            <button class="form-control btn border rounded-0" type="submit" aria-label="Search button">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-md-4 header-center text-center my-auto">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 id="logo" class="logo-font">Poster Panda</h2>
-                </a>
-            </div>
-            <div class="col-12 col-md-4 d-inline-block p-0 mx-auto">
-                <ul class="list-inline float-right list-unstyled text-center text-lg-right mr-md-1 my-0">
-                    <li class="list-inline-item d-inline-block">
-                        <a href="{% url 'view_wishlist' %}" class="nav-link text-black px-0">
-                            <div class="text-center">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                {% if wishlist_products %}
-                                <span
-                                    class="badge badge-pill wishlist-pill-lg badge-info">{{ wishlist_products|length }}</span>
-                                {% endif %}
-                                <p class="my-0">My Wishlist</p>
-
+    <body>
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-md-4 header-left my-auto">
+                    <form method="GET" action="{% url 'products' %}">
+                        <div class="input-group mx-auto w-75">
+                            <input class="form-control border" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control btn border rounded-0" type="submit" aria-label="Search button">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item dropdown d-inline-block">
-                        <a class="nav-link dropdown-toggle px-0" role="button" href="#" id="user-profile-options"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center text-black">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-profile-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
                         </div>
-                    </li>
-                    <li class="list-inline-item d-inline-block">
-                        <a class="text-black nav-link pl-0 pr-3" href="{% url 'view_bag' %}">
-                            <div class="text-center pr-1">
-                                <div>
-                                    <i class="fas fa-shopping-cart fa-lg"></i>
-                                    {% if bag_items %}
-                                    <span class="badge badge-pill bag-pill-lg ml-0 badge-danger">{{ product_count }}</span>
+                    </form>
+                </div>
+                <div class="col-12 col-md-4 header-center text-center my-auto">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 id="logo" class="logo-font">Poster Panda</h2>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 d-inline-block p-0 mx-auto">
+                    <ul class="list-inline float-right list-unstyled text-center text-lg-right mr-md-1 my-0">
+                        <li class="list-inline-item d-inline-block">
+                            <a href="{% url 'view_wishlist' %}" class="nav-link text-black px-0">
+                                <div class="text-center">
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
+                                    {% if wishlist_products %}
+                                    <span
+                                        class="badge badge-pill wishlist-pill-lg badge-info">{{ wishlist_products|length }}</span>
                                     {% endif %}
-                                    <p
-                                        class="my-0 pr-2 {% if grand_total %}text-primary{% else %}text-black{% endif %}">
-                                        {% if grand_total %}
-                                        £{{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                        £0.00
-                                        {% endif %}
-                                    </p>
+                                    <p class="my-0">My Wishlist</p>
+
                                 </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown d-inline-block">
+                            <a class="nav-link dropdown-toggle px-0" role="button" href="#" id="user-profile-options"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center text-black">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-profile-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="list-inline-item d-inline-block">
+                            <a class="text-black nav-link pl-0 pr-3" href="{% url 'view_bag' %}">
+                                <div class="text-center pr-1">
+                                    <div>
+                                        <i class="fas fa-shopping-cart fa-lg"></i>
+                                        {% if bag_items %}
+                                        <span class="badge badge-pill bag-pill-lg ml-0 badge-danger">{{ product_count }}</span>
+                                        {% endif %}
+                                        <p
+                                            class="my-0 pr-2 {% if grand_total %}text-primary{% else %}text-black{% endif %}">
+                                            {% if grand_total %}
+                                            £{{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                            £0.00
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100 mx-xs-1 mx-md-3 my-auto py-0">
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-banner">
-                <h6 class="text-white my-1 d-block">Delivery 2-4 working days</h4>
-                    <h6 class="text-white my-1 d-block">Free shipping over £{{ free_delivery_threshold }}!</h4>
+            <div class="row bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light w-100 mx-xs-1 mx-md-3 my-auto py-0">
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
-        </div>
-    </header>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-banner">
+                    <h6 class="text-white my-1 d-block">Delivery 2-4 working days</h4>
+                        <h6 class="text-white my-1 d-block">Free shipping over £{{ free_delivery_threshold }}!</h4>
+                </div>
+            </div>
+        </header>
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
         {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
 
-    {% block postloadjs %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
-    {% endblock %}
+        {% block postloadjs %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+            integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+        {% endblock %}
 
-    {% block postload_js %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-        $(".owl-carousel").owlCarousel({
-            margin: 8,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            dots: false,
-            navText: ["<div class='nav-btn prev-slide' aria-label='Left Button'></div>",
-                "<div class='nav-btn next-slide' aria-label='Right Button'></div>"
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    loop: true,
-                },
-                600: {
-                    items: 3,
-                    nav: true,
-                    loop: false,
-                },
-                1000: {
-                    items: 4,
-                    nav: true,
-                    loop: false,
-                },
-                1200: {
-                    items: 5,
-                    nav: true,
-                    loop: false,
+        {% block postload_js %}
+        <script type="text/javascript">
+            $('.toast').toast('show');
+            $(".owl-carousel").owlCarousel({
+                margin: 8,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                dots: false,
+                navText: ["<div class='nav-btn prev-slide' aria-label='Left Button'></div>",
+                    "<div class='nav-btn next-slide' aria-label='Right Button'></div>"
+                ],
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false,
+                        loop: true,
+                    },
+                    600: {
+                        items: 3,
+                        nav: true,
+                        loop: false,
+                    },
+                    1000: {
+                        items: 4,
+                        nav: true,
+                        loop: false,
+                    },
+                    1200: {
+                        items: 5,
+                        nav: true,
+                        loop: false,
+                    }
                 }
-            }
-        });
-    </script>
-    {% endblock %}
+            });
+        </script>
+        {% endblock %}
 
-</body>
+    </body>
 </html>
