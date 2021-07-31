@@ -28,8 +28,6 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
   * [Frameworks, Libraries and Tools](#frameworks--libraries-and-tools)
 - [Features](#features)
   * [Implemented Features](#implemented-features)
-    + [**Features available accross all pages**](#--features-available-accross-all-pages--)
-    + [**Page specific features**](#--page-specific-features--)
   * [Future Features](#future-features)
 - [Information Architecture](#information-architecture)
 - [Testing](#testing)
@@ -37,11 +35,8 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
   * [**Local Deployment**](#--local-deployment--)
   * [**Remote Deployment**](#--remote-deployment--)
 - [Credits](#credits)
-  * [Code](#code)
-  * [Content](#content)
 - [Acknowledgements](#acknowledgements)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
