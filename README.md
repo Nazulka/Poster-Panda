@@ -16,9 +16,9 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
     + [Business Goals](#business-goals)
     + [Target Audience](#target-audience)
   * [User Stories](#user-stories)
-    + [As a **First-time / casual visitor** I want to be able to:](#as-a---first-time---casual-visitor---i-want-to-be-able-to-)
-    + [As a **Registered / returning visitor** I want to be able to:](#as-a---registered---returning-visitor---i-want-to-be-able-to-)
-    + [As a **Store owner / Superuser** I want to be able to:](#as-a---store-owner---superuser---i-want-to-be-able-to-)
+    + [First-time / casual visitor](#first-time---casual-visitor)
+    + [Registered / returning visitor](#registered---returning-visitor)
+    + [Store owner / Superuser](#store-owner---superuser)
   * [Scope](#scope)
   * [Structure](#structure)
   * [Skeleton](#skeleton)
@@ -28,19 +28,21 @@ At Poster Panda, we are passionate about interior decoration and design. We offe
   * [Frameworks, Libraries and Tools](#frameworks--libraries-and-tools)
 - [Features](#features)
   * [Implemented Features](#implemented-features)
+    + [**Features available accross all pages**](#--features-available-accross-all-pages--)
+    + [**Page specific features**](#--page-specific-features--)
   * [Future Features](#future-features)
 - [Information Architecture](#information-architecture)
 - [Testing](#testing)
 - [Deployment](#deployment)
   * [**Local Deployment**](#--local-deployment--)
-  * [**Deployment to Heroku**](#--deployment-to-heroku--)
+  * [**Remote Deployment**](#--remote-deployment--)
 - [Credits](#credits)
   * [Code](#code)
   * [Content](#content)
 - [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-nowledgements)
+
 
 
 # UX
