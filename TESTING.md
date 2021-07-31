@@ -1,18 +1,23 @@
 # Testing 
 ---
----
-## Table of contents 
 
+- [Testing](#testing)
   * [Code Validity](#code-validity)
   * [Testing User Stories](#testing-user-stories)
+    + [First-Time / Casual Visitor](#first-time---casual-visitor)
+    + [Registered / Returning Visitor](#registered---returning-visitor)
+    + [Store owner / Superuser](#store-owner---superuser)
   * [Functionality Testing](#functionality-testing)
-  * [**Navigation Bar**](#--navigation-bar--)
-  * [**Toast Messages**](#--toast-messages--)
+    + [Features available accross all pages](#features-available-accross-all-pages)
+    + [Page specific features](#page-specific-features)
   * [Responsiveness](#responsiveness)
   * [Usability Testing](#usability-testing)
   * [Performance Testing](#performance-testing)
   * [Browser Compatibility Testing](#browser-compatibility-testing)
+  
   * [Known Bugs](#known-bugs)
+
+
 
 
 
@@ -71,11 +76,13 @@
 | Delete products, if they are no longer available, to keep the stocks up to date.| Logged in Superuser is provided with a *Delete* button under each product, which they can use to remove a product/s from the store if need be. |
 
 
-[:top:](#poster-panda)
+[:top:](#testing)
 
 
 ## Functionality Testing
 ----
+
+### Features available accross all pages
 
 **Navigation Bar**
 
@@ -100,6 +107,7 @@
 
 * Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
+### Page specific features
 
 - [x] **Home Page**
 
@@ -186,11 +194,10 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
     * A toast message is displayed to confirm successful sign out and users are redirected to the Home Page.
  
 
-[:top:](#poster-panda)
+[:top:](#testing)
 
 
 ## Responsiveness
-----
 
 The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro, etc using Responsinator, Am I Responsive as well as Google Dev Tools Device Mode.
 
@@ -198,13 +205,11 @@ It was tested on physical devices including iPhone XR and iPad. All tests have s
 
 
 ## Usability Testing
-----
 
 This website was tested for usability by my family and friends. They didn't experience any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to intuitively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website.
 
 
 ## Performance Testing
-----
 
 Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown an excellent performance and accessibility results for desktop devices. Steps taken to improve performance for the mobile devices following the initial tests.
 
@@ -220,9 +225,8 @@ Desktop        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_
 
 
 
-### Known Bugs 
-----
+## Known Bugs 
 
 There are no known bags at the time of submitting this project.
 
-[:top:](#poster-panda)
+[:top:](#testing)
