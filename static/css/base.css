@@ -7,12 +7,14 @@ html {
 body {
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden !important;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .container-fluid {
     padding: 0;
     margin: 0;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 .border-black {
@@ -503,6 +505,7 @@ input[name='q']::placeholder {
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
+        overflow-x: hidden !important;
     }
 
     .product-card {

@@ -10,7 +10,8 @@ from wishlist.models import Wishlist, WishlistItem
 
 @login_required
 def view_wishlist(request):
-
+    """ A view to render all wishlist items """
+    
     user = UserProfile.objects.get(user=request.user)
     wishlist = Wishlist.objects.get(user=user)
     wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
@@ -23,7 +24,7 @@ def view_wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
-    """ A view to add products to the wishlist and remove from it"""
+    """ A view to add products to the wishlist and remove from it """
 
     if request.method == 'GET':
         # get the wishlist
