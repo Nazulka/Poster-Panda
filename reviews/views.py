@@ -34,6 +34,7 @@ def add_review(request, product_id):
     if request.method == 'POST':
         if user_review:
             messages.error(request, "You have reviewed this product already.")
+            return redirect(reverse('product_detail', args=[product.id]))
 
         else:
             if review_form.is_valid():
@@ -64,7 +65,7 @@ def edit_review(request, review_id):
     """ Save edited product review """
 
     review = get_object_or_404(ProductReview, pk=review_id)
-    if request.user.is_superuser or request.user == review.user:
+    if request.user.is_superuser or request.user == review.user.user:
         if request.method == 'POST':
             review_form = AddReviewForm(request.POST, instance=review)
             if review_form.is_valid():
@@ -95,7 +96,7 @@ def delete_review(request, review_id):
     """ Delete user's existing review """
 
     review = get_object_or_404(ProductReview, pk=review_id)
-    if request.user.is_superuser or request.user == review.user:
+    if request.user.is_superuser or request.user == review.user.user:
         review.delete()
         messages.info(request, 'Your review has been deleted!')
         return redirect(reverse('products'))

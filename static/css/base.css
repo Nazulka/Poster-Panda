@@ -508,8 +508,14 @@ input[name='q']::placeholder {
     .product-card {
         width: 14rem;
     }
+    .shop-now-button {
+        min-width: 15rem;
+        margin-top: 1.5rem;
+    }
+    .product-btn {
+        min-width: 14rem;
+    }
 }
-
 
 
 /* Large (lg) devices (desktops) */
