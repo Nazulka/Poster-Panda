@@ -576,6 +576,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 105px !important;
     }
+    
+    body {
+        height: calc(100vh - 105px);
+    }
 
     #jumbotron-hero {
         height: 450px;
@@ -609,13 +613,8 @@ input[name='q']::placeholder {
         width: 18rem !important;
     }
 
-    .hamburger {
-        width: 25px;
-        height: 35px;
-    }
-
     .navbar-toggler {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
     }
 
     .navbar-brand {
@@ -640,7 +639,7 @@ input[name='q']::placeholder {
     }
 
     #footer .fa-2x {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -654,21 +653,24 @@ input[name='q']::placeholder {
         height: calc(100vh - 120px);
     }
 
+    .shop-now-button {
+        min-width: 12rem;
+    }
     .product-btn {
-        margin-top: -20px;
-        min-width: 200px;
+        margin-top: -1.25rem;
+        min-width: 12rem;
     }
 
     .hamburger {
         position: relative;
-        width: 30px;
-        height: 40px;
+        width: 2rem;
+        height: 2.5rem;
         overflow: hidden;
         color: #000;
     }
 
     .navbar-toggler {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         background-color: transparent;
         border: none;
     }
