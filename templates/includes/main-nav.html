@@ -1,6 +1,6 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown ml-1">
             <a class="logo-font nav-link dropdown-toggle text-black mr-5" href="#" id="posters-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Posters
@@ -14,48 +14,43 @@
                 <a href="{% url 'products' %}?category=bestsellers" class="dropdown-item">Bestsellers</a>
             </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ml-1">
             <a class="logo-font nav-link text-black mr-5"
                 href="{% url 'products' %}?category=new_in" id="newIn-link">
                 New In
             </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ml-1">
             <a class="logo-font nav-link text-black mr-5"
                 href="{% url 'products' %}?category=bestsellers" id="bestsellers-link">
                 Bestsellers
             </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown ml-1">
             <a class="logo-font dropdown-toggle nav-link text-black mr-5" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <hr class="w-80 d-md-none">
-            <a class="text-black nav-link d-block d-lg-none dropdown-toggle" role="button" href="#" id="user-options"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="text-left">
-                    <p>My Account</p>
-                </div>
-            </a>
-            <div class="dropdown-menu border-0 text-left" aria-labelledby="user-options">
+        <li class="nav-item dropdown ml-1">
+            <a class="text-black nav-link d-block d-lg-none dropdown-toggle text-secondary" role="button" href="#" id="user-options"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+            <div class="dropdown-menu border-0 text-left text-secondary" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item dropdown-item-left">Product Management</a>
+                    <a href="{% url 'add_product' %}" class="dropdown-item dropdown-item-left text-secondary">Product
+                        Management</a>
                 {% endif %}
-                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    <a href="{% url 'profile' %}" class="dropdown-item text-secondary">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item text-secondary">Logout</a>
                 {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    <a href="{% url 'account_signup' %}" class="dropdown-item text-secondary">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item text-secondary">Login</a>
                 {% endif %}
             </div>
         </li>

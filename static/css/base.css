@@ -10,13 +10,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden !important;
     overflow-y: scroll;
-}
-
-.container-fluid {
-    padding: 0;
-    margin: 0;
     max-width: 100% !important;
-    overflow-x: hidden !important;
 }
 
 .border-black {
@@ -87,7 +81,7 @@ input[name='q']::placeholder {
 }
 
 .nav-link {
-    padding: 8px;
+    padding: 0.4rem;
 }
 
 
@@ -652,9 +646,9 @@ input[name='q']::placeholder {
         padding-top: 120px;
     }
 
-    body {
+    /* body {
         height: calc(100vh - 120px);
-    }
+    } */
 
     .shop-now-button {
         min-width: 12rem;
