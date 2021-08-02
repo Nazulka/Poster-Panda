@@ -75,11 +75,11 @@ ___
 
     * Navigate the site intuitively and easily access all available website features from different screen size devices.
     * See list of all the products offered on the site and use sorting and filters to narrow down the search for posters that I am interested in purchasing.
-    * See the new collections and other featured favourites to be inspired and informed on latest trends.
+    * See the new collections and other featured favourites to get inspired and be informed on the latest trends.
     * Search products by name or description to quickly find the product that I need.
     * View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.
-    * View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the costs before I decide to checkout. 
-    * Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.
+    * View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the subtotal before I decide to checkout. 
+    * Easily sign-up for an account and create a profile for faster checkout in the future and to keep track of order details and history.
 
 
 ### Registered / returning visitor
@@ -91,12 +91,12 @@ ___
     * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
     * View all items in the bag as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
     * Adjust the quantity of the products in the bag so I can make changes easily before purchasing.
-    * Remove items in the bag so I can purchase only the ones that I really want.
+    * Remove items from the bag so I can purchase only the ones that I really want.
     * Add and save my personal information when checking out for the first time, so it can safely be stored in my account to ensure faster and hussle free checkout next time. 
     * Securely enter my card details when checking out.
-    * See an instant confirmation of the order on the site and receive an email confirming that the order has been placed successfully for proof of purchase and peace of mind.  
+    * See an instant confirmation of the order on the website and receive an email confirming that the order was placed successfully for proof of purchase and peace of mind.  
     * Easily view my current order details and previous orders history, all saved in one place - my account.
-    * Leave reviews for the products to interract and provide feedback to the store, encourage them make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide. 
+    * Leave reviews for the products to interract and provide feedback to the store, encourage them to make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide. 
     * Edit and delete my reviews if I change my mind or if they are no longer relevant. 
     * Save items in my wishlist, to create a personilised collection of posters that I like and might consider purchasing in the future.  
     * Remove items that I am no longer interested in from my wishlist.
@@ -107,7 +107,7 @@ ___
 
     * Add products to enable me to add new items to the store.
     * Edit and update products to enable me to update prices, descriptions, images and apply any discounts, if applicable.
-    * Delete products, if they are no longer available, to keep the stocks up to date.
+    * Delete products, if they are no longer available, to keep the stock up to date.
 
 
 [:top:](#poster-panda)
@@ -115,7 +115,8 @@ ___
 
 ## Scope 
 
-* To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
+To create user friendly and simple to use e-commerce website using HTML, CSS, JavaScript, Python and Django framework that includes following features:
+
 * Intuitive design: allow users to navigate the site intuitively, view products.
 * Authorisation: allow users to Register, Login and Logout.
 * Wishlist: allow users to add products to the wishlist and remove from it.
@@ -134,7 +135,7 @@ Detailed information can be found in the _Information Architecture_ section.
 
 * Wireframes were created using Balsamiq Wireframes at the planning stage of the project. 
 
-* Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because it was considered low importance and low viability.
+* Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages (with the exception of the Products page) fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because it was considered low importance and low viability.
 
 [Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
 
@@ -146,7 +147,7 @@ Detailed information can be found in the _Information Architecture_ section.
 
 * [Coolors](https://coolors.co/) was used to create the color palette for this project.
 * Deeper shade of turquoise was chosen as a background color for the banner to support the Summer Collection images on the Home page and for some of the buttons. It is planned to change this banner's color every time when a new collection is out, so it fully complements the color scheme of the collection. 
-* Light grey and black were used for the rest of the elements to keep it simple and less cluttered as products' images can be quite colourful. 
+* Light grey and black were used for the rest of the elements to keep it simple and less cluttered as product images can be quite colourful. 
 
 
 - [x] **Typography**
@@ -154,7 +155,7 @@ Detailed information can be found in the _Information Architecture_ section.
 
 
 - [x] **Imagery**
-* All supporting images for the website as well as products' images were carefully selected from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/). 
+* All supporting images for the website as well as product images were carefully selected from [Unsplash](https://unsplash.com/), [Shutterstock](https://www.shutterstock.com/home) and [Pexels](https://www.pexels.com/). 
 
 
 [:top:](#poster-panda)
@@ -217,8 +218,9 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 * The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
 * Bag and Account icons remain always visible to the user, and on large screens users also able to see bag total, to keep informed on how much they are spending. 
-* Brand Logo is centered and visible on all screen sizes and serves as a link to the Home Page, which is particularly convenient when accessing the site on smaller screen size devices. 
-* My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile, My Wishlist and Logout for authorised users and an additional Product Management link for an admin user.
+* Brand Logo is placed next to the hamburger menu button and visible on all screen sizes and serves as a link to the Home Page, which is particularly convenient when accessing the site on mobile devices. 
+* My Wishlist link takes users to My Wishlist page where they are able to view a list of all their wishlisted items. 
+* My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile and Logout for authorised users and an additional Product Management link for an admin user.
 
 **Toast Messages**
 

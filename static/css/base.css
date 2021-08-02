@@ -2,8 +2,8 @@
 
 html {
     height: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 body {
@@ -416,22 +416,22 @@ input[name='q']::placeholder {
 
 .bag-pill-mob {
     top: 1em;
-    right: 1.4em;
+    right: 1.1em;
 }
 
 .wishlist-pill-mob {
     top: 1em;
-    right: 4.7em;
+    right: 4.4em;
 }
 
 .bag-pill-lg {
-    top: 0.5em;
-    right: 2.8em;
+    top: 0.1em;
+    right: 2.2em;
 }
 
 .wishlist-pill-lg {
-    top: 0.5em;
-    right: 21.8em;
+    top: 0.1em;
+    right: 21.4em;
 }
 
 
