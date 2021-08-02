@@ -38,19 +38,19 @@
             </div>
         </li>
         <li class="nav-item dropdown ml-1">
-            <a class="text-black nav-link d-block d-lg-none dropdown-toggle text-secondary" role="button" href="#" id="user-options"
+            <a class="text-black nav-link d-block d-lg-none dropdown-toggle text-black" role="button" href="#" id="user-options"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
-            <div class="dropdown-menu border-0 text-left text-secondary" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0 text-left" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <a href="{% url 'add_product' %}" class="dropdown-item dropdown-item-left text-secondary">Product
+                    <a href="{% url 'add_product' %}" class="dropdown-item dropdown-item-left">Product
                         Management</a>
                 {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item text-secondary">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item text-secondary">Logout</a>
+                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item text-secondary">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item text-secondary">Login</a>
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                 {% endif %}
             </div>
         </li>

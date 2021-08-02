@@ -96,6 +96,7 @@ input[name='q']::placeholder {
 }
 
 .jumbotron-inner {
+    max-width: 100%;
     position: absolute;
     top: 50%;
     left: 5%;
@@ -646,9 +647,9 @@ input[name='q']::placeholder {
         padding-top: 120px;
     }
 
-    /* body {
+    body {
         height: calc(100vh - 120px);
-    } */
+    }
 
     .shop-now-button {
         min-width: 12rem;
@@ -660,14 +661,12 @@ input[name='q']::placeholder {
 
     .hamburger {
         position: relative;
-        width: 2rem;
-        height: 2.5rem;
         overflow: hidden;
         color: #000;
     }
 
     .navbar-toggler {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         background-color: transparent;
         border: none;
     }
@@ -679,5 +678,9 @@ input[name='q']::placeholder {
     .review-img {
         height: 16rem !important;
         width: 10rem !important;
+    }
+    .increment-qty,
+    .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }
