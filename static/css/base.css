@@ -9,7 +9,6 @@ html {
 body {
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden !important;
-    overflow-y: scroll;
     max-width: 100% !important;
 }
 
@@ -572,10 +571,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 105px !important;
     }
-
+/* 
     body {
         height: calc(100vh - 105px);
-    }
+    } */
 
     #jumbotron-hero {
         height: 450px;
@@ -645,9 +644,9 @@ input[name='q']::placeholder {
         padding-top: 120px;
     }
 
-    body {
+    /* body {
         height: calc(100vh - 120px);
-    }
+    } */
 
     .shop-now-button {
         min-width: 12rem;
@@ -677,10 +676,12 @@ input[name='q']::placeholder {
         height: 16rem !important;
         width: 10rem !important;
     }
+
     .increment-qty,
     .decrement-qty {
         padding: .25rem .5rem !important;
     }
+    
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
