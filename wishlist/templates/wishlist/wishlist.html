@@ -43,12 +43,12 @@
                         </td>
                         <td class="p-3 w-35 text-center">
                             <a href="{% url 'product_detail' item.product.id %}"
-                                class="btn btn-small btn-black rounded-0 text-uppercase mt-2 ml-1 px-sm-1 p-lg-2"
+                                class="btn btn-small btn-black rounded-0 text-uppercase mt-2 ml-1 p-sm-1 p-lg-2"
                                 aria-disabled="true">
                                 <span class="icon">
                                     <i class="fas fa-info-circle" aria-hidden="true"></i>
                                 </span>
-                                <span class="text-uppercase pr-1">View Product</span>
+                                <span class="text-uppercase pr-2">View</span>
                             </a>
                             <a href="{% url 'add_to_wishlist' item.product.id %}"
                                 class="btn btn-small btn-outline-black rounded-0 text-uppercase mt-2 ml-1 p-sm-1 p-lg-2"
@@ -71,7 +71,7 @@
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
                             <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg mt-2">
-                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="text-uppercase pl-1">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
                                 </span>
