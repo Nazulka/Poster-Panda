@@ -248,6 +248,12 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 * When users click on a product that they are interested in it opens in a new Product detail page. This page contains a image and product details and allows users to select product size and quantity before adding it to the bag. 
 * Product reviews and ratings for the selected product are displayed on the bottom of the page to give users chance to learn other customers feedback.
 * Logged in users are able to leave their own ratings and reviews and unauthenticated users are encouraged to log in or register first to be able to do the same.
+* Users can click on _Add to Wishlist_ button to add the product to their wishlisted items. They will be redirected to the _My Wishlist_ Page.
+
+
+- [x] **My Wishlist Page**
+* The wishlisted items page can also be accessed through clicking on _My Wishlist_ button on the navbar on large screens and a _heart_ button on medium and small screens. 
+* For each item on the list, users can view the product image, name, price and two buttons. The _View_ button takes them to the _Product Detail_ Page for this product for full details and the _Remove_ button to allow them to remove the item from their wishlist. 
 
 
 - [x] **Profile Page**

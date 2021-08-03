@@ -20,17 +20,17 @@
 
 
 ## Code Validity
-------
+
 - HTML Markup Validation - [pass](https://validator.w3.org/nu/)
 - CSS Validation - [pass](https://jigsaw.w3.org/css-validator/)
 - JavaScript Code Quality Tool JSHint - [pass](https://jshint.com/)
 - PEP8 - [pass](http://pep8online.com/)
 
 
-## Testing User Stories
-------
+# Testing User Stories
+----
 
-### First-Time / Casual Visitor
+## First-Time / Casual Visitor
 
 | **User Story** | **Testing** | 
 |:-----------|:--------|
@@ -43,18 +43,18 @@
 | View all items in the bag as well as delivery charges and order total to be aware of the costs before I go through the checkout process.| Bag items snippets, subtotal as well as delivery charges can be viewed on the *Shopping Bag* page. |
 | Adjust quantity of the products in the bag so I can make changes easily before purchasing.| Users can easily adjust quantity of the products in the bag.|
 | Remove items in the bag so I can purchase only the ones that I really want. | There is a *Remove* button / link under each product in the bag, so users can easily remove unwanted item/s from the bag before proceeding to the payment. |
-| Securely enter my card details when checking out. | Users are prompted to enter their card details on the *Checkout* page before completing the purchase. |
+| Securely enter my card details when checking out. | Users are prompted to enter their card details on the Stripe enabled form on the *Checkout* page before completing the purchase. |
 | Easily sign-up for an account and create a profile for faster checkout in the future and keeping track of order details and history.| The *Register* button is easily accessible for the users who wish to sign up to enable faster checkouts in the future as well as accessing their order history.|
 
 
 
-### Registered / Returning Visitor
+## Registered / Returning Visitor
 
 | **User Story** | **Testing** | 
 |:---------------|:------------|
 | Get a confirmation email upon successful registration to be certain that my account has been created.| When users submit the registration form successfully, they receive an email to confirm it.|
 | Easily reset the password if I forget it so I can recover access to my account.| There is a *Forgot password* link in the Log In page which users can click on to request a password reset. They will recieve an email with a link to reset the password.|
-| Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.| Users can view their profile by clicking on *My Account* link, which is easily accessible from the main navbar on larger screens hamburger menu on mobile screens.|
+| Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.| Users can view their profile by clicking on *My Account* link, which is easily accessible from the main navbar on larger screens and hamburger menu on mobile screens.|
 | Save my personal information when checking out for the first time, so it can safely be stored in my account to ensure faster and hussle free checkout next time.| Users have an option to select if they wish their details to be saved for faster checkout in the future.|
 | See an instant confirmation of the order on the site and receive an email confirming that the order has been placed successfully for proof of purchase and peace of mind. | Order confirmation is displayed when checkout is completed successfully and a copy is sent to the email provided by the user.|
 | Easily view my current order details and previous orders history, all saved in one place - my account.| On the *My Profile* page logged in users can view their Order History details.|
@@ -65,7 +65,7 @@
 
 
 
-### Store owner / Superuser
+## Store owner / Superuser
 
 | **User Story** | **Testing** | 
 |:-----------|:--------|
@@ -77,16 +77,16 @@
 [:top:](#testing)
 
 
-## Functionality Testing
+# Functionality Testing
 ----
 
-### Features available accross all pages
+## Features available accross all pages
 
-**Navigation Bar**
+### Navigation Bar
 
 * The responsive navbar stays visible accross all pages. On screen sizes =< 992px it collapses into a compact mobile navbar that contains the hamburger menu button, brand logo and *Search*, *My Wishlist* and *Bag* buttons. 
-* When clicked, the hamburger menu dropdown displays featured page links, filtering by categories and sorting products by category, price and rating. All of the above have been tested by clicking and are working as desired.
-* *My Account* link can also be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
+* When clicked, the hamburger menu dropdown displays featured page links, filtering by categories and sorting products by category and price. All of the above have been tested by clicking and are working as desired.
+* *My Account* link can also be accessed through the hamburger menu and displays *Log In* and *Register* links if the user is not logged in and *My Profile* and *Logout* links for the authenticated users. All above mentioned links are working as intended and take users to the appropriate pages. 
 * On large screen users are offered extended navbar for easier access to the links. It is working as expected.  
 * All the links on the main navbar were tested by clicking and are working as intended, allowing users to jump to the linked pages.
 * *Posters* link dropdown is activated when clicked and displays product categories. All category links are working as intended allowing products to be filtered correctly. 
@@ -101,11 +101,11 @@
 * The *Bag* button is working as intended and takes users to their shopping bag page when clicked. 
 
 
-**Toast Messages**
+### Toast Messages
 
 * Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
-### Page specific features
+## Page specific features
 
 - [x] **Home Page**
 
@@ -138,11 +138,16 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 * The *Add to Wishlist* button allows users to add the selected product to their wishlist. It is working as intended.
 * All website users can read reviews left by other customers. Reviews (if any) are displayed below the product description. 
 * *Add a review* button is displayed only for logged in users and admin. 
-* Authenticated users can click on the *Add a review* button and open up form containing *Review Headline*, *Your Comments* and a *rating* required fields. If the form is submitted successfully, users get a toast notification confirming it.
-* Users can only review each product once. 
-* Logged in users and admin can *edit* and *delete* their reviews. *Edit* form is similar to the *Add review* form and the *Delete Review* is displayed in a modal asking users to confirm before deleting the review or cancel. All of the above described review CRUD operations have been extensively tested and working as intended.
+* Authenticated users can click on the *Add a review* button and open up a form containing *Review Headline*, *Your Comments* and a *Rating* required fields. If the form is submitted successfully, users get a toast notification confirming it.
+* Users can only review each product once, and get an error toast message: "you have reviewed this product already", if they try to leave a review again. 
+* Logged in users and admin can *Edit* and *Delete* their reviews. *Edit* form is similar to the *Add review* form and the *Delete Review* is displayed in a modal. Users are required to confirm before deleting the review or can choose to cancel. All of the above described review CRUD operations have been extensively tested and working as intended.
 * *Keep Shopping* button takes users back to the *Products* page. 
 
+
+- [x] **My Wishlist Page**
+* _My Wishlist_ links on the navbar are working as intended, by allowing users to navigate to the _My Wishlist_ Page. The page correctly displaying all the items that have been added to the wishlist.
+* The _View_ button correctly takes users to the _Product Details_ Page. 
+* The _Remove_ button is working as desired by removing the item from the wishlist.
 
 - [x] **Profile Page**
 
@@ -175,19 +180,19 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 * **_Registration_**: 
     * Users can click on the *Register* button on the *My Account* dropdown menu.
     * The allauth registration form is rendered as expected. As all the fields are required in the form, leaving any of them unfilled prompts an allauth validation error.
-    * Allauth validation errors could also be caused by entering unmatched emails, already registered email, unmatching passwords, short password (less than 8 characters), too easy password, existing username, etc.
+    * Allauth validation errors could also be caused by entering unmatching emails, already registered email, unmatching passwords, short password (less than 8 characters), too easy password, existing username, etc.
     * When the valid form is submitted, users are required to verify their email address by clicking on the link in the email sent to the newly registered email address. 
 
 * **_Login_**:
     * *Log In* form is rendered on the *Sign In* page.
     * *Sign up* link is provided if users haven't registered yet and redirects them to the registration page.
     * *The username and/or password you specified are not correct.* error is generated if wrong username / email address or password entered. 
-    * *Forgot password* link is provided to allow users to allow users to reset their password. 
+    * *Forgot password* link provided allows users to reset their password. 
     * If all the entries are valid, a toast success message is displayed and users are redirected to the Home page. 
     
 
 * **_Logout_**:
-    * *Sign Out* page is accessed by clicking on *My Account* and *Logout*. 
+    * *Sign Out* page is accessed by clicking on *My Account* > *Logout*. 
     * Users need to confirm sighning out by clicking on the *Sign Out* button. 
     * A toast message is displayed to confirm successful sign out and users are redirected to the Home Page.
  
@@ -197,9 +202,9 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 ## Responsiveness
 
-The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro, etc using Responsinator, Am I Responsive as well as Google Dev Tools Device Mode.
+The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro, etc using Responsinator and Google Dev Tools Device Mode.
 
-It was tested on physical devices including iPhone XR and iPad. All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
+It was tested on physical devices including desktop computer, iPhone XR and iPad. All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
 
 
 ## Usability Testing
@@ -209,7 +214,7 @@ This website was tested for usability by my family and friends. They didn't expe
 
 ## Performance Testing
 
-Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown an excellent performance and accessibility results for desktop devices. Steps taken to improve performance for the mobile devices following the initial tests.
+Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown an excellent performance and accessibility results for desktop devices. Steps taken to improve performance for the mobile devices following the initial tests, such as resizing and compressing the images used throughout the site.
 
 
 ## Browser Compatibility Testing
@@ -223,7 +228,22 @@ Desktop        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_
 
 
 
-## Known Bugs 
+## Bugs 
+----
+
+#### Identified Bugs
+* I had a problem with horizontal scrolling of the screen on medium and small devices.
+The popular fix for the problem,
+``` 
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+```
+didn't fix the issue. After trying to give 0 margins and paddings and further reading, I thought the possible cause for this was using Bootstrap _container-fluid_ class. I replaced it with a simple _container_ and adjusted the width where needed. This fixed this bug. 
+
+
+#### Known Bugs
 
 There are no known bags at the time of submitting this project.
 
