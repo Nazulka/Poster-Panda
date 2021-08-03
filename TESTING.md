@@ -16,9 +16,6 @@
 - [Known Bugs](#known-bugs)
 
 
-
-
-
 ## Code Validity
 
 - HTML Markup Validation - [pass](https://validator.w3.org/nu/)
@@ -105,6 +102,7 @@
 
 * Django pop up toast messages are displayed correctly and contain notification messages according to their type.
 
+
 ## Page specific features
 
 - [x] **Home Page**
@@ -149,6 +147,7 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 * The _View_ button correctly takes users to the _Product Details_ Page. 
 * The _Remove_ button is working as desired by removing the item from the wishlist.
 
+
 - [x] **Profile Page**
 
 * Authenticated users are able to access *My Profile* page by clicking on *My Account* button on the main navbar on larger screens or clicking on the hamburger menu button and selecting it from the dropdown menu on medium and small screens. 
@@ -190,7 +189,6 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
     * *Forgot password* link provided allows users to reset their password. 
     * If all the entries are valid, a toast success message is displayed and users are redirected to the Home page. 
     
-
 * **_Logout_**:
     * *Sign Out* page is accessed by clicking on *My Account* > *Logout*. 
     * Users need to confirm sighning out by clicking on the *Sign Out* button. 
@@ -218,7 +216,6 @@ Performance testing was carried out using Lighthouse in Chrome Developer Tools. 
 
 
 ## Browser Compatibility Testing
-----
 
 Device/Browser | Google Chrome    | Microsoft Edge   | Firefox          | Safari           | Internet Explorer |
 -------------- | :---------------:|:----------------:| :---------------:| :---------------:| :----------------:|
@@ -227,24 +224,23 @@ Tablet         |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_
 Desktop        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| n/a               |
 
 
-
 ## Bugs 
-----
 
-#### Identified Bugs
-* I had a problem with horizontal scrolling of the screen on medium and small devices.
-The popular fix for the problem,
+### Identified Bugs
+
+* When testing on physical devices, iPhone XR and iPad, I came accross a problem with horizontal scrolling of the screen on medium and small devices.
+The popular fix for the problem, didn't fix the issue.
 ``` 
 body {
     overflow-x: hidden !important;
     max-width: 100% !important;
 }
 ```
-didn't fix the issue. After trying to give 0 margins and paddings and further reading, I thought the possible cause for this was using Bootstrap _container-fluid_ class. I replaced it with a simple _container_ and adjusted the width where needed. This fixed this bug. 
+ After further reading, I thought the possible cause for this was using Bootstrap _container-fluid_ class. I replaced it with a simple _container_ and adjusted the width where needed. This fixed the bug. 
 
 
-#### Known Bugs
+### Known Bugs
 
-There are no known bags at the time of submitting this project.
+There are no known bugs at the time of submitting this project.
 
 [:top:](#testing)

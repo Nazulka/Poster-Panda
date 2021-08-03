@@ -224,6 +224,10 @@ input[name='q']::placeholder {
     margin: 0 auto;
 }
 
+.footer-container {
+    width: 100%;
+}
+
 .social-links {
     text-decoration: none;
 }
@@ -555,9 +559,9 @@ input[name='q']::placeholder {
     }
 
     .product-view-img {
-        max-height: 32rem !important;
+        max-height: 22rem !important;
         width: fit-content;
-        max-width: 20rem;
+        max-width: 16rem;
         object-fit: cover;
         padding: 1rem;
         border: 2px solid black !important;
@@ -663,6 +667,8 @@ input[name='q']::placeholder {
 
     .image-container {
         text-align: center !important;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .review-img {
