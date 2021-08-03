@@ -79,6 +79,11 @@ ___
     * Search products by name or description to quickly find the product that I need.
     * View individual product details on a separate page including price, image, description, product rating, reviews and available sizes.
     * View ratings and reviews for the product to help me decide, add the products that I like to the bag, select the quantity and view the total amount for the items in the bag to be able to see the subtotal before I decide to checkout. 
+    * View all items in the bag as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
+    * Adjust the quantity of the products in the bag so I can make changes easily before purchasing.
+    * Remove items from the bag so I can purchase only the ones that I really want.
+    * Securely enter my card details when checking out.
+    * See an instant confirmation of the order on the website and receive an email confirming that the order was placed successfully for proof of purchase and peace of mind.  
     * Easily sign-up for an account and create a profile for faster checkout in the future and to keep track of order details and history.
 
 
@@ -89,12 +94,7 @@ ___
     * Get a confirmation email upon successful registration to be certain that my account has been created.
     * Easily reset the password if I forget it so I can recover access to my account.
     * Easily login to view my profile and access my personal information and logout from my account to ensure personal data protection and security.
-    * View all items in the bag as well as delivery charges and order total to be aware of the costs before I go through the checkout process.
-    * Adjust the quantity of the products in the bag so I can make changes easily before purchasing.
-    * Remove items from the bag so I can purchase only the ones that I really want.
     * Add and save my personal information when checking out for the first time, so it can safely be stored in my account to ensure faster and hussle free checkout next time. 
-    * Securely enter my card details when checking out.
-    * See an instant confirmation of the order on the website and receive an email confirming that the order was placed successfully for proof of purchase and peace of mind.  
     * Easily view my current order details and previous orders history, all saved in one place - my account.
     * Leave reviews for the products to interract and provide feedback to the store, encourage them to make product improvements if neccessary and offer valuable guidance to other shoppers and make it easier for them to decide. 
     * Edit and delete my reviews if I change my mind or if they are no longer relevant. 
