@@ -1,7 +1,7 @@
 # POSTER PANDA
 ___
 
-### ![responsive image]()
+### ![responsive image](https://github.com/Nazulka/Poster-Panda/blob/master/media/home-page.png)
 
 At Poster Panda, we are passionate about interior decoration and design. We offer wide range of stylish high quality posters along with frames and have something to suit every wall. Express yourself by creating a personalized wall of posters! Inspire others and have fun!
 
@@ -218,8 +218,8 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 * The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
 * Bag and Account icons remain always visible to the user, and on large screens users also able to see bag total, to keep informed on how much they are spending. 
-* Brand Logo is placed next to the hamburger menu button and visible on all screen sizes and serves as a link to the Home Page, which is particularly convenient when accessing the site on mobile devices. 
-* My Wishlist link takes users to My Wishlist page where they are able to view a list of all their wishlisted items. 
+* The mobile brand Logo is left aligned, placed next to the hamburger menu button on small and medium screens and a center-aligned Full Logo is visible on large screen sizes. They both serve as links to the Home Page, which is particularly convenient when accessing the site on mobile devices. 
+* My Wishlist menu link takes users to My Wishlist page where they are able to view a list of all their wishlisted items. 
 * My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile and Logout for authorised users and an additional Product Management link for an admin user.
 
 **Toast Messages**
@@ -230,7 +230,7 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 
 - [x] **Home Page**
 
-* Contains a main jumbotron that features colorful and bright image to draw attention and call to action to shop the latest collection. Two additional jumbotrons also styled in similar fashion and invite users to shop. 
+* Contains a main jumbotron that features colorful and bright image to draw attention and call to action to shop the latest collection. Two additional jumbotrons are designed to promote collections, also styled in a similar fashion and invite users to shop. 
 * *Handpicked Favourites* section is added for extra interactivity and is an owl-carousel that cycles through cards containing product images and details. 
 * Responsive *Footer* is visible on Home Page and contains website motto, delivery information and social media icons. Icons are hoverable to let users know they are clickable and linked to the external websites and open in new tabs when clicked.
 * *Copyright* section is directly below the Footer and contains Copyright information.
@@ -238,35 +238,35 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 
 - [x] **Products Page**
 
-* Products are displayed in a responsive grid layout and provide the best shopping experience no matter what device user is using to shop. 
-* Products display can be sorted alphabetically, by price, rating and category for the user's convenience. 
+* Products are displayed in a responsive grid layout and provide the best shopping experience no matter what device is used by the user. 
+* Products display can be sorted alphabetically, by price and category for the user's convenience. 
 * It features back to top button to allow users to get to the top of the page if there are a lot of products on the page.
 
 
 - [x] **Product Detail Page**
 
-* When users click on a product that they are interested in it opens in a new Product detail page. This page contains a product image and details and allows users to select product size and quantity before adding the product to the bag. 
+* When users click on a product that they are interested in it opens in a new Product detail page. This page contains a image and product details and allows users to select product size and quantity before adding it to the bag. 
 * Product reviews and ratings for the selected product are displayed on the bottom of the page to give users chance to learn other customers feedback.
-* Logged in users are encouraged to leave their own reviews.
+* Logged in users are able to leave their own ratings and reviews and unauthenticated users are encouraged to log in or register first to be able to do the same.
 
 
 - [x] **Profile Page**
 
 * This page is only available for registered users.
-* It allows users to view saved default delivery and update it if need be. 
-* Order History section contains all previous orders details. Users can click on individual order number to view full details.
+* It allows users to view saved default delivery information and update it if need be. 
+* Order History section contains details of all previous orders. Users can click on individual order numbers to view full details.
 
 
 - [x] **Bag Page**
 
-* This feature allows users to view their shopping bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm when product is added to the bag.  
+* This feature allows users to view their shopping bag, as well as adjusting the quantity of the items or removing it altogether from the bag. A toast message containing a snippet of product and costs information pops up to confirm any changes to the bag.  
 
 
 - [x] **Checkout Page**
 
 * Contains a crispy form for user details and delivery address.
 * Order summary is displayed to keep users informed and contains products details, subtotal, delivery charges and total for the bag. 
-* Links provided to create an account for all new users or to log in for existing users to.
+* Links provided to create an account for all new users or to log in for existing users.
 * Logged in users can save their details for faster checkout next time. 
 * Users can securely fill their credit card details into the form.
 * Checkout success page displays order details as well as sending it to the email provided. Users get notified via a toast message. 
@@ -284,7 +284,6 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 
 *  Add additional payment options, such as PayPal and Apple Pay to widen customer base and increase sales, so site users who don't want to use credit card can still make purchases.
 *  Integrate Google Sign-In into the website to reduce the burden of login for customers and increase safety and security. 
-*  Offer weekly newsletters to all subscribed customers to advertise new products, communicate any events and to offer marketing discount codes. 
 
 
 [:top:](#poster-panda)
@@ -294,7 +293,7 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 ----
 - [x] **Database**
 
-* SQLite database engine was used in local development and Heroku Postgres for deployed project.
+* SQLite database engine was used in local development and Heroku PostgreSQL for deployed project.
 
 - [x] **Database Relationship**
 
@@ -306,11 +305,11 @@ This project features 8 models accross 7 apps:
 
 * **Products Model** - contains information on each Product. 
 
-* **Category Model** - holds Product Categories
+* **Category Model** - holds Product Categories.
 
 * **User Profile** - holds default delivery information users select to save on their profile as well as their order history.
 
-* **Product Review** - model for performing CRUD operations on product Reviews
+* **Product Review** - model for performing CRUD operations on product Reviews.
 
 * **Wishlist** - model for maintaining a wishlist.
 
@@ -486,21 +485,21 @@ Remember,they should match the ones you have in your _settings.py_ file.
 ## Code
 
 * John CI - for helping me to restore my worksapace.
-* Sean CI - for helping to debug the code to automatically create a wishlist for the new users
-* Owl-carousel custom navigation arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/) 
+* Sean CI - for helping to debug the code to automatically create a wishlist for new users.
+* Owl-carousel custom navigation arrows are from this [tutorial](https://www.freakyjolly.com/owl-carousel-2-customize-navigation-next-prev-arrows/).
 
 ## Content
 
-* The website was inspired by CI Project- Boutique Ado
-* The website design was inspired by [Desenio](https://desenio.co.uk/)
-* All images are taken from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
-* Some of the poster descriptions are from [Poster Store](https://posterstore.co.uk/)
-* Favicon icon is from [ICONS8](https://icons8.com/)
+* The website was inspired by CI Project- Boutique Ado.
+* The website design was inspired by [Desenio](https://desenio.co.uk/).
+* All images are taken from [Unsplash](https://unsplash.com/), [Shutterstock](https://www.shutterstock.com/home) and [Pexels](https://www.pexels.com/).
+* Some of the posters descriptions were inspired by [Poster Store](https://posterstore.co.uk/).
+* Favicon icon is from [ICONS8](https://icons8.com/).
 
 ## Acknowledgements
 
 * I would like to thank my mentor Excellence Ilesanmi for his continuous support and guidance.
-* Big thanks to all tutors from Tutor Support.
+* Big thanks to all tutors from Tutor Support for their patience and help.
 * Thanks to the wonderful Slack community for their time and sharing their knowledge!
 * A big thank you to my family and friends for their enormous support!
 
