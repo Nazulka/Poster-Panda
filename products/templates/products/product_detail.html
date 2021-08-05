@@ -82,27 +82,26 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Render Add to wishlist or Remove from wishlist button if item exists in the wishlist already -->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                                    {% for item in wishlist %}
-                                            <a href="{% url 'add_to_wishlist' product.id %}"
-                                                class="btn btn-outline-black rounded-0 mt-5" aria-disabled="true">
-                                                <span class="icon">
-                                                    <i class="far fa-trash-alt"></i>
-                                                </span>
-                                                <span class="text-uppercase">Remove from Wishlist</span>
-                                            </a>
-                                            {% empty %}
-                                            <a href="{% url 'add_to_wishlist' product.id %}"
-                                                class="btn btn-outline-black rounded-0 mt-5" aria-disabled="true">
-                                                <span class="icon">
-                                                    <i class="fa fa-list-alt"></i>
-                                                </span>
-                                                <span class="text-uppercase">Add To Wishlist</span>
-                                            </a>
-                                    {% endfor %}
-
+                                {% for item in wishlist %}
+                                    <a href="{% url 'add_to_wishlist' product.id %}"
+                                        class="btn btn-outline-black rounded-0 mt-5" aria-disabled="true">
+                                        <span class="icon">
+                                            <i class="far fa-trash-alt"></i>
+                                        </span>
+                                        <span class="text-uppercase">Remove from Wishlist</span>
+                                    </a>
+                                {% empty %}
+                                    <a href="{% url 'add_to_wishlist' product.id %}"
+                                        class="btn btn-outline-black rounded-0 mt-5" aria-disabled="true">
+                                        <span class="icon">
+                                            <i class="fa fa-list-alt"></i>
+                                        </span>
+                                        <span class="text-uppercase">Add To Wishlist</span>
+                                    </a>
+                                {% endfor %}
                             <br>
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -128,5 +127,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
