@@ -11,7 +11,7 @@ from wishlist.models import Wishlist, WishlistItem
 @login_required
 def view_wishlist(request):
     """ A view to render all wishlist items """
-    
+
     user = UserProfile.objects.get(user=request.user)
     wishlist = Wishlist.objects.get(user=user)
     wishlist_products = WishlistItem.objects.filter(wishlist=wishlist)
@@ -31,7 +31,7 @@ def add_to_wishlist(request, product_id):
         user = UserProfile.objects.get(user=request.user)
         wishlist = Wishlist.objects.get(user=user)
 
-        # create a new wishlist item
+        # create a new wishlist item, delete if already in the wishlist
         if request.user.is_authenticated:
             product = get_object_or_404(Product, pk=product_id)
             item = WishlistItem.objects.filter(
