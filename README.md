@@ -125,9 +125,11 @@ To create user friendly and simple to use e-commerce website using HTML, CSS, Ja
 * Secure payment: allow users to securely enter their payment details to complete the purchase. 
 * Superuser: allow admin user to add, edit delete products to keep the store up to date. 
 
+
 ## Structure
 
 Detailed information can be found in the _Information Architecture_ section. 
+
 
 ## Skeleton 
 
@@ -138,6 +140,7 @@ Detailed information can be found in the _Information Architecture_ section.
 * Some changes were made to the original wireframes during development process, particularly, I decided that only the Home page will feature a footer and all the rest of the pages (with the exception of the Products page) fit in one page for better user experience. Also, About, FAQs and Contact Us pages were not included in the project because it was considered low importance and low viability.
 
 [Desktop/Tablet and Mobile Wireframes](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/ms4-all-wireframes.pdf "Project wireframes created using Balsamiq")
+
 
 ## Surface
 
@@ -212,9 +215,10 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 ---
 ## Implemented Features
 
+
 ### **Features available accross all pages**
 
-**Navigation Bar**
+- [x] **Navigation Bar**
 * The website Header features navigation menu, website logo, Search Bar, My Bag, My Account and My Wishlist links.    
 * Responsive main navigation bar was created using Bootstrap Navbar and is designed to collapse into a hamburger menu on medium and smaller screen sizes. 
 * Bag and Account icons remain always visible to the user, and on large screens users also able to see bag total, to keep informed on how much they are spending. 
@@ -222,9 +226,10 @@ The main components used: navbar, cards, footer, buttons, toasts etc.
 * My Wishlist menu link takes users to My Wishlist page where they are able to view a list of all their wishlisted items. 
 * My Account is a dropdown menu that displays links to the Register and Log In pages for all unauthorised / guest users; My Profile and Logout for authorised users and an additional Product Management link for an admin user.
 
-**Toast Messages**
+- [x] **Toast Messages**
 
 * Django pop-up toast messages displayed to keep the users informed.
+
 
 ### **Page specific features**
 

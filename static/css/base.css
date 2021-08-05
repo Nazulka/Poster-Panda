@@ -66,6 +66,12 @@ input[name='q']::placeholder {
     text-decoration: none;
 }
 
+.edit-review,
+.delete-review {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 /*---- Navigation ----*/
 

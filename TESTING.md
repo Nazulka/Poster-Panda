@@ -133,7 +133,7 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 * If value of less than 1 or greater than 99 is selected, the form validation error message is displayed informing users. 
 * If user manually enters a value of 0 or greater than 100 and click on the *Add to bag* button, an error form validation message is displayed and quantity not added.
 * When a valid quantity is selected and *Add to Bag* button is clicked, the product is added to the bag. Users then see a confirmation toast message containing product image, price quantity and subtotal.
-* The *Add to Wishlist* button allows users to add the selected product to their wishlist. It is working as intended.
+* The *Add to Wishlist* button allows users to add the selected product to their wishlist. It is working as intended. If the item is already in the wishlist, _Remove from Wishlist_ button is displayed. Clicking on _Remove from Wishlist_ button will remove the product from the user's wishlist.
 * All website users can read reviews left by other customers. Reviews (if any) are displayed below the product description. 
 * *Add a review* button is displayed only for logged in users and admin. 
 * Authenticated users can click on the *Add a review* button and open up a form containing *Review Headline*, *Your Comments* and a *Rating* required fields. If the form is submitted successfully, users get a toast notification confirming it.
@@ -200,7 +200,7 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 ## Responsiveness
 
-The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro, etc using Responsinator and Google Dev Tools Device Mode.
+The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro using Google Dev Tools Device Mode.
 
 It was tested on physical devices including desktop computer, iPhone XR and iPad. All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
 
