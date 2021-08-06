@@ -513,7 +513,7 @@ input[name='q']::placeholder {
     }
 
     .product-card {
-        height: auto !important;
+        max-height: 18rem !important;
     }
 }
 
