@@ -200,7 +200,7 @@ Additionally, *edit* and *delete* buttons are displayed for the admin user.
 
 ## Responsiveness
 
-The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro using Google Dev Tools Device Mode.
+The responsiveness of the website was tested on all popular devices, including iPhone 5/SE Android Pixel 2, Samgung Galaxy S5, iPhone 6/7/8, iPad, iPad Pro using Google Dev Tools Device Mode as well as Responsive Web Design Tester and Am I Responsive tools.
 
 It was tested on physical devices including desktop computer, iPhone XR and iPad. All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
 
@@ -229,14 +229,14 @@ Desktop        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_
 ### Identified Bugs
 
 * When testing on physical devices, iPhone XR and iPad, I came accross a problem with horizontal scrolling of the screen on medium and small devices.
-The popular fix for the problem, didn't fix the issue.
+I wasn't able to fix the issue using the the recommended fix:
 ``` 
 body {
-    overflow-x: hidden !important;
-    max-width: 100% !important;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 ```
- After further reading, I thought the possible cause for this was using Bootstrap _container-fluid_ class. I replaced it with a simple _container_ and adjusted the width where needed. This fixed the bug. 
+After further research, I thought the possible cause for this might be the use of Bootstrap _container-fluid_ class. I replaced it with a simple _container_ and adjusted the width where needed. This fixed the bug. 
 
 
 ### Known Bugs

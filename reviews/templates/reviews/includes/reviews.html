@@ -1,4 +1,4 @@
-<!-- Product reviews -->
+<!-- Product reviews heading -->
 <div class="row mx-auto mt-5">
     <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
         <div class="review-title logo-font font-weight-bold m-2 p-3">
@@ -11,61 +11,68 @@
         </div>
         <hr>
         {% if reviews %}
+            <!-- Render reviews for the product, if any -->
             <div class="row">
                 {% for review in reviews %}
-                <div class="col-12">
-                    <div class="review-notification px-2">
-                        <h5 class="text-left font-weight-bold"></i>{{ review.rating }} / 5
-                            {{ review.headline }}
-                        </h5>
-                        <p class="text-left">{{ review.comments }}</p>
-                        
-                        <p class="text-right text-muted">Submitted
-                            <strong>{{ review.date_posted|date:"d-M-y" }}</strong></p>
-                        <p class="text-right text-muted">By <strong><em>{{ review.user }}</em></strong></p>
-                    </div>
-                    {% if request.user == review.user.user or request.user.is_superuser %}
-                    <div class="text-right edit-review my-2">
-                        <a href="{% url 'edit_review' review.pk %}">Edit</a> |
-                        <!-- Button trigger modal -->
-                        <a class="text-danger delete-review" data-toggle="modal" data-target="#delete-review-modal">
-                            Delete
-                        </a>
-                        <!-- Delete review modal -->
-                        <div class="modal fade" id="delete-review-modal" tabindex="-1" role="dialog"
-                            aria-labelledby="deleteReviewModal" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-black logo-font" id="deleteReviewModal">Delete Review</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body text-black text-left">
-                                        <p>Are you sure you want to permanently delete this review?</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-outline-black rounded-0"
-                                            data-dismiss="modal">Cancel</button>
-                                        <a class="btn btn-black rounded-0"
-                                            href="{% url 'delete_review' review.pk %}">Delete</a>
+                    <div class="col-12">
+                        <div class="review-notification px-2">
+                            <h5 class="text-left font-weight-bold"></i>{{ review.rating }} / 5
+                                {{ review.headline }}
+                            </h5>
+                            <p class="text-left">{{ review.comments }}</p>
+                            
+                            <p class="text-right text-muted">Submitted
+                                <strong>{{ review.date_posted|date:"d-M-y" }}</strong></p>
+                            <p class="text-right text-muted">By <strong><em>{{ review.user }}</em></strong></p>
+                        </div>
+                        {% if request.user == review.user.user or request.user.is_superuser %}
+                            <div class="text-right edit-review my-2">
+                                <a href="{% url 'edit_review' review.pk %}">Edit</a> |
+                                <!-- Button trigger modal -->
+                                <a class="text-danger delete-review" data-toggle="modal"
+                                    data-target="#delete-review-modal">
+                                    Delete
+                                </a>
+                                <!-- Delete review modal -->
+                                <div class="modal fade" id="delete-review-modal" tabindex="-1" role="dialog"
+                                    aria-labelledby="deleteReviewModal" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-black logo-font" id="deleteReviewModal">
+                                                    Delete Review</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-black text-left">
+                                                <p>Are you sure you want to permanently delete this review?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-black rounded-0"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <a class="btn btn-black rounded-0"
+                                                    href="{% url 'delete_review' review.pk %}">Delete</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {% endif %}
+                        <hr>
                     </div>
-                    {% endif %}
-                    <hr>
-                </div>
                 {% endfor %}
+
                 {% if request.user.is_authenticated %}
+                <!-- If the user is logged in, can leave a product review -->
                 <div class="col-12">
                     <div class="text-center">
                         <a class="btn btn-black rounded-0 my-4" href="{% url 'add_review' product.pk %}">Add A Review</a>
                     </div>
                 </div>
                 {% else %}
+                    <!-- Log in or Sign Up first, if not logged in  -->
                     <div class="col-12">
                         <div class="my-4 mx-auto review-notification">
                             <a href="{% url 'account_signup' %}">Sign up</a>
@@ -78,6 +85,7 @@
             </div>
         {% else %}
             {% if request.user.is_authenticated %}
+                <!-- If no reviews - leave the first review if logged in -->
                 <div class="my-4 review-notification">
                     <p>Write the first review.</p>
                 </div>
@@ -85,6 +93,7 @@
                     <a class="btn btn-black rounded-0 my-5" href="{% url 'add_review' product.pk %}">Add A Review</a>
                 </div>
              {% else %}
+                <!-- Log In or Sign Up to leave the first review -->
                 <div class="my-4 review-notification">
                     <a href="{% url 'account_signup' %}">Sign up</a>
                     or 
