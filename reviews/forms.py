@@ -23,7 +23,6 @@ class AddReviewForm(forms.ModelForm):
         }
 
         self.fields['headline'].widget.attrs['autofocus'] = True
-        self.fields['comments'].widget.attrs['rows'] = 5
 
         for field in self.fields:
             if field != 'rating':

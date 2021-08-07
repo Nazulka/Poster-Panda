@@ -513,7 +513,8 @@ input[name='q']::placeholder {
     }
 
     .product-card {
-        max-height: 18rem !important;
+        max-height: 90%;
+        max-width: 11rem;
     }
 }
 
@@ -561,7 +562,7 @@ input[name='q']::placeholder {
 @media (min-width: 576px) {
     .product-card {
         height: 18rem;
-        width: 14rem !important;
+        width: 13rem;
         padding: 0.8rem;
         border: 2px solid black !important;
     }
