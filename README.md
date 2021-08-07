@@ -1,7 +1,7 @@
 # POSTER PANDA
 ___
 
-### ![responsive image](https://github.com/Nazulka/Poster-Panda/blob/master/media/home-page.png)
+### ![responsive image](https://github.com/Nazulka/Poster-Panda/blob/master/readme_docs/home-page.png)
 
 At Poster Panda, we are passionate about interior decoration and design. We offer wide range of stylish high quality posters along with frames and have something to suit every wall. Express yourself by creating a personalized wall of posters! Inspire others and have fun!
 
