@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
-            <div class="image-container text-right px-4 m-5">
+            <div class="image-container text-right px-2 m-5">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="card-img-top product-view-img img-fluid" src="{{ product.image.url }}"
@@ -84,7 +84,7 @@
                         </div>
                         <!-- Render Add to wishlist or Remove from wishlist button if item exists in the wishlist already -->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5 px-2" value="Add to Bag">
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-4 px-2" value="Add to Bag">
                                 {% if wishlist is True %}
                                     <a href="{% url 'add_to_wishlist' product.id %}"
                                         class="btn btn-outline-black rounded-0 mt-4">
