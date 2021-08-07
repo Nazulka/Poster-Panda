@@ -77,13 +77,15 @@
                 </div>
             {% else %}
                 <!-- If wishlist is empty -->
-                <p class="lead mb-5">This list is empty</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-4">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Back</span>
-                </a>
+                <div class="text-left">
+                    <p class="lead mb-5">This list is empty</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-4">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back</span>
+                    </a>
+                </div>
             {% endif %}
         </div>
     </div>
