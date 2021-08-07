@@ -20,7 +20,7 @@
         </div>
     </div>
     <!-- Render wishlist items, if any -->
-    <div class="row text-center">
+    <div class="row text-left">
         <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             {% if wishlist_products %}
                 <div class="table-responsive rounded">
@@ -77,15 +77,13 @@
                 </div>
             {% else %}
                 <!-- If wishlist is empty -->
-                <div class="text-left">
-                    <p class="lead mb-5">This list is empty</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-4">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back</span>
-                    </a>
-                </div>
+                <p class="lead mb-5">This list is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mt-4">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
             {% endif %}
         </div>
     </div>
