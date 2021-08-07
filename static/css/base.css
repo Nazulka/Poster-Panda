@@ -571,9 +571,9 @@ input[name='q']::placeholder {
     }
 
     .product-view-img {
-        max-height: 22rem !important;
+        max-height: 21rem !important;
         width: fit-content;
-        max-width: 16rem;
+        max-width: 15rem;
         object-fit: cover;
         padding: 1rem;
         border: 2px solid black !important;
