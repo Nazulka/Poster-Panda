@@ -511,6 +511,9 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
+    .product-container {
+        max-width: 1000px;
+    }
 
     .product-card {
         max-height: 90%;

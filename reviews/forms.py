@@ -8,7 +8,7 @@ class AddReviewForm(forms.ModelForm):
         exclude = ('user', 'product', 'date_posted')
         fields = ['headline', 'comments', 'rating']
         labels = {
-            'rating': 'Rating',
+            'rating': 'Select Your Rating',
         }
 
     def __init__(self, *args, **kwargs):
@@ -26,11 +26,8 @@ class AddReviewForm(forms.ModelForm):
 
         for field in self.fields:
             if field != 'rating':
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                    self.fields[field].label = placeholder
-            self.fields[field].label = False
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+                placeholder = f'{placeholders[field]} *'
+                self.fields[field].widget.attrs['placeholder'] = placeholder
+                self.fields[field].label = False
+
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
