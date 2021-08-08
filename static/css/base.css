@@ -519,6 +519,9 @@ input[name='q']::placeholder {
         max-height: 90%;
         max-width: 11rem;
     }
+    h1 {
+        font-size: 4rem;
+    }
 }
 
 
