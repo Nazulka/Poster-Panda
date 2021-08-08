@@ -86,7 +86,7 @@
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-4 px-2" value="Add to Bag">
                                 
-                            {% if request.user.is_authenticated and wishlist is True %}
+                            {% if wishlist_item is True %}
                                     <a href="{% url 'add_to_wishlist' product.id %}"
                                         class="btn btn-outline-black rounded-0 mt-4">
                                         <span class="icon">

@@ -7,7 +7,8 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 
 from reviews.models import ProductReview
-from wishlist.models import WishlistItem
+from wishlist.models import Wishlist, WishlistItem
+from profiles.models import UserProfile
 
 from .forms import ProductForm
 
@@ -71,12 +72,20 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
-    wishlist = list(WishlistItem.objects.filter(product=product))
-    wishlist = len(wishlist) > 0
+    user = UserProfile.objects.get(user=request.user)
+
+    if request.user.is_authenticated:
+        wishlist = Wishlist.objects.get(user=user)
+
+        wishlist_item = list(WishlistItem.objects.filter(product=product,
+                                                         wishlist=wishlist))
+        wishlist_item = len(wishlist_item) > 0
+
     context = {
         'product': product,
         'reviews': reviews,
         'wishlist': wishlist,
+        'wishlist_item': wishlist_item,
     }
     template = 'products/product_detail.html'
 
