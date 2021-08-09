@@ -238,7 +238,8 @@ body {
 ```
 After further research, I thought the possible cause for this might be the use of Bootstrap _container-fluid_ class. I replaced it with a simple _container_ and adjusted the width where needed. This fixed the bug. 
 
-* During my pre-submission tests, I've realised that product detail template was displaying the 'Remove from Wishlist' button, even though the product wasn't in the session user's wishlist. I have rectified this bug by adding a logic to only get product's in the current user's wishlist. 
+* During my pre-submission tests, I've realised that product detail template was displaying the 'Remove from Wishlist' button, even though the product wasn't in the session user's wishlist. I have rectified this bug by adding a logic to only get products in the current user's wishlist. 
+* Also, empty wishlist and wishlist products were added to the product details view to fix the bug I was getting when unauthorised user clicked on the 'Add to Wishlist' button. This resolved the issue. 
 
 ### Known Bugs
 
