@@ -70,11 +70,14 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
+    wishlist = {}
+    wishlist_item = []
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
-    user = UserProfile.objects.get(user=request.user)
 
     if request.user.is_authenticated:
+        user = UserProfile.objects.get(user=request.user)
+
         wishlist = Wishlist.objects.get(user=user)
 
         wishlist_item = list(WishlistItem.objects.filter(product=product,
